@@ -8,8 +8,14 @@ Translate the tagged source batch from `{source_lang}` to `{target_lang}`.
 
 ## Inputs
 - Source batch path: `{source_file}`
-- Knowledge bundle path: `{knowledge_bundle_file}`
-- Supplementary terminology path: `{supplementary_terms_file}`
+- Universal bundle path: `{bundle_universal_file}`
+- Domain bundle path: `{bundle_domain_file}`
+- Adapt bundle path: `{bundle_adapt_file}`
+- Glossary bundle path: `{bundle_glossary_file}`
+- Errors bundle path: `{bundle_errors_file}`
+- Culture bundle path: `{bundle_culture_file}`
+- Supplementary terms path: `{supplementary_terms_file}`
+- Adaptation notes path: `{adaptation_notes_file}`
 
 ## Outputs
 - Translated batch path: `{output_file}`
@@ -19,6 +25,7 @@ Translate the tagged source batch from `{source_lang}` to `{target_lang}`.
 1. Read the source batch file.
 2. Read the knowledge bundle file if it exists.
 3. Read the supplementary terminology file if it exists.
+3a. Read the adaptation notes file if it exists — apply language-pair-specific rules.
 4. Translate only the non-`[CONTEXT]` tagged paragraphs.
 5. Preserve every tag marker exactly, including `[P0]`, `[H0]`, `[F0]`, `[TB0_P0]`, and `[CONTEXT]` markers.
 6. Preserve `[CONTEXT]` lines exactly if they are present.

@@ -12,6 +12,7 @@ Inspect the current translation and write both a full report and a machine-reada
 - Source tagged path: `{source_file}`
 - Translation path: `{translated_file}`
 - Knowledge bundle path: `{knowledge_bundle_file}`
+- Adaptation notes path: `{adaptation_notes_file}`
 - Terminology scan report path: `{scan_file}`
 - Numerical check report path: `{numerical_report_file}`
 - Numerical score JSON path: `{numerical_score_file}`
