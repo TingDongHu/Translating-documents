@@ -1,5 +1,7 @@
 # Translating Documents — 文档翻译
 
+[**English**](README.md) | Translating Documents — 文档翻译
+
 基于文件的、质量受控的 DOCX 翻译管道，专为 [Claude Code](https://claude.ai/code) 设计。通过主编排器调度专业子代理，完成提取、术语研究、并行翻译、多轮质检、修订和最终审计——所有流程通过 JSON manifest 和经过校验的状态机协调。
 
 ## 特性

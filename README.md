@@ -1,5 +1,7 @@
 # Translating Documents
 
+[**中文版**](README.zh.md) | Translating Documents — 文档翻译
+
 A file-driven, quality-assured DOCX translation pipeline for [Claude Code](https://claude.ai/code). Orchestrates specialized subagents through extraction, terminology research, parallel translation, multi-round QA, revision, and final audit — all coordinated via JSON manifests and a validated workflow state machine.
 
 ## Features
