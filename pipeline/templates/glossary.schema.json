@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Glossary Knowledge File",
+  "description": "Bilingual glossary with confidence tracking — auto-grown by knowledge_extraction",
+  "type": "object",
+  "required": ["source_lang", "target_lang", "last_updated", "entries"],
+  "properties": {
+    "source_lang": { "type": "string", "minLength": 1 },
+    "target_lang": { "type": "string", "minLength": 1 },
+    "domain": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "last_updated": { "type": "string" },
+    "archived_count": { "type": "integer", "minimum": 0 },
+    "warning": { "type": "string" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "target", "confidence"],
+        "properties": {
+          "source": { "type": "string" },
+          "target": { "type": "string" },
+          "frequency": { "type": "integer", "minimum": 0 },
+          "confidence": {
+            "type": "string",
+            "enum": ["pending", "low", "medium", "high", "disputed"]
+          },
+          "verified_count": { "type": "integer", "minimum": 0 },
+          "first_seen": { "type": "string" },
+          "last_seen": { "type": "string" },
+          "source_jobs": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "category": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

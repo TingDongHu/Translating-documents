@@ -5,9 +5,11 @@ from pathlib import Path
 
 CANONICAL_STAGES = [
     'initialized', 'extraction', 'knowledge_loading', 'terminology_research',
+    'adaptation_research',
     'translation', 'merge_marker_check', 'numerical_check', 'terminology_scan',
     'inspection_round1', 'revision_round1', 'inspection_round2', 'revision_round2',
-    'render', 'final_audit', 'completed',
+    'render', 'final_audit', 'knowledge_extraction',
+    'completed',
 ]
 
 STAGE_HISTORY_STATUSES = {'pending', 'in_progress', 'completed', 'skipped', 'failed'}

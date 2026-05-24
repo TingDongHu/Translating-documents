@@ -14,6 +14,7 @@ Revise the current translation using upstream QA reports.
 - Terminology scan report path: `{scan_file}`
 - Numerical check report path: `{numerical_report_file}`
 - Knowledge bundle path: `{knowledge_bundle_file}`
+- Adaptation notes path: `{adaptation_notes_file}`
 
 ## Outputs
 - Revised translation path: `{output_file}`

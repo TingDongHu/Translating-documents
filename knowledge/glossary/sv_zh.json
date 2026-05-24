@@ -1,181 +1,327 @@
 {
   "source_lang": "sv",
   "target_lang": "zh",
-  "source_domain": ["legal", "administrative"],
+  "domain": ["legal", "administrative"],
+  "last_updated": "2026-05-24",
   "entries": [
     {
       "source": "Notarius Publicus",
       "target": "公证人",
       "frequency": 4,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Apostille",
       "target": "附加证明书",
       "frequency": 4,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Advokatbyrå",
       "target": "律师事务所",
       "frequency": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Advokat",
       "target": "律师",
       "frequency": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "exp. nr.",
       "target": "证件编号",
       "frequency": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Org. no. / Organisationsnummer",
       "target": "机构编号",
       "frequency": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Registrerat kontor",
       "target": "注册办事处",
       "frequency": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "bekräftelse",
       "target": "确认",
       "frequency": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "utfärdats",
       "target": "签发",
       "frequency": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "denna dag",
       "target": "即日",
       "frequency": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Mobil nr.",
       "target": "手机号码",
       "frequency": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Telefon nr.",
       "target": "电话号码",
       "frequency": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Till den det vederbör",
       "target": "致相关方",
       "frequency": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Vänliga hälsningar / Med vänlig hälsning",
       "target": "此致敬礼",
       "frequency": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Koncernkontoret",
       "target": "集团办公室",
       "frequency": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Stab",
       "target": "秘书处",
       "frequency": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Journalservice",
       "target": "档案服务",
       "frequency": 3,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Ärendenummer",
       "target": "案号",
       "frequency": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Journalbegäran",
       "target": "档案调取申请",
       "frequency": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "journalkopior",
       "target": "档案副本",
       "frequency": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Region Skåne",
       "target": "斯科讷大区",
       "frequency": 5,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Regionarkivet",
       "target": "大区档案馆",
       "frequency": 3,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Senior journaladministratör",
       "target": "高级档案管理员",
       "frequency": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "allmänna handlingar",
       "target": "公共文件",
       "frequency": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Intygas",
       "target": "兹证明",
       "frequency": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Postadress",
       "target": "邮寄地址",
       "frequency": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Telefon (växel)",
       "target": "电话（总机）",
       "frequency": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Namnunderskrift",
       "target": "签名",
       "frequency": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     },
     {
       "source": "Sigill / Stämpel",
       "target": "印章",
       "frequency": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "verified_count": 1,
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-05-24",
+      "source_jobs": ["pre-migration"],
+      "category": "general"
     }
   ]
 }
