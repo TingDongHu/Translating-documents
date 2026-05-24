@@ -1,7 +1,10 @@
 {
   "source_lang": "sv",
   "target_lang": "zh",
-  "domain": ["legal", "administrative"],
+  "domain": [
+    "legal",
+    "administrative"
+  ],
   "last_updated": "2026-05-24",
   "entries": [
     {
@@ -9,10 +12,12 @@
       "target": "公证人",
       "frequency": 4,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 4,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -20,10 +25,12 @@
       "target": "附加证明书",
       "frequency": 4,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 4,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -31,10 +38,12 @@
       "target": "律师事务所",
       "frequency": 2,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 2,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -42,10 +51,12 @@
       "target": "律师",
       "frequency": 2,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 2,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -56,7 +67,9 @@
       "verified_count": 1,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -64,10 +77,12 @@
       "target": "机构编号",
       "frequency": 2,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 2,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -78,7 +93,9 @@
       "verified_count": 1,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -86,10 +103,12 @@
       "target": "确认",
       "frequency": 2,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 2,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -97,10 +116,12 @@
       "target": "签发",
       "frequency": 2,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 2,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -108,10 +129,12 @@
       "target": "即日",
       "frequency": 2,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 2,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -122,7 +145,9 @@
       "verified_count": 1,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -133,7 +158,9 @@
       "verified_count": 1,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -144,7 +171,9 @@
       "verified_count": 1,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -152,10 +181,12 @@
       "target": "此致敬礼",
       "frequency": 2,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 2,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -163,10 +194,12 @@
       "target": "集团办公室",
       "frequency": 2,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 2,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -177,7 +210,9 @@
       "verified_count": 1,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -185,10 +220,12 @@
       "target": "档案服务",
       "frequency": 3,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 3,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -199,7 +236,9 @@
       "verified_count": 1,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -207,10 +246,12 @@
       "target": "档案调取申请",
       "frequency": 2,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 2,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -221,7 +262,9 @@
       "verified_count": 1,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -229,10 +272,12 @@
       "target": "斯科讷大区",
       "frequency": 5,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 5,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -240,10 +285,12 @@
       "target": "大区档案馆",
       "frequency": 3,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 3,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -251,10 +298,12 @@
       "target": "高级档案管理员",
       "frequency": 2,
       "confidence": "high",
-      "verified_count": 1,
+      "verified_count": 2,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -265,7 +314,9 @@
       "verified_count": 1,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -276,7 +327,9 @@
       "verified_count": 1,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -287,7 +340,9 @@
       "verified_count": 1,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -298,7 +353,9 @@
       "verified_count": 1,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -309,7 +366,9 @@
       "verified_count": 1,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     },
     {
@@ -320,7 +379,9 @@
       "verified_count": 1,
       "first_seen": "2026-05-24",
       "last_seen": "2026-05-24",
-      "source_jobs": ["pre-migration"],
+      "source_jobs": [
+        "pre-migration"
+      ],
       "category": "general"
     }
   ]

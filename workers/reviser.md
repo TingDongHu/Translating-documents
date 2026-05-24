@@ -13,7 +13,9 @@ Revise the current translation using upstream QA reports.
 - Inspection report path: `{report_file}`
 - Terminology scan report path: `{scan_file}`
 - Numerical check report path: `{numerical_report_file}`
-- Knowledge bundle path: `{knowledge_bundle_file}`
+- Universal bundle path: `{bundle_universal_file}`
+- Domain bundle path: `{bundle_domain_file}`
+- Adapt bundle path: `{bundle_adapt_file}`
 - Adaptation notes path: `{adaptation_notes_file}`
 
 ## Outputs
@@ -25,7 +27,7 @@ Revise the current translation using upstream QA reports.
 1. Read the current translation.
 2. Read the inspection report.
 3. Read terminology and numerical reports if provided.
-4. Read the knowledge bundle if provided.
+4. Read the knowledge bundles if provided.
 5. Fix all critical issues.
 6. Fix warning issues when they are actionable.
 7. Preserve every tag marker exactly.

@@ -267,8 +267,8 @@ Every stage is dispatched to an isolated subagent. The main agent never runs scr
 | inspection_round2 | skip | if revised | mandatory |
 | revision_round2 | skip | skip | max 2, user approval |
 | render | run | run | run |
-| knowledge_extraction | run | run | run |
 | final_audit | run | run | run |
+| knowledge_extraction | run | run | run |
 
 ## Worker Bundle Mapping
 

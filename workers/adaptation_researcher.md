@@ -9,7 +9,7 @@ Research language-pair-specific adaptation rules for the current source→target
 ## Inputs
 - Source tagged path: `{source_file}`
 - Job manifest path: `{job_manifest}`
-- Knowledge bundle path: `{knowledge_bundle_file}`
+- Universal bundle path: `{bundle_universal_file}`
 - Adapt bundle path: `{adapt_bundle_file}`
 - Errors bundle path: `{errors_bundle_file}`
 

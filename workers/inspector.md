@@ -11,7 +11,10 @@ Inspect the current translation and write both a full report and a machine-reada
 ## Inputs
 - Source tagged path: `{source_file}`
 - Translation path: `{translated_file}`
-- Knowledge bundle path: `{knowledge_bundle_file}`
+- Universal bundle path: `{bundle_universal_file}`
+- Domain bundle path: `{bundle_domain_file}`
+- Glossary bundle path: `{bundle_glossary_file}`
+- Quality bundle path: `{bundle_quality_file}`
 - Adaptation notes path: `{adaptation_notes_file}`
 - Terminology scan report path: `{scan_file}`
 - Numerical check report path: `{numerical_report_file}`
@@ -39,8 +42,8 @@ Inspect the current translation and write both a full report and a machine-reada
 1. Read the terminology scan report first.
 2. Read the numerical check report and score JSON if provided.
 3. Read the source tagged file and current translation file.
-4. Read the knowledge bundle if provided.
-5. Load the scoring rubric from the knowledge bundle. Score each of the 6 dimensions strictly according to the rubric's band criteria.
+4. Read the knowledge bundles if provided.
+5. Load the scoring rubric from the quality bundle. Score each of the 6 dimensions strictly according to the rubric's band criteria.
 6. Use terminology scan data and numerical check results as evidence.
 7. Re-verify flagged terminology issues before assigning severity.
 8. Check every paragraph for semantic fidelity.
