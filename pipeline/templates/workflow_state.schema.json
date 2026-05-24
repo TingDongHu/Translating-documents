@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Translating Documents Workflow State",
+  "type": "object",
+  "required": [
+    "current_stage",
+    "completed_stages",
+    "blocked",
+    "requires_revision",
+    "critical_issues",
+    "next_stage",
+    "stage_history"
+  ],
+  "properties": {
+    "current_stage": { "type": "string", "minLength": 1 },
+    "completed_stages": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "blocked": { "type": "boolean" },
+    "requires_revision": { "type": "boolean" },
+    "critical_issues": { "type": "integer", "minimum": 0 },
+    "next_stage": { "type": ["string", "null"] },
+    "stage_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["stage", "status"],
+        "properties": {
+          "stage": { "type": "string", "minLength": 1 },
+          "status": { "type": "string", "enum": ["pending", "in_progress", "completed", "skipped", "failed"] },
+          "reason": { "type": "string" },
+          "outputs": { "type": "object" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

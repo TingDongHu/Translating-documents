@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Translating Documents Marker Check Result",
+  "type": "object",
+  "required": [
+    "passed",
+    "source_tag_count",
+    "translation_tag_count",
+    "missing_tags",
+    "extra_tags",
+    "duplicate_source_tags",
+    "duplicate_translation_tags",
+    "empty_source_tags",
+    "empty_translation_tags",
+    "content_dropped_tags"
+  ],
+  "properties": {
+    "passed": { "type": "boolean" },
+    "source_tag_count": { "type": "integer", "minimum": 0 },
+    "translation_tag_count": { "type": "integer", "minimum": 0 },
+    "missing_tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "extra_tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "duplicate_source_tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "duplicate_translation_tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "empty_source_tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "empty_translation_tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "content_dropped_tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}

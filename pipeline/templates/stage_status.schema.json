@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Translating Documents Stage Status",
+  "type": "object",
+  "required": ["stage", "status", "outputs"],
+  "properties": {
+    "stage": { "type": "string", "minLength": 1 },
+    "status": { "type": "string", "enum": ["completed", "skipped", "failed"] },
+    "reason": { "type": "string" },
+    "inputs": { "type": "object" },
+    "outputs": { "type": "object" },
+    "metrics": { "type": "object" },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}

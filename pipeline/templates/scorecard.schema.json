@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Translating Documents Inspection Scorecard",
+  "type": "object",
+  "required": [
+    "round",
+    "total_score",
+    "numerical_accuracy",
+    "terminology_consistency",
+    "semantic_fidelity",
+    "format_compliance",
+    "completeness",
+    "inference_ocr_quality",
+    "critical_count",
+    "warning_count",
+    "info_count",
+    "requires_revision",
+    "report_path"
+  ],
+  "properties": {
+    "round": { "type": "integer", "minimum": 1 },
+    "total_score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "numerical_accuracy": { "type": "number", "minimum": 0, "maximum": 100 },
+    "terminology_consistency": { "type": "number", "minimum": 0, "maximum": 100 },
+    "semantic_fidelity": { "type": "number", "minimum": 0, "maximum": 100 },
+    "format_compliance": { "type": "number", "minimum": 0, "maximum": 100 },
+    "completeness": { "type": "number", "minimum": 0, "maximum": 100 },
+    "inference_ocr_quality": { "type": "number", "minimum": 0, "maximum": 100 },
+    "critical_count": { "type": "integer", "minimum": 0 },
+    "warning_count": { "type": "integer", "minimum": 0 },
+    "info_count": { "type": "integer", "minimum": 0 },
+    "requires_revision": { "type": "boolean" },
+    "report_path": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": false
+}

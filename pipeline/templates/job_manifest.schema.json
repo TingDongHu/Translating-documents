@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Translating Documents Job Manifest",
+  "type": "object",
+  "required": [
+    "job_id",
+    "source_file",
+    "source_language",
+    "target_language",
+    "domain",
+    "quality_level",
+    "created_at"
+  ],
+  "properties": {
+    "job_id": { "type": "string", "minLength": 1 },
+    "source_file": { "type": "string", "minLength": 1 },
+    "source_language": { "type": "string", "minLength": 1 },
+    "target_language": { "type": "string", "minLength": 1 },
+    "domain": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    },
+    "quality_level": {
+      "type": "string",
+      "enum": ["standard", "high", "professional"]
+    },
+    "created_at": { "type": "string", "minLength": 1 },
+    "original_filename": { "type": "string" },
+    "job_directory": { "type": "string" }
+  },
+  "additionalProperties": false
+}

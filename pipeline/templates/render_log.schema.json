@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Translating Documents Render Log",
+  "type": "object",
+  "required": [
+    "logical_tags_applied",
+    "output_docx"
+  ],
+  "properties": {
+    "logical_tags_applied": { "type": "integer", "minimum": 0 },
+    "missing": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "output_docx": { "type": "string" },
+    "layout_warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}

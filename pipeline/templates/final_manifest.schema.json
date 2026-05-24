@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Translating Documents Final Manifest",
+  "type": "object",
+  "required": [
+    "status",
+    "final_report",
+    "revision_rounds",
+    "critical_issues_remaining",
+    "numerical_check_passed",
+    "marker_check_passed",
+    "render_check_passed"
+  ],
+  "properties": {
+    "status": { "type": "string", "enum": ["completed", "blocked"] },
+    "final_docx": { "type": "string" },
+    "final_translation": { "type": "string" },
+    "final_report": { "type": "string", "minLength": 1 },
+    "revision_rounds": { "type": "integer", "minimum": 0 },
+    "critical_issues_remaining": { "type": "integer", "minimum": 0 },
+    "numerical_check_passed": { "type": "boolean" },
+    "marker_check_passed": { "type": "boolean" },
+    "render_check_passed": { "type": "boolean" },
+    "layout_warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}
