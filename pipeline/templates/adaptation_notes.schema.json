@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Adaptation Notes",
+  "description": "Per-job adaptation research output — rules for the current source→target language pair",
+  "type": "object",
+  "required": ["source_lang", "target_lang", "entries", "generated_at"],
+  "properties": {
+    "source_lang": { "type": "string" },
+    "target_lang": { "type": "string" },
+    "domain": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "rule"],
+        "properties": {
+          "category": { "type": "string" },
+          "rule": { "type": "string" },
+          "source_example": { "type": "string" },
+          "correct": { "type": "string" },
+          "confidence": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "source": {
+            "type": "string",
+            "enum": ["existing_knowledge", "web_research", "inference"]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

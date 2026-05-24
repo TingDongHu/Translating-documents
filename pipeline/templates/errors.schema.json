@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Error Pattern Library",
+  "description": "Cross-language error patterns — auto-grown from QA critical findings",
+  "type": "object",
+  "required": ["source_lang", "target_lang", "last_updated", "entries"],
+  "properties": {
+    "source_lang": { "type": "string" },
+    "target_lang": { "type": "string" },
+    "last_updated": { "type": "string" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "rule"],
+        "properties": {
+          "category": { "type": "string" },
+          "severity": {
+            "type": "string",
+            "enum": ["critical", "warning", "info"]
+          },
+          "rule": { "type": "string" },
+          "source_example": { "type": "string" },
+          "incorrect": { "type": "string" },
+          "correct": { "type": "string" },
+          "confidence": {
+            "type": "string",
+            "enum": ["pending", "low", "medium", "high", "disputed"]
+          },
+          "verified_count": { "type": "integer", "minimum": 0 },
+          "first_seen": { "type": "string" },
+          "last_seen": { "type": "string" },
+          "domains": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
