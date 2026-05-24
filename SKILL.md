@@ -86,7 +86,16 @@ Required core files:
 - `extraction/source_tagged.txt` — tagged source text;
 - `extraction/extraction.json` — source location mapping;
 - `extraction/extraction_report.json` — paragraph count and type summary for batch strategy decisions;
-- `knowledge/knowledge_bundle.md` — loaded rules for workers;
+- `knowledge/knowledge_manifest.json` — index of produced bundles;
+- `knowledge/bundle_universal.md` — target-language writing rules;
+- `knowledge/bundle_domain.md` — domain-specific decision frameworks;
+- `knowledge/bundle_glossary.json` — bilingual glossary subset;
+- `knowledge/bundle_adapt.json` — adaptation rules (if exists);
+- `knowledge/bundle_errors.json` — error patterns (if exists);
+- `knowledge/bundle_culture.md` — source culture rules (if exists);
+- `knowledge/bundle_quality.md` — scoring rubric (if exists, for inspectors);
+- `knowledge/adaptation_notes.json` — adaptation research output;
+- `knowledge/extraction_status.json` — extraction results (if exists);
 - `translation/translated_merged.txt` — merged current translation;
 - `translation/marker_check.json` — marker integrity gate;
 - `qa/numerical_score.json` — numerical gate;
@@ -110,6 +119,7 @@ initialized
   -> extraction
   -> knowledge_loading
   -> terminology_research
+  -> adaptation_research
   -> translation
   -> merge_marker_check
   -> numerical_check
@@ -120,6 +130,7 @@ initialized
   -> revision_round2
   -> render
   -> final_audit
+  -> knowledge_extraction
   -> completed
 ```
 
@@ -134,6 +145,7 @@ Every stage is dispatched to an isolated subagent. The main agent never runs scr
 | extraction | script runner | `workers/script_runner.md` | `pipeline/scripts/extract_docx.py` | python-docx, lxml |
 | knowledge_loading | language worker | `workers/knowledge_loader.md` | — | — |
 | terminology_research | language worker | `workers/terminology_researcher.md` | — | — |
+| adaptation_research | language worker | `workers/adaptation_researcher.md` | — | knowledge_loading + terminology_research |
 | translation | language worker (parallel by batch) | `workers/translator.md` | — | — |
 | merge_marker_check | main agent orchestrated | `workers/script_runner.md` | `merge_batches.py` → `check_markers.py` (sequential, see subflow) | — |
 | numerical_check | script runner | `workers/script_runner.md` | `pipeline/scripts/check_numerics.py` | — |
@@ -142,6 +154,7 @@ Every stage is dispatched to an isolated subagent. The main agent never runs scr
 | revision_roundN | language worker | `workers/reviser.md` | — | — |
 | render | script runner | `workers/script_runner.md` | `pipeline/scripts/render_docx.py` | python-docx, lxml |
 | final_audit | script runner | `workers/script_runner.md` | `pipeline/scripts/final_audit.py` | — |
+| knowledge_extraction | script runner | `workers/script_runner.md` | `pipeline/scripts/knowledge_extraction.py` | final_audit |
 
 **Script runner** = a subagent that executes a Python script, debugs encoding/path/import errors, retries up to 3 times, and returns only exit status and key output values. Each script gets a fresh subagent so debugging loops never pollute the main agent's context.
 
@@ -164,6 +177,51 @@ Every stage is dispatched to an isolated subagent. The main agent never runs scr
    - `--output translation/marker_check.json`
    - 如果失败：stage blocked，按 **Blocked Communication Protocol** 处理（marker_check 是 hard gate）。
    - 如果成功：stage completed，更新 `translation/marker_check.json` 到 workflow_state。
+
+### adaptation_research
+
+**Position**: `terminology_research → [adaptation_research] → translation`
+
+**Purpose**: Research known pitfalls and adaptation rules for the specific source→target language pair.
+
+**Inputs**:
+- source_lang, target_lang, domain
+- `knowledge/bundle_adapt.json` (existing adaptation rules, if any)
+- `knowledge/bundle_errors.json` (existing error patterns, if any)
+
+**Process**:
+1. Load existing adapt and error pattern knowledge.
+2. Filter by domain (only inject relevant entries).
+3. Evaluate coverage — identify categories with weak coverage.
+4. For weak categories, research using web if needed.
+5. Merge existing + new rules into adaptation_notes.json.
+6. Write adaptation_notes.json to `knowledge/adaptation_notes.json`.
+
+**Error handling**: Non-hard gate. If web research fails, use only existing knowledge. If no adaptation knowledge exists at all, inject only base.md rules and flag the gap.
+
+**Output**: `knowledge/adaptation_notes.json`
+
+### knowledge_extraction
+
+**Position**: `final_audit → [knowledge_extraction] → completed`
+
+**Purpose**: Extract new glossary entries, error patterns, and adaptation rules from completed pipeline outputs and write them back to the knowledge base. This is what makes the knowledge base auto-grow.
+
+**Inputs**: job_manifest, source_tagged.txt, translated_merged.txt, QA scorecards, revision reports
+
+**Process**:
+1. Extract recurring source terms (frequency >= 3) and map to their translations.
+2. Compare against existing glossary — add new entries with confidence=pending.
+3. Update verified_count and last_seen for existing entries.
+4. Flag confidence upgrades (pending→low at 3, low→medium at 5, medium→high at 10).
+5. Extract error patterns from QA critical issues (flag for manual review).
+6. Detect source-target conflicts — mark conflicting entries for manual review.
+7. Archive stale low-confidence entries untouched for >180 days.
+8. Write updated glossary/errors/adapt files back to knowledge base.
+
+**Error handling**: Non-blocking. If extraction fails, record the error in pipeline.log but do not block pipeline completion. The glossary files on disk remain unchanged — extraction will retry on the next job.
+
+**Output**: `knowledge/extraction_status.json`
 
 ## Quality Levels
 
@@ -199,6 +257,7 @@ Every stage is dispatched to an isolated subagent. The main agent never runs scr
 | extraction | run | run | run |
 | knowledge_loading | run | run | run |
 | terminology_research | run | run | run |
+| adaptation_research | run | run | run |
 | translation | run | run | run |
 | merge_marker_check | run | run | run |
 | numerical_check | skip | skip | mandatory |
@@ -208,7 +267,20 @@ Every stage is dispatched to an isolated subagent. The main agent never runs scr
 | inspection_round2 | skip | if revised | mandatory |
 | revision_round2 | skip | skip | max 2, user approval |
 | render | run | run | run |
+| knowledge_extraction | run | run | run |
 | final_audit | run | run | run |
+
+## Worker Bundle Mapping
+
+| Worker | Bundles Received |
+|--------|-----------------|
+| translator | universal + domain + adapt + glossary + errors + culture + supplementary_terms + adaptation_notes |
+| terminology_researcher | domain + glossary + source_tagged.txt |
+| adaptation_researcher | adapt + errors |
+| inspector | universal + domain + glossary + quality + adaptation_notes |
+| consistency_checker | universal + glossary |
+| reviser | universal + domain + adapt + adaptation_notes |
+| knowledge_loader | universal (for itself) |
 
 ## Batch Strategy
 
@@ -401,3 +473,16 @@ The final user summary should include:
 - marker check status;
 - output file paths;
 - important layout warnings.
+
+## Knowledge Base Maintenance
+
+The knowledge base auto-grows via knowledge_extraction. The following limits keep it manageable:
+
+| Limit | Value | Behavior |
+|-------|-------|----------|
+| Max entries per glossary file | 5000 | Warning emitted in extraction manifest when exceeded |
+| Stale pending/low entry auto-archival | 180 days | Entries with no update in 180 days auto-archived |
+| Archived storage location | `knowledge/archived/{source}_{target}.json` | Preserved for recovery, not injected into workers |
+| Conflicting entry review trigger | Detected in extraction | Flagged in manifest warnings[] for manual review |
+
+Archived entries remain on disk in `knowledge/archived/` but are NOT included in bundle_glossary.json during knowledge_loading.
