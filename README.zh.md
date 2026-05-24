@@ -63,9 +63,88 @@ git clone https://github.com/TingDongHu/Translating-documents.git ~/.claude/skil
 [final_audit] done — all gates passed
 ```
 
-## 管道概览
+## 架构设计
 
-### 工作流
+### 设计理念
+
+管道基于严格的**编排器-工作者**分离模式。主代理从不翻译、质检或修订——它只负责调度、读取轻量 JSON 状态文件、以及做流程决策。所有语言工作和脚本执行都委托给隔离的子代理。
+
+这种设计的优势：
+- **上下文隔离** — 每个子代理从零开始，阶段间不会产生幻觉传递
+- **可审计** — 每个阶段都会写文件；完整的工作目录就是一条审计追溯链
+- **确定性** — 确定性 Python 脚本处理结构化任务（提取、分块、标记检查、渲染）；LLM 判断力仅用于语言类任务
+
+### 编排器
+
+主代理以「读取-评估-调度」循环运行：
+
+```
+验证 workflow_state.json → 读取 manifests/scorecards →
+  → 决定下一个阶段 → 调度子代理 →
+  → 更新 workflow_state.json → 报告进度 → 重复
+```
+
+**主代理必须：**
+- 收集源文件路径（仅 DOCX）、源/目标语言、领域和质量等级
+- 创建隔离的任务目录，写入 `job_manifest.json` 和 `workflow_state.json`
+- 在每次调度前通过 `validate_workflow_state.py` 验证工作流状态
+- 每个阶段都调度子代理执行——绝不直接运行脚本或语言任务
+- 每个阶段完成后更新 `workflow_state.json`
+- 通过读取轻量 JSON 文件做流程决策（绝不通过聊天上下文传递完整报告）
+- 每个阶段后报告进度；只有在最终审计通过后才做总结
+
+**主代理禁止：**
+- 直接翻译、修订、质检或撰写质量报告
+- 直接运行管道脚本（必须通过脚本执行子代理）
+- 将完整报告内容传入其他 worker 的提示
+- 在最终审计通过前宣告完成
+
+### 文件驱动的通信
+
+所有阶段间的数据通过文件传递，绝不通过聊天上下文：
+
+```
+translation_job_{时间戳}_{源文件名}/
+├── job_manifest.json              # 静态任务元数据（schema 校验）
+├── workflow_state.json            # 管道状态的唯一可信源
+├── extraction/
+│   └── source_tagged.txt          # 带 [Pn] 标记的源文本
+├── knowledge/
+│   └── knowledge_bundle.md        # 为 worker 组装的知识包
+├── translation/
+│   ├── batch_001_translated.txt   # 每批的翻译结果
+│   └── translated_merged.txt      # 合并后的完整译文
+├── qa/
+│   ├── marker_check.json          # 标记完整性门禁
+│   ├── numerical_score.json       # 数值零容忍门禁
+│   ├── terminology_score.json     # 术语扫描数据
+│   └── scorecard_round1.json      # 质检评分卡
+├── revision/
+│   └── revision_status_round1.json
+├── render/
+│   └── render_log.json            # 渲染状态
+└── final/
+    ├── final_manifest.json        # 最终门禁判定
+    └── final_report.md            # 管道结果摘要
+```
+
+所有流程决策通过读取 JSON manifest 和 scorecard 完成。这使得每次运行都可复现、可调试——回放任务目录即可看到每个阶段发生的具体细节。
+
+### 两种 Worker 类型
+
+| | 脚本执行器 | 语言工作者 |
+|---|---|---|
+| **职责** | 执行 Python 管道脚本 | 执行基于 LLM 的语言判断任务 |
+| **模板** | `workers/script_runner.md` | 特定 worker 模板（如 `workers/translator.md`） |
+| **重试** | 3 次内部调试+重试 + 主代理层 + 用户层升级 | 通过重新调度重试 |
+| **输出** | 退出码 + 输出文件的关键值 | 标准 JSON 报告格式：`{stage, status, outputs, metrics, warnings}` |
+| **示例** | `extract_docx.py`, `check_markers.py`, `render_docx.py` | `translator.md`, `inspector.md`, `reviser.md` |
+
+每个脚本执行器使用**全新的子代理**，确保调试循环不会污染主代理的上下文。
+
+### 状态机
+
+管道遵循标准的 14 阶段工作流：
 
 ```
 initialized → extraction → knowledge_loading → terminology_research → translation
@@ -75,7 +154,9 @@ initialized → extraction → knowledge_loading → terminology_research → tr
 
 `[方括号]` 内的阶段根据质量等级条件执行。
 
-### 质量等级映射
+`workflow_state.json` 追踪 `current_stage`、`completed_stages`、`stage_history`（含每条目的状态）、`blocked` 和 `requires_revision`。每次调度前，Python 校验脚本会根据 `workflow_state.schema.json` 和标准阶段列表检查状态。
+
+### 质量等级阶段映射
 
 | 阶段 | standard | high | professional |
 |-------|----------|------|--------------|
@@ -89,30 +170,53 @@ initialized → extraction → knowledge_loading → terminology_research → tr
 | inspection_round1 | 运行 | 运行 | 运行 |
 | revision_round1 | 跳过 | critical > 0 时 | 强制 |
 | inspection_round2 | 跳过 | 已修订时 | 强制 |
-| revision_round2 | 跳过 | 跳过 | 最多 2 轮 |
+| revision_round2 | 跳过 | 跳过 | 最多 2 轮，需用户批准 |
 | render | 运行 | 运行 | 运行 |
 | final_audit | 运行 | 运行 | 运行 |
 
-### 架构
+### 质量门禁
+
+管道禁止绕过的硬门禁：
+
+- **标记检查** — 在进入 QA 前，所有 `[Pn]` 标签必须完整且正确配对
+- **数值检查**（专业级） — 零容忍：任何金额、日期或百分比的错误自动标记为严重
+- **质检** — 没有 scorecard 不能进入修订；修订后未复审不能进入渲染
+- **最终审计** — 所有门禁通过后管道才能报告完成
+
+### 恢复架构
+
+阶段失败时，系统通过三层升级：
+
+1. **脚本执行器层** — 子代理内部诊断并重试最多 3 次（处理编码问题、缺失包、路径错误）
+2. **主代理层** — 如果内部重试失败，主代理调度一个全新子代理再做一次 3 轮重试
+3. **用户层** — 如果所有自动尝试都失败，主代理进入**阻塞通信协议**：报告阻塞原因，为用户提供 `[重试 / 跳过并记录原因 / 中止]` 选项
+
+**批量翻译重试：** 当合并步骤检测到缺失批次时，仅重新调度缺失的批次——已翻译的批次保持不变。
+
+**最终审计恢复：** 如果 `final_manifest.json` 报告 `status=blocked`，主代理诊断哪个具体门禁失败，并提供定向恢复选项（重试门禁、用户确认后跳过、接受部分输出、或中止）。
+
+### 组件图
 
 ```
 主编排器 (orchestrator)
+  │
   ├── 脚本执行器 (Python 管道脚本)
-  │   ├── extract_docx.py       — DOCX → 带标签纯文本
-  │   ├── split_batches.py      — 批次拆分（含 [CONTEXT] 重叠区域）
-  │   ├── merge_batches.py      — 批次合并（含缺失检测）
-  │   ├── check_markers.py      — [Pn] 标签完整性门禁
-  │   ├── check_numerics.py     — 数值零容忍检查
-  │   ├── render_docx.py        — 带标签纯文本 → DOCX
-  │   ├── final_audit.py        — 最终门禁验证 + 报告生成
+  │   ├── extract_docx.py           — DOCX → 带 [Pn] 标记的纯文本
+  │   ├── split_batches.py          — 批次拆分（含 [CONTEXT] 重叠区域）
+  │   ├── merge_batches.py          — 批次合并（含缺失检测）
+  │   ├── check_markers.py          — [Pn] 标签完整性门禁
+  │   ├── check_numerics.py         — 数值零容忍检查
+  │   ├── render_docx.py            — 带标签纯文本 → DOCX
+  │   ├── final_audit.py            — 最终门禁验证 + 报告生成
   │   └── validate_workflow_state.py — 状态机校验
-  └── 语言子代理 (LLM subagents)
-      ├── knowledge_loader.md   — 知识加载
-      ├── terminology_researcher.md — 术语研究
-      ├── translator.md         — 翻译
-      ├── consistency_checker.md — 一致性检查
-      ├── inspector.md          — 质量检查
-      └── reviser.md            — 修订
+  │
+  └── 语言子代理 (LLM subagents，通过提示模板调度)
+      ├── knowledge_loader.md       — 组装领域规则 + 术语表为知识包
+      ├── terminology_researcher.md — 提取高频术语，研究未覆盖的术语
+      ├── translator.md             — 翻译批次，保持 [Pn]/[CONTEXT] 标记
+      ├── consistency_checker.md    — 扫描全文检查术语一致性
+      ├── inspector.md              — 6 维度质检评分（使用评分标尺）
+      └── reviser.md                — 根据质检报告修复问题
 ```
 
 ## 项目结构
