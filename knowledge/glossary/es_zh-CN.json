@@ -1,0 +1,356 @@
+{
+  "source_lang": "es",
+  "target_lang": "zh-CN",
+  "domain": [
+    "administrative"
+  ],
+  "last_updated": "2026-05-25T07:30:43.583125+00:00",
+  "entries": [
+    {
+      "source": "CFE",
+      "target": "CFE（墨西哥联邦电力委员会）",
+      "frequency": 7,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582293+00:00",
+      "last_seen": "2026-05-25T07:30:43.582293+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P0] CFE",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Comisión",
+      "target": "墨西哥联邦电力委员会",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582354+00:00",
+      "last_seen": "2026-05-25T07:30:43.582354+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P1] Comisión Federal de Electricidad",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Federal",
+      "target": "墨西哥联邦电力委员会",
+      "frequency": 5,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582392+00:00",
+      "last_seen": "2026-05-25T07:30:43.582392+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P1] Comisión Federal de Electricidad",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Electricidad",
+      "target": "墨西哥联邦电力委员会",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582427+00:00",
+      "last_seen": "2026-05-25T07:30:43.582427+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P1] Comisión Federal de Electricidad",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "RFC",
+      "target": "墨西哥城。RFC：CFE370814QI0",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582459+00:00",
+      "last_seen": "2026-05-25T07:30:43.582459+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P6] Ciudad de México. RFC: CFE370814QI0",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "MAY",
+      "target": "2026年5月8日",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582490+00:00",
+      "last_seen": "2026-05-25T07:30:43.582490+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P22] 08 MAY 26",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "FEB",
+      "target": "2026年2月19日至2026年4月21日",
+      "frequency": 5,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582522+00:00",
+      "last_seen": "2026-05-25T07:30:43.582522+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P32] 19 FEB 26-21 ABR 26",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "ABR",
+      "target": "2026年2月19日至2026年4月21日",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582553+00:00",
+      "last_seen": "2026-05-25T07:30:43.582553+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P32] 19 FEB 26-21 ABR 26",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Concepto",
+      "target": "费用项目",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582586+00:00",
+      "last_seen": "2026-05-25T07:30:43.582586+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P36] Concepto",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "MXN",
+      "target": "（墨西哥比索）",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582619+00:00",
+      "last_seen": "2026-05-25T07:30:43.582619+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P43] (MXN)",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Energía",
+      "target": "电能（千瓦时）",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582652+00:00",
+      "last_seen": "2026-05-25T07:30:43.582652+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P46] Energía (kWh)",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "kWh",
+      "target": "电能（千瓦时）",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582685+00:00",
+      "last_seen": "2026-05-25T07:30:43.582685+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P46] Energía (kWh)",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "consumo",
+      "target": "此图表反映您的用电量水平。用电越少，补贴越多。",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582718+00:00",
+      "last_seen": "2026-05-25T07:30:43.582718+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P62] Este gráfico refleja tu nivel de consumo. A menor uso, mayor apoyo.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Importe",
+      "target": "金额（墨西哥比索）",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582751+00:00",
+      "last_seen": "2026-05-25T07:30:43.582751+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P68] Importe (MXN)",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "del",
+      "target": "应付金额明细",
+      "frequency": 23,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582795+00:00",
+      "last_seen": "2026-05-25T07:30:43.582795+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P97] Desglose del Importe a pagar",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "con",
+      "target": "此图表反映您的用电量水平。用电越少，补贴越多。",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582831+00:00",
+      "last_seen": "2026-05-25T07:30:43.582831+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P62] Este gráfico refleja tu nivel de consumo. A menor uso, mayor apoyo.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "los",
+      "target": "应付金额明细",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582867+00:00",
+      "last_seen": "2026-05-25T07:30:43.582867+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P97] Desglose del Importe a pagar",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "que",
+      "target": "(1) SCMEm：与市场服务相关的费用。(2) DAP：公共照明费。(3) 费用或抵免额：可能包含在所收到的通知中的与供电相关的各项费用项目。",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582903+00:00",
+      "last_seen": "2026-05-25T07:30:43.582903+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P116] (1) SCMEm: Costos relacionados con los servicios del Mercado. (2) DAP: Derecho de Alumbrado Público. (3) Cargos o créditos: Diversos conceptos que se pueden incluir en el aviso recibido relacionados con el suministro.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "DIC",
+      "target": "2025年12月19日至2026年2月19日",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582941+00:00",
+      "last_seen": "2026-05-25T07:30:43.582941+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P137] del 19 DIC 25 al 19 FEB 26",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "OCT",
+      "target": "2025年10月20日至2025年12月19日",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.582978+00:00",
+      "last_seen": "2026-05-25T07:30:43.582978+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P141] del 20 OCT 25 al 19 DIC 25",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "JUN",
+      "target": "2025年6月23日至2025年8月19日",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.583015+00:00",
+      "last_seen": "2026-05-25T07:30:43.583015+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "general",
+      "source_context": "[P149] del 23 JUN 25 al 19 AGO 25",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "23-01-06",
+      "target": "72830 23-01-06 XAXX-010101 024 CFE",
+      "frequency": 2,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.583048+00:00",
+      "last_seen": "2026-05-25T07:30:43.583048+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "reference",
+      "source_context": "[P18] 72830 23-01-06 XAXX-010101 024 CFE",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "XAXX-010101",
+      "target": "72830 23-01-06 XAXX-010101 024 CFE",
+      "frequency": 2,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T07:30:43.583081+00:00",
+      "last_seen": "2026-05-25T07:30:43.583081+00:00",
+      "source_jobs": [
+        "韩国人住址证明_HTML_E2E"
+      ],
+      "category": "reference",
+      "source_context": "[P18] 72830 23-01-06 XAXX-010101 024 CFE",
+      "extraction_method": "paragraph_alignment"
+    }
+  ],
+  "archived_count": 0
+}

@@ -1,0 +1,161 @@
+{
+  "source_lang": "zh-CN",
+  "target_lang": "en",
+  "domain": [
+    "commercial"
+  ],
+  "last_updated": "2026-05-25T09:37:27.574951+00:00",
+  "entries": [
+    {
+      "source": "Leyuan",
+      "target": "Leyuan",
+      "frequency": 7,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T09:37:27.574337+00:00",
+      "last_seen": "2026-05-25T09:37:27.574337+00:00",
+      "source_jobs": [
+        "translation_job_20260525_170721"
+      ],
+      "category": "general",
+      "source_context": "[P0] Leyuan",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Health",
+      "target": "Health.",
+      "frequency": 6,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T09:37:27.574423+00:00",
+      "last_seen": "2026-05-25T09:37:27.574423+00:00",
+      "source_jobs": [
+        "translation_job_20260525_170721"
+      ],
+      "category": "general",
+      "source_context": "[P1] Health.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Juice",
+      "target": "Fruit Juice",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T09:37:27.574481+00:00",
+      "last_seen": "2026-05-25T09:37:27.574481+00:00",
+      "source_jobs": [
+        "translation_job_20260525_170721"
+      ],
+      "category": "general",
+      "source_context": "[P3] Fruit Juice",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "乐源健康",
+      "target": "Introduction to Leyuan Health",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T09:37:27.574535+00:00",
+      "last_seen": "2026-05-25T09:37:27.574535+00:00",
+      "source_jobs": [
+        "translation_job_20260525_170721"
+      ],
+      "category": "general",
+      "source_context": "[P2] 乐源健康介绍",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "零度果坊",
+      "target": "Lingdu Guofang",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T09:37:27.574585+00:00",
+      "last_seen": "2026-05-25T09:37:27.574585+00:00",
+      "source_jobs": [
+        "translation_job_20260525_170721"
+      ],
+      "category": "general",
+      "source_context": "[P11] 零度果坊",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "果蔬秘诀",
+      "target": "Guoshu Mijue",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T09:37:27.574635+00:00",
+      "last_seen": "2026-05-25T09:37:27.574635+00:00",
+      "source_jobs": [
+        "translation_job_20260525_170721"
+      ],
+      "category": "general",
+      "source_context": "[P12] 果蔬秘诀",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "品牌介绍",
+      "target": "Brand Introduction",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T09:37:27.574688+00:00",
+      "last_seen": "2026-05-25T09:37:27.574688+00:00",
+      "source_jobs": [
+        "translation_job_20260525_170721"
+      ],
+      "category": "general",
+      "source_context": "[P103] 品牌介绍",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "全家福",
+      "target": "Full Product Range",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T09:37:27.574768+00:00",
+      "last_seen": "2026-05-25T09:37:27.574768+00:00",
+      "source_jobs": [
+        "translation_job_20260525_170721"
+      ],
+      "category": "general",
+      "source_context": "[P111] 全家福",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Center",
+      "target": "R&D Center",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T09:37:27.574845+00:00",
+      "last_seen": "2026-05-25T09:37:27.574845+00:00",
+      "source_jobs": [
+        "translation_job_20260525_170721"
+      ],
+      "category": "general",
+      "source_context": "[P209] R&D Center",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "ISO14001",
+      "target": "Fully implemented HACCP management system and successively achieved FSSC22000, ISO9001, ISO14001, BRC, HALAL and other management system certifications, as well as CNAS laboratory accreditation.",
+      "frequency": 2,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-25T09:37:27.574920+00:00",
+      "last_seen": "2026-05-25T09:37:27.574920+00:00",
+      "source_jobs": [
+        "translation_job_20260525_170721"
+      ],
+      "category": "reference",
+      "source_context": "[P247] 全面导入HACCP管理体系，先后通过FSSC22000、ISO9001、ISO14001、BRC、HALAL等管理体系认证以及CNAS实验室认可。",
+      "extraction_method": "paragraph_alignment"
+    }
+  ],
+  "archived_count": 0
+}

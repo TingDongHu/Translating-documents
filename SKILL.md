@@ -5,7 +5,7 @@ description: Runs document translation jobs through a file-driven quality-assure
 
 # Translating Documents
 
-Run document translation jobs through a file-driven, auditable pipeline. Currently supports DOCX source files only.
+Run document translation jobs through a file-driven, auditable pipeline. Supports DOCX, HTML, Markdown (.md), TXT, XLSX, and PPTX source files.
 
 The main agent is an orchestrator. Specialized workers and scripts perform extraction, knowledge loading, terminology research, translation, QA, revision, rendering, and final audit.
 
@@ -13,7 +13,7 @@ The main agent is an orchestrator. Specialized workers and scripts perform extra
 
 The main agent MUST:
 
-- collect source file path (DOCX format only);
+- collect source file path (DOCX, HTML, Markdown (.md), TXT, XLSX, or PPTX format);
 - collect source language, target language, domain, and quality level;
 - create an isolated job directory;
 - write `job_manifest.json`;
@@ -85,7 +85,7 @@ Required core files:
 - `workflow_state.json` — single source of truth for current stage;
 - `extraction/source_tagged.txt` — tagged source text;
 - `extraction/extraction.json` — source location mapping;
-- `extraction/extraction_report.json` — paragraph count and type summary for batch strategy decisions;
+- `extraction/extraction_report.json` — paragraph count and type summary for batch strategy decisions; report contents vary by format (DOCX/HTML/MD: body_count, heading_count, table_count; TXT: body_count; XLSX: table_count; PPTX: body_count, table_count);
 - `knowledge/knowledge_manifest.json` — index of produced bundles;
 - `knowledge/bundle_universal.md` — target-language writing rules;
 - `knowledge/bundle_domain.md` — domain-specific decision frameworks;
@@ -142,7 +142,7 @@ Every stage is dispatched to an isolated subagent. The main agent never runs scr
 
 | Stage | Worker Type | Worker Template | Script | Dependencies |
 |-------|-------------|----------------|--------|--------------|
-| extraction | script runner | `workers/script_runner.md` | `pipeline/scripts/extract_docx.py` | python-docx, lxml |
+| extraction | script runner | `workers/script_runner.md` | `pipeline/scripts/extract_{source_format}.py` | — |
 | knowledge_loading | language worker | `workers/knowledge_loader.md` | — | — |
 | terminology_research | language worker | `workers/terminology_researcher.md` | — | — |
 | adaptation_research | language worker | `workers/adaptation_researcher.md` | — | knowledge_loading + terminology_research |
@@ -152,9 +152,11 @@ Every stage is dispatched to an isolated subagent. The main agent never runs scr
 | terminology_scan | language worker | `workers/consistency_checker.md` | — | — |
 | inspection_roundN | language worker | `workers/inspector.md` | — | writes scorecard + detailed QA report per round |
 | revision_roundN | language worker | `workers/reviser.md` | — | — |
-| render | script runner | `workers/script_runner.md` | `pipeline/scripts/render_docx.py` | python-docx, lxml |
+| render | script runner | `workers/script_runner.md` | `pipeline/scripts/render_{source_format}.py` | — |
 | final_audit | script runner | `workers/script_runner.md` | `pipeline/scripts/final_audit.py` | — |
 | knowledge_extraction | script runner | `workers/script_runner.md` | `pipeline/scripts/knowledge_extraction.py` | final_audit |
+
+**Format dispatching:** The `{source_format}` placeholder is resolved from `job_manifest.source_format` at dispatch time. Supported values: `docx`, `html`, `md`, `txt`, `xlsx`, `pptx`. The main agent constructs the script path by interpolating `source_format` into the script name (e.g. `extract_docx.py`, `extract_html.py`, `extract_md.py`, `extract_txt.py`, `extract_xlsx.py`, `extract_pptx.py`).
 
 **Script runner** = a subagent that executes a Python script, debugs encoding/path/import errors, retries up to 3 times, and returns only exit status and key output values. Each script gets a fresh subagent so debugging loops never pollute the main agent's context.
 
@@ -446,7 +448,7 @@ When `final/final_manifest.json` reports `status=blocked`, the main agent MUST d
 1. Read `final_manifest.json` to identify failing gates:
    - `marker_check_passed: false` → marker integrity lost.
    - `numerical_check_passed: false` → numerical mismatch (professional only).
-   - `render_check_passed: false` → DOCX output missing.
+   - `render_check_passed: false` → render output missing.
    - `critical_issues_remaining > 0` → unresolved quality issues.
 
 2. Offer the user a targeted recovery choice:

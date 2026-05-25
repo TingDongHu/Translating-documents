@@ -17,7 +17,7 @@
     "source_file": { "type": "string", "minLength": 1 },
     "source_format": {
       "type": "string",
-      "enum": ["docx", "html", "md"],
+      "enum": ["docx", "html", "md", "txt", "xlsx", "pptx"],
       "default": "docx"
     },
     "source_language": { "type": "string", "minLength": 1 },

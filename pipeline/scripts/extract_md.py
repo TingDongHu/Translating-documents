@@ -93,7 +93,6 @@ def extract_from_md(source_path):
     in_yaml = False
     in_code_block = False
     in_math_block = False
-    # For tracking fenced code block fence character and minimum length
     fence_char = ""
     fence_min_len = 0
 
@@ -110,6 +109,16 @@ def extract_from_md(source_path):
         if in_yaml:
             if line.strip() == "---":
                 in_yaml = False
+            continue
+
+        # Math blocks: $$ ... $$ (must come before code fence)
+        if line.strip() == "$$":
+            if not in_math_block:
+                in_math_block = True
+            else:
+                in_math_block = False
+            continue
+        if in_math_block:
             continue
 
         # Fenced code blocks (```...``` or ~~~...~~~)
@@ -132,18 +141,6 @@ def extract_from_md(source_path):
                 fence_char = ""
                 fence_min_len = 0
             continue
-
-        # Math blocks: $$ ... $$
-        if line.strip() == "$$":
-            if not in_math_block:
-                in_math_block = True
-            else:
-                in_math_block = False
-            continue
-        if in_math_block:
-            continue
-
-        # ---- Extractable content ----
 
         stripped = line.strip()
         if not stripped:

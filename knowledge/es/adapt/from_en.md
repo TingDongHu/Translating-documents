@@ -1,0 +1,488 @@
+---
+id: es/adapt/from_en
+type: adapt
+target_lang: es
+source_lang: en
+name: English to Spanish Adaptation
+description: Target-specific adaptation rules for translating English documents into Spanish
+---
+
+## Formality and Treatment
+
+- **English "you" → Spanish "usted/ustedes/tú/vosotros" four-way distinction**
+  - Source: "You are required to..." → Target: "Usted está obligado a..." (formal singular, standard for business)
+  - Source: "You may proceed" → Target: "Puede continuar" (formal usted)
+  - Source: "You should check" → Target: "Debe verificar" / "Debería verificar" (formal)
+  - Context: For general business/technical translation, default to "usted" (formal singular) and "ustedes" (formal plural). "Tú" is reserved for informal/consumer contexts. "Vosotros" is used only in Spain for informal plural; Latin American Spanish uses "ustedes" for all plural.
+- **English "your" → Spanish "su/tu/vuestro"**
+  - Source: "Your application" → Target: "Su solicitud" (formal)
+  - Source: "Your order" → Target: "Su pedido"
+  - Source: "Your password" → Target: "Su contraseña" (formal, technical docs)
+- **English imperative mood in technical docs → Spanish imperative (formal) or infinitive**
+  - Source: "Click here" → Target: "Haga clic aquí" (formal imperative: haga, not haz)
+  - Source: "Enter your password" → Target: "Introduzca su contraseña" (formal imperative)
+  - Source: "Press Enter to continue" → Target: "Pulse Intro para continuar"
+  - Regional variation: Spain prefers "pulse"/"haga"/"introduzca" (formal imperative); Latin American Spanish also uses formal imperative but may prefer "presione"/"coloque"/"ingrese"
+  - Alternative (mainly Spain software): Use infinitive as impersonal: "Hacer clic aquí", "Introducir contraseña" (common in UI strings, menus)
+- **English "please" → Spanish "por favor"**
+  - Source: "Please find attached..." → Target: "Adjunto encontrará..." / "Le adjuntamos..." (Spanish often omits "por favor" in formal correspondence; it is implied)
+  - Source: "Please confirm receipt" → Target: "Le rogamos confirme la recepción" / "Sírvase confirmar la recepción" (more formal than "por favor confirme")
+  - Source: "Please note that..." → Target: "Tenga en cuenta que..." / "Nótese que..."
+  - Note: English uses "please" more frequently than Spanish uses "por favor". In formal Spanish, "rogamos" / "sírvase" / "le agradeceríamos" are often more natural than literal "por favor".
+- **English "please" in instructions → Spanish "por favor" (optional, context-dependent)**
+  - Source: "Please wait" → Target: "Espere, por favor" or simply "Espere" (both acceptable)
+  - Source: "Please do not hesitate to contact us" → Target: "No dude en ponerse en contacto con nosotros"
+- **English titles (Mr/Ms/Mrs/Dr) → Spanish equivalents**
+  - Source: "Mr. Smith" → Target: "Sr. Smith" / "Señor Smith"
+  - Source: "Ms. Johnson" → Target: "Sra. Johnson" / "Señora Johnson" (Spanish uses "Sra." for both Ms. and Mrs.)
+  - Source: "Dr. Martinez" → Target: "Dr. Martínez" (use surname, and use Dr./Dra. with gender agreement)
+  - Source: "Professor Brown" → Target: "Prof. Brown" / "Profesor Brown"
+  - Note: Spanish abbreviations for titles: Sr. (Señor), Sra. (Señora), Srta. (Señorita), D. (Don — very formal), D.ª (Doña), Dr./Dra., Prof./Prof.ª
+- **English "Dear Sirs" / "To whom it may concern" → Spanish formal openings**
+  - Source: "Dear Sirs" → Target: "Muy señores míos:" / "Estimados señores:" (colon, not comma)
+  - Source: "To whom it may concern" → Target: "A quien corresponda:" / "A quién pueda interesar:"
+  - Source: "Dear Mr. García" → Target: "Estimado Sr. García:" (colon in Spanish, not comma)
+  - Source: "Dear colleagues" → Target: "Estimados colegas:"
+  - Note: Spanish formal letters use colon (:) after the salutation, not comma (,). This is a key difference from English.
+- **English conversational/colloquial style → Spanish more formal register**
+  - Source: "Let's get started" → Target: "Comencemos" / "Demos comienzo" (neutral/formal, not "Vamos a empezar" which is too casual for formal docs)
+  - Source: "Feel free to contact us" → Target: "No dude en contactarnos" (formal)
+  - Source: "Thanks!" → Target: "Gracias." / "Le agradecemos..." (formal)
+- **English "you" generic (one) → Spanish impersonal "se"**
+  - Source: "You can see the results" → Target: "Se pueden ver los resultados" (impersonal se)
+  - Source: "You should always verify" → Target: "Siempre se debe verificar" / "Debe verificarse siempre"
+  - Note: Spanish prefers impersonal "se" constructions over using "usted" repeatedly in general statements. This is more natural than overusing "usted".
+- **English gender-neutral language → Spanish grammatical gender (desdoblamiento or generic masculine)**
+  - Source: "The employee must submit his/her report" → Target: "El/la empleado/a debe presentar su informe" (desdoblamiento with slash) or "El empleado debe presentar su informe" (generic masculine)
+  - Source: "The participants and their spouses" → Target: "Los participantes y sus cónyuges" ("cónyuge" is gender-neutral)
+  - Note: Spanish does not have a neutral gender equivalent to English singular "they". Use generic masculine for groups of mixed gender, desdoblamiento (los/las) when specified, or gender-neutral nouns where available ("la persona", "el miembro").
+
+### Passive Voice Handling
+
+- **English passive voice → Spanish passive (ser + participio) or active/reflexive (se)**
+  - Source: "The report was submitted on time" → Target: "El informe se presentó a tiempo" (reflexive passive, most natural) or "El informe fue presentado a tiempo" (ser passive, formal)
+  - Source: "It is recommended that..." → Target: "Se recomienda que..." (reflexive passive — most common in Spanish)
+  - Source: "It was decided that..." → Target: "Se decidió que..." (reflexive passive)
+  - Source: "The document is attached" → Target: "Se adjunta el documento" / "El documento se adjunta" (reflexive passive)
+  - Note: English uses the passive voice much more frequently than Spanish. In Spanish, prefer:
+    1. Reflexive passive with "se" (most natural)
+    2. Active voice (clear agent)
+    3. Ser + participle (only for very formal/legal texts)
+- **English passive with modal verbs → Spanish reflexive passive or impersonal**
+  - Source: "This can be adjusted" → Target: "Esto puede ajustarse" / "Se puede ajustar esto"
+  - Source: "The form must be signed" → Target: "El formulario debe firmarse" / "Debe firmarse el formulario"
+  - Source: "The password must be changed every 30 days" → Target: "La contraseña debe cambiarse cada 30 días"
+- **English impersonal "it is said that..." → Spanish "se dice que..."**
+  - Source: "It is believed that..." → Target: "Se cree que..."
+  - Source: "It is known that..." → Target: "Se sabe que..."
+- **English passive avoiding agent → Spanish "se" passive (ideal equivalent)**
+  - Source: "The contract was signed yesterday" → Target: "El contrato se firmó ayer" (se passive avoids specifying agent, just like the English passive)
+  - Source: "The meeting has been postponed" → Target: "La reunión se ha pospuesto" / "Se ha pospuesto la reunión"
+  - Source: "The report is being prepared" → Target: "El informe se está preparando" / "Se está preparando el informe"
+
+## Number and Date Conventions
+
+- **English decimal point (.) → Spanish decimal comma (,)**
+  - Source: "3.14" → Target: "3,14"
+  - Source: "99.9%" → Target: "99,9%"
+  - Source: "0.5" → Target: "0,5" (leading zero is kept)
+  - ZERO TOLERANCE: This is the most common numeric error in EN→ES translation. Inverting decimal and thousands separators can change values.
+- **English thousands separator (,) → Spanish period (.) or thin space**
+  - Source: "12,345,678" → Target: "12.345.678" (traditional) or "12 345 678" (modern international style)
+  - Source: "1,000" → Target: "1.000" or "1000" (for 4-digit numbers, space is optional: 1000 or 1 000)
+  - Source: "10,000" → Target: "10.000" or "10 000"
+  - Rule: Choose one style (period or thin space) and apply consistently. Never mix styles.
+- **English "billion" (10⁹) → Spanish "mil millones" (NOT "billón")**
+  - Source: "$5 billion" → Target: "5 000 millones de dólares" / "USD 5 000 millones"
+  - Critical: Spanish "billón" = 10¹² (one million millions). English "billion" = 10⁹ (one thousand millions). Translating "billion" as "billón" is a MAJOR error — it multiplies the value by 1,000.
+  - Source: "$2.5 billion" → Target: "2 500 millones de dólares" (not "2,5 billones")
+  - Source: "The company is worth $1 billion" → Target: "La empresa vale 1 000 millones de dólares"
+- **English "trillion" (10¹²) → Spanish "billón"**
+  - Source: "$2 trillion" → Target: "2 billones de dólares" (correct: Spanish billón = English trillion)
+  - Source: "national debt of $31 trillion" → Target: "deuda nacional de 31 billones de dólares"
+- **English "quadrillion" (10¹⁵) → Spanish "mil billones"**
+- **English date format: Month DD, YYYY or MM/DD/YYYY → Spanish: DD/MM/YYYY**
+  - Source: "January 15, 2024" → Target: "15 de enero de 2024" (text) or "15/01/2024" (numeric)
+  - Source: "12/31/2023" → Target: "31/12/2023" (**critical**: swap month and day!)
+  - Source: "2023-12-31" → Target: "31/12/2023" (ISO format may be kept in technical contexts)
+  - ZERO TOLERANCE: MM/DD/YYYY → DD/MM/YYYY conversion is the most common date error.
+- **English ordinal dates ("January 1st, 2024") → Spanish cardinal numbers**
+  - Source: "January 1st, 2024" → Target: "1 de enero de 2024" (cardinal, not "1.º de enero")
+  - Exception: Spanish uses ordinals only for the first day of the month: "1.º de enero" (primero de enero) is accepted but "1 de enero" is more common
+  - Source: "December 31st" → Target: "31 de diciembre" (never "31.º de diciembre")
+- **English 12h time (AM/PM) → Spanish 24h time or 12h with a. m./p. m.**
+  - Source: "3:00 PM" → Target: "15:00" (24h, preferred for formal/official documents)
+  - Source: "12:00 AM" → Target: "0:00" (midnight) or "12:00 a. m." (12h format)
+  - Source: "12:00 PM" → Target: "12:00" (noon) or "12:00 m." (meridiem, less common)
+  - Source: "9:30 AM" → Target: "9:30" / "09:30" (24h) or "9:30 a. m." (12h)
+  - Note: Spanish uses "a. m." (from Latin ante meridiem) and "p. m." (post meridiem) with spaces and periods. "a.m." without spaces is also common but less formal. Choose one style and apply consistently.
+- **English week references → Spanish**
+  - Source: "Week of March 5" → Target: "Semana del 5 de marzo"
+  - Source: "the week starting Monday" → Target: "la semana que comienza el lunes"
+- **English "midnight" / "noon" → Spanish "medianoche" / "mediodía"**
+  - Source: "The report is due by midnight" → Target: "El informe debe entregarse antes de la medianoche"
+  - Source: "The meeting is at noon" → Target: "La reunión es al mediodía"
+- **English century format → Spanish**
+  - Source: "21st century" → Target: "siglo XXI" (Roman numerals preferred, lowercase "siglo")
+  - Source: "early 20th century" → Target: "principios del siglo XX"
+  - Source: "late 19th century" → Target: "finales del siglo XIX"
+- **English decades → Spanish**
+  - Source: "the 1990s" → Target: "la década de 1990" / "los años 90" / "los noventa"
+  - Source: "the 1960s" → Target: "los años sesenta" / "la década de 1960"
+- **English large numbers in text → Spanish numeric conventions**
+  - Source: "over 2.5 million people" → Target: "más de 2,5 millones de personas" (decimal comma)
+  - Source: "1.2 billion dollars" → Target: "1 200 millones de dólares" (avoid "billón"!)
+- **English fractions in text → Spanish**
+  - Source: "3/4 of the participants" → Target: "tres cuartas partes de los participantes"
+  - Source: "a 1/2 inch pipe" → Target: "un tubo de media pulgada" / "un tubo de 1/2 pulgada"
+- **English percentage formats → Spanish**
+  - Source: "a 10% increase" → Target: "un aumento del 10%" / "un incremento del 10 por ciento"
+  - Source: "5 percentage points" → Target: "5 puntos porcentuales"
+
+## Cultural References
+
+- **English common law concepts → Spanish descriptive adaptation** (no direct equivalent in civil law systems)
+  - Source: "common law" → Target: "derecho anglosajón" / "derecho común" / "sistema de precedentes" (explain on first use)
+  - Source: "equity" (legal) → Target: "derecho de equidad" / "principios de equidad" (context-dependent)
+  - Source: "trust" (legal) → Target: "fideicomiso" / "trust" (anglicism used in some contexts, but "fideicomiso" is preferred)
+  - Source: "consideration" (contract law) → Target: "contraprestación" (not "consideración")
+- **English corporate concepts → Spanish equivalents**
+  - Source: "Limited Liability Company (LLC)" → Target: "Sociedad de Responsabilidad Limitada (SRL)" / "Sociedad Limitada (SL)"
+  - Source: "Corporation (Inc./Corp.)" → Target: "Sociedad Anónima (SA)" / "Corporación"
+  - Source: "Public Limited Company (PLC)" → Target: "Sociedad Anónima Abierta" / "Sociedad Cotizada"
+  - Source: "Board of Directors" → Target: "Consejo de Administración" / "Junta Directiva"
+  - Source: "CEO" → Target: "Director General" / "Director Ejecutivo" / "CEO" (anglicism widely used in business)
+  - Source: "CFO" → Target: "Director Financiero"
+  - Source: "shareholder" → Target: "accionista"
+  - Source: "stakeholder" → Target: "interesado" / "parte interesada" / "grupo de interés" / "stakeholder" (anglicism used)
+- **English measurement system (imperial) → Spanish metric system**
+  - Source: "5 miles" → Target: "8 km" (convert to metric; add imperial in parentheses if needed for technical accuracy)
+  - Source: "10 feet" → Target: "3,05 m" / "3 metros" (approximate or precise based on context)
+  - Source: "1 gallon" → Target: "3,78 litros"
+  - Source: "32°F" → Target: "0 °C"
+  - Source: "1 pound" → Target: "0,454 kg" / "454 gramos"
+  - Source: "1 inch" → Target: "2,54 cm"
+  - Source: "1 ounce" → Target: "28,35 gramos"
+  - Note: Converting imperial to metric is mandatory for most Spanish-language documents. For literary or historical texts, keep imperial with metric in parentheses.
+- **English idiomatic expressions → Spanish equivalents (not literal)**
+  - Source: "It's raining cats and dogs" → Target: "Llueve a cántaros" (idiomatic equivalent)
+  - Source: "The ball is in your court" → Target: "La pelota está en su tejado" / "Le toca a usted mover ficha"
+  - Source: "To cut a long story short" → Target: "En resumidas cuentas" / "Para no hacer un cuento largo"
+  - Source: "To bite the bullet" → Target: "Tragar saliva" / "Afrontar el toro"
+  - Source: "The best of both worlds" → Target: "Lo mejor de ambos mundos" / "Salirse con la suya en ambos aspectos"
+  - Source: "To hit the nail on the head" → Target: "Dar en el clavo"
+  - Source: "It's not rocket science" → Target: "No es cosa del otro jueves" / "No es tan complicado"
+  - Source: "Once in a blue moon" → Target: "De Pascuas a Ramos" / "Cada muerte de obispo"
+  - Source: "To add insult to injury" → Target: "Para colmo de males" / "Por si fuera poco"
+  - Source: "To be on the same page" → Target: "Estar en la misma sintonía" / "Estar de acuerdo"
+  - Note: When an exact idiomatic equivalent does not exist, use a functional translation that conveys the same meaning in natural Spanish.
+- **English culturally specific terms → keep with explanation or adapt**
+  - Source: "Thanksgiving" → Target: "Día de Acción de Gracias" (well-known in Spanish-speaking world; no explanation needed)
+  - Source: "Super Bowl" → Target: "Super Bowl" (kept in English, well-known)
+  - Source: "Social Security Number" → Target: "número de la Seguridad Social (SSN)"
+  - Source: "IRS" → Target: "Servicio de Impuestos Internos (IRS)"
+  - Source: "401(k)" → Target: "plan de pensiones 401(k)" (add "plan de pensiones" for context)
+  - Source: "FBI" → Target: "FBI (Oficina Federal de Investigación)"
+  - Source: "FDA" → Target: "FDA (Administración de Alimentos y Medicamentos)"
+- **English names of international organizations → use official Spanish names**
+  - Source: "United Nations" → Target: "Naciones Unidas (ONU)"
+  - Source: "World Health Organization" → Target: "Organización Mundial de la Salud (OMS)"
+  - Source: "International Monetary Fund" → Target: "Fondo Monetario Internacional (FMI)"
+  - Source: "NATO" → Target: "OTAN" (Organización del Tratado del Atlántico Norte)
+  - Source: "European Union" → Target: "Unión Europea (UE)"
+  - Source: "World Bank" → Target: "Banco Mundial (BM)"
+  - Source: "UNESCO" → Target: "UNESCO" (keep acronym; full: Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura)
+  - Source: "WTO" → Target: "OMC (Organización Mundial del Comercio)"
+- **English academic concepts → Spanish adaptation**
+  - Source: "Bachelor's degree" → Target: "título de grado" / "licenciatura" (context-dependent; "licenciatura" is more traditional in Spanish)
+  - Source: "Master's degree" → Target: "máster" / "maestría" (Latin America prefers "maestría"; Spain prefers "máster")
+  - Source: "PhD" → Target: "doctorado" / "PhD" (both used; "doctorado" preferred in formal Spanish)
+  - Source: "GPA" → Target: "nota media" / "promedio académico" (GPA is not a Spanish concept; translate descriptively)
+  - Source: "High school" → Target: "instituto" / "secundaria" / "bachillerato" (regional variation)
+  - Source: "College" → Target: "universidad" (not "colegio" which means K-12 school)
+- **English month-day constructions → Spanish**
+  - Source: "The May 5 meeting" → Target: "La reunión del 5 de mayo" (not "la reunión de mayo 5")
+  - Source: "the January report" → Target: "el informe de enero" (months are lowercase)
+- **English proper names**: Keep in original Latin script. Spanish does not transliterate English names into Spanish orthography (unlike Russian).
+  - Source: "Johnson" → Target: "Johnson" (not "Yonson")
+  - Source: "Washington" → Target: "Washington"
+  - Exception: Well-known historical figures and monarchs: "Charles" → "Carlos", "James" → "Santiago" / "Jaime", "Henry" → "Enrique", "Elizabeth" → "Isabel"
+  - Exception: Geographical names with established Spanish forms: "London" → "Londres", "New York" → "Nueva York", "Los Angeles" → "Los Ángeles", "United Kingdom" → "Reino Unido", "Germany" → "Alemania", "France" → "Francia", "Italy" → "Italia"
+
+## Anglicisms and Technical Terminology
+
+- **General principle**: Prefer the Spanish-native term over the anglicism unless the anglicism is universally established in the target variety.
+  - Source: "email" → Target: "correo electrónico" (preferred) vs. "email" (anglicism, widely used but less formal)
+  - Source: "website" → Target: "sitio web" (preferred) vs. "website" (avoid)
+  - Source: "meeting" → Target: "reunión" (preferred) vs. "meeting" (anglicism, used in corporate jargon but avoid in formal writing)
+  - Source: "feedback" → Target: "comentarios" / "retroalimentación" / "opiniones" (avoid "feedback" in formal texts)
+  - Source: "performance" → Target: "rendimiento" (technical) / "desempeño" (HR) (avoid "performance" as anglicism)
+- **IT terminology: regional variation (computadora vs ordenador)**
+  - Source: "computer" → Target: "computadora" (Latin America) / "ordenador" (Spain)
+  - Source: "laptop" → Target: "computadora portátil" / "ordenador portátil" / "laptop" (anglicism increasingly common)
+  - Source: "software" → Target: "software" (standard anglicism, accepted by RAE) / "programas informáticos" (descriptive)
+  - Source: "hardware" → Target: "hardware" (standard anglicism) / "equipo informático" (descriptive)
+  - Source: "firmware" → Target: "firmware" (standard anglicism)
+  - Source: "cloud computing" → Target: "computación en la nube" (Latin America) / "informática en la nube" (Spain)
+  - Source: "machine learning" → Target: "aprendizaje automático" / "machine learning" (anglicism common in technical contexts)
+  - Source: "artificial intelligence" → Target: "inteligencia artificial (IA)"
+  - Source: "deep learning" → Target: "aprendizaje profundo" / "deep learning"
+  - Source: "big data" → Target: "macrodatos" / "big data" (anglicism widely used)
+  - Source: "internet" → Target: "internet" (lowercase, masculine: "el internet" or feminine "la internet" — RAE recommends masculine)
+  - Source: "login" → Target: "inicio de sesión" / "acceso" / "login" (anglicism)
+  - Source: "username" → Target: "nombre de usuario"
+  - Source: "password" → Target: "contraseña" (not "password")
+  - Source: "click" (verb) → Target: "hacer clic" (not "clicar" in standard Spanish, though "cliquear" is used in some regions)
+- **Business/management anglicisms → Spanish equivalents**
+  - Source: "business" → Target: "negocio" / "empresa" / "comercial" (context-dependent)
+  - Source: "marketing" → Target: "marketing" / "mercadotecnia" / "mercadeo" (regional variation; "marketing" is the most common anglicism)
+  - Source: "manager" → Target: "gerente" / "director" / "gestor" (avoid "mánager" except in entertainment)
+  - Source: "consulting" → Target: "consultoría" (avoid "consulting")
+  - Source: "CEO" → Target: "Director General" / "Director Ejecutivo" / "CEO" (anglicism used in international business)
+  - Source: "ROI" → Target: "retorno de la inversión" / "ROI" (anglicism common in finance)
+  - Source: "branding" → Target: "creación de marca" / "branding" (anglicism common in marketing)
+  - Source: "briefing" → Target: "instrucciones" / "resumen" / "briefing" (anglicism)
+  - Source: "benchmarking" → Target: "evaluación comparativa" / "benchmarking" (anglicism)
+  - Source: "outsourcing" → Target: "subcontratación" / "externalización" (preferred over "outsourcing")
+- **Legal/administrative anglicisms → Spanish equivalents**
+  - Source: "compliance" → Target: "cumplimiento normativo" / "compliance" (anglicism gaining use in corporate contexts)
+  - Source: "due diligence" → Target: "diligencia debida" (preferred over keeping Latin "due diligence")
+  - Source: "enforcement" → Target: "ejecución" / "aplicación" / "cumplimiento forzoso" (context-dependent)
+  - Source: "liability" → Target: "responsabilidad" / "pasivo" (legal vs. accounting, context-dependent)
+  - Source: "warranty" → Target: "garantía"
+  - Source: "breach of contract" → Target: "incumplimiento de contrato"
+  - Source: "liquidated damages" → Target: "indemnización por daños y perjuicios" (not "daños liquidados")
+  - Source: "intellectual property" → Target: "propiedad intelectual"
+  - Source: "confidentiality" → Target: "confidencialidad"
+  - Source: "non-disclosure agreement (NDA)" → Target: "acuerdo de confidencialidad"
+- **Financial terminology**
+  - Source: "revenue" → Target: "ingresos" / "facturación" (not "revenue")
+  - Source: "profit" → Target: "beneficio" / "ganancia"
+  - Source: "net income" → Target: "ingreso neto" / "beneficio neto"
+  - Source: "EBITDA" → Target: "EBITDA" (keep acronym; explain: "beneficio antes de intereses, impuestos, depreciaciones y amortizaciones")
+  - Source: "accounts receivable" → Target: "cuentas por cobrar" (LATAM) / "cuentas a cobrar" (Spain) / "deudores comerciales"
+  - Source: "accounts payable" → Target: "cuentas por pagar" (LATAM) / "cuentas a pagar" (Spain) / "acreedores comerciales"
+  - Source: "goodwill" → Target: "fondo de comercio" / "plusvalía" (avoid anglicism "goodwill" in financial statements)
+  - Source: "stock" → Target: "acciones" / "existencias" (finance vs. inventory, context-dependent)
+- **Engineering/technical terminology**
+  - Source: "torque" → Target: "par" / "torque" (anglicism, both used in engineering)
+  - Source: "stress" (mechanical) → Target: "tensión" / "esfuerzo"
+  - Source: "strain" → Target: "deformación"
+  - Source: "fatigue" (material) → Target: "fatiga"
+  - Source: "yield strength" → Target: "límite elástico" / "resistencia a la fluencia"
+  - Source: "tensile strength" → Target: "resistencia a la tracción"
+  - Source: "pipeline" → Target: "tubería" / "oleoducto/gasoducto" (context) / "canalización"
+- **False friends (falsos amigos) EN→ES — critical list**
+  - Source: "actually" → Target: "en realidad" / "de hecho" (NOT "actualmente" which means "currently")
+  - Source: "eventually" → Target: "finalmente" / "con el tiempo" (NOT "eventualmente" which means "possibly")
+  - Source: "sensible" → Target: "sensato" / "razonable" (NOT "sensible" which means "sensitive")
+  - Source: "library" → Target: "biblioteca" (NOT "librería" which means "bookstore")
+  - Source: "carpet" → Target: "alfombra" / "moqueta" (NOT "carpeta" which means "folder")
+  - Source: "exit" → Target: "salida" (NOT "éxito" which means "success")
+  - Source: "constipated" → Target: "estreñido" (NOT "constipado" which means "having a cold")
+  - Source: "embarrassed" → Target: "avergonzado" (NOT "embarazada" which means "pregnant")
+  - Source: "record" (noun) → Target: "registro" / "expediente" / "récord" (context-dependent; in IT: "registro")
+  - Source: "assist" → Target: "ayudar" / "asistir" (in the sense of "to attend" as in "asistir a una reunión" is correct, but "asistir" ≠ "to assist" in all contexts)
+  - Source: "discussion" → Target: "debate" / "discusión" (Spanish "discusión" often implies argument, not neutral discussion)
+
+## Administrative/Legal Style
+
+- **English "shall" in legal/technical texts → Spanish obligation (future or present with deontic value)**
+  - Source: "The Contractor shall deliver..." → Target: "El Contratista entregará..." (future tense with deontic value, most common in Spanish legal writing)
+  - Source: "The Employer shall pay..." → Target: "El Contratante pagará..." (future = obligation)
+  - Source: "No modification shall be made without..." → Target: "No se realizará ninguna modificación sin..." / "No podrá realizarse modificación alguna sin..."
+  - Source: "The parties shall comply with..." → Target: "Las partes cumplirán con..." / "Las partes deben cumplir con..."
+  - Note: Spanish legal Spanish uses the future tense (entregará, pagará, cumplirá) to express obligation, not the modal "deber" (must). This is the equivalent of English "shall". Using "deberá" is also correct but more emphatic.
+- **English "shall not" → Spanish negative future or "no podrá"**
+  - Source: "The lessee shall not sublet..." → Target: "El arrendatario no podrá subarrendar..." / "El arrendatario no subarrendará..."
+- **English "hereby/hereinafter/hereunder" → Spanish legal connectors**
+  - Source: "The parties hereby agree" → Target: "Por la presente, las partes acuerdan" / "Las partes, por el presente, acuerdan"
+  - Source: "hereinafter referred to as..." → Target: "en adelante denominado/a como..." (gender agreement with the noun)
+  - Source: "as defined hereunder" → Target: "según se define a continuación" / "conforme a lo dispuesto más abajo"
+  - Source: "herein" → Target: "en el presente [documento/contrato]"
+  - Source: "thereof" → Target: "del mismo" / "de ello"
+  - Source: "whereas" → Target: "CONSIDERANDO" / "VISTO" / "EXPONGO" (depending on the specific legal tradition)
+- **English "whereas" clauses (recitals) → Spanish "CONSIDERANDO" / "EXPONEN"**
+  - Source: "WHEREAS, the Company wishes to engage..." → Target: "CONSIDERANDO: Que la Compañía desea contratar..."
+  - Source: "WHEREAS, the parties wish to enter into..." → Target: "EXPONEN: Que las partes desean suscribir..."
+  - Note: Spanish recitals (exposición de motivos / resultandos) use "CONSIDERANDO" (Mexico/Latin America) or "EXPONEN" (Spain). These are typically capitalized. Each recital paragraph begins with "Que..." after the colon.
+- **English "subject to" → Spanish "sujeto a" / "con sujeción a"**
+  - Source: "Subject to the terms and conditions of this Agreement..." → Target: "Con sujeción a los términos y condiciones del presente Contrato..."
+  - Source: "Subject to applicable law..." → Target: "Sujeto a la legislación aplicable..."
+- **English "notwithstanding" → Spanish "no obstante" / "sin perjuicio de"**
+  - Source: "Notwithstanding the foregoing..." → Target: "No obstante lo anterior..." / "Sin perjuicio de lo anterior..."
+  - Source: "Notwithstanding any provision to the contrary..." → Target: "Sin perjuicio de cualquier disposición en contrario..."
+- **English "pursuant to" → Spanish "conforme a" / "de conformidad con" / "en virtud de"**
+  - Source: "Pursuant to Section 5 of the Agreement..." → Target: "De conformidad con la Cláusula 5 del Contrato..."
+  - Source: "pursuant to law" → Target: "en virtud de la ley"
+- **English legal sentence structure → Spanish even more formal/synthetic**
+  - Source: "In witness whereof, the parties have executed this Agreement..." → Target: "En fe de lo cual, las partes firman el presente Contrato..."
+  - Source: "This Agreement shall be governed by and construed in accordance with..." → Target: "El presente Contrato se regirá e interpretará de conformidad con..."
+  - Source: "For the avoidance of doubt..." → Target: "Para mayor claridad..." / "A efectos de evitar dudas..."
+- **English bullet list punctuation → Spanish conventions**
+  - Source: Bullets ending with semicolons → Spanish: bullets can end with period (if full sentences) or semicolon (if completing introductory phrase)
+  - Source: English capitalizes first word of each bullet → Spanish: lowercase if bullets complete the introductory phrase, uppercase if each bullet is a complete sentence
+  - Example EN:
+    The system:
+    - Processes data;
+    - Generates reports;
+    - Sends notifications.
+  - Example ES:
+    El sistema:
+    - procesa datos;
+    - genera informes; y
+    - envía notificaciones.
+  - Note: Spanish typically uses "y" (and) before the last bullet in a list; English may or may not. Spanish legal lists often use "y" or "e" consistently.
+- **English letter closing → Spanish letter closing**
+  - Source: "Sincerely," → Target: "Atentamente," / "Le saluda atentamente,"
+  - Source: "Best regards," → Target: "Reciba un cordial saludo," / "Atentamente," / "Saludos cordiales,"
+  - Source: "Yours faithfully," → Target: "Le saluda atentamente," / "Queda a la espera de sus noticias,"
+  - Source: "Yours sincerely," → Target: "Atentamente," (universal formal closing in Spanish)
+  - Note: Spanish letter closings are more varied than English. Choose formality level appropriately. "Atentamente" is the most universal for business correspondence.
+- **English "Attached please find..." → Spanish "Adjunto..." / "Adjuntamos..."**
+  - Source: "Please find attached the contract" → Target: "Adjunto encontrará el contrato" / "Adjuntamos el contrato"
+  - Source: "Attached is the report" → Target: "Se adjunta el informe"
+  - Source: "I am attaching..." → Target: "Adjunto..." / "Le adjunto..."
+- **English section references → Spanish conventions**
+  - Source: "Section 5.2" → Target: "Sección 5.2" / "Cláusula 5.2" / "Artículo 5.2" (context-dependent)
+  - Source: "Appendix A" → Target: "Anexo A" / "Apéndice A"
+  - Source: "Schedule 1" → Target: "Apéndice 1" / "Anexo 1"
+  - Note: Spanish legal documents use: "artículo" (article, for laws/regulations), "cláusula" (clause, for contracts), "sección" (section), "apartado" (subsection), "párrafo" (paragraph)
+- **English numbering in legal documents**: "1.1, 1.2" → Spanish "1.1, 1.2" (same)
+- **English reference to laws → Spanish reference style**
+  - Source: "Pursuant to Section 5 of the Securities Act" → Target: "Conforme al artículo 5 de la Ley del Mercado de Valores"
+  - Source: "Under the laws of the State of New York" → Target: "Conforme a la legislación del Estado de Nueva York"
+  - Source: "As defined in the Act" → Target: "Según se define en la Ley"
+- **Spanish administrative formulas for opening documents**
+  - Source: "This Agreement is made on..." → Target: "El presente Contrato se celebra el día..." / "En [ciudad], a [fecha]"
+  - Source: "This Certifies that..." → Target: "Por la presente se CERTIFICA que..."
+  - Source: "Know all men by these presents" → Target: "Sepan cuantos la presente vieren..." (archaic, used in notarial documents)
+
+## Punctuation Conversion
+
+- **English quotation marks "" → Spanish angular quotation marks «» (comillas latinas)**
+  - Source: 'He said "This is important"' → Target: 'Él dijo: «Esto es importante».'
+  - Source: 'The term "interface" refers to...' → Target: 'El término «interfaz» se refiere a...'
+  - Note: Per RAE (Real Academia Española), the preferred order of quotation marks in Spanish is: 1st level «», 2nd level "", 3rd level ''
+- **English inner quotation marks '' → Spanish inner double quotes ""**
+  - Source: 'She said "He told me \'Go now\'"' → Target: 'Ella dijo: «Él me dijo: "Vete ahora"».'
+  - Source: 'The "so-called \'expert\'" arrived' → Target: 'Llegó el supuesto «experto»'
+  - Note: When «» are used as the primary quoting mechanism, the inner quotes become "" (comillas inglesas/dobles). Inner quotes inside "" become '' (comillas simples).
+- **English single quotes '' → Spanish single quotes '' (same, but less common)**
+  - Source: "The term 'paradigm shift'" → Target: "El término «cambio de paradigma»" (prefer «» over '' for terms)
+- **English question marks ? → Spanish ¿? (must include opening inverted question mark)**
+  - Source: "What is your name?" → Target: "¿Cómo se llama usted?" (opening ¿ is mandatory)
+  - Source: "Are you sure? I need to know." → Target: "¿Está seguro? Necesito saberlo."
+  - Source: "Really?" → Target: "¿De verdad?"
+  - ZERO TOLERANCE: Spanish requires opening ¿ and closing ?. Forgetting the opening ¿ is a grammatical error in Spanish.
+  - Exception: In very informal writing (chats, SMS), some users omit ¿. In ALL formal/translated text, ¿ is mandatory.
+- **English exclamation marks ! → Spanish ¡! (must include opening inverted exclamation mark)**
+  - Source: "Great!" → Target: "¡Genial!"
+  - Source: "Congratulations!" → Target: "¡Enhorabuena!" / "¡Felicidades!"
+  - Note: Same rule as questions — opening ¡ is mandatory. NOT optional.
+- **English question/exclamation mixed**: If a sentence is both interrogative and exclamatory, use both marks
+  - Source: "What on earth are you doing?!" → Target: "¿Pero qué demonios estás haciendo?!" or "¡¿Pero qué demonios estás haciendo?!"
+- **English colon in salutations → Spanish colon (same, but Spanish also uses colon in letters)**
+  - Source: "Dear Mr. Smith:" → Target: "Estimado Sr. Smith:" (colon, same as English. Note: Spanish does NOT use comma in formal letter salutations)
+  - Source: "Dear Sirs:" → Target: "Muy señores míos:" (colon)
+- **English semicolon → Spanish semicolon (same, but used less frequently)**
+  - Spanish uses semicolons in complex enumerations and legal texts, similar to English
+  - Spanish also uses semicolons before connectors like "sin embargo", "no obstante", "por consiguiente"
+- **English em dash (—) → Spanish em dash (—) with Spanish spacing rules**
+  - English em dash without spaces ("word—word") is common → Spanish always uses spaces ("palabra — palabra")
+  - Source: "Three components—CPU, RAM, and storage—are critical" → Target: "Tres componentes —CPU, RAM y almacenamiento— son críticos"
+  - Source: "The decision—made in 2020—was controversial" → Target: "La decisión —adoptada en 2020— fue controvertida"
+  - Note: Spanish typography always spaces em dashes used for parenthetical inserts. No spacing only for indicating dialogue turns in literary texts.
+- **English en dash (–) for ranges → Spanish en dash (–) same, with Spanish spacing**
+  - Source: "pages 10–20" → Target: "páginas 10–20" (no spaces around en dash for ranges)
+  - Source: "2010–2020" → Target: "2010–2020" (same)
+  - Source: "London–Paris route" → Target: "ruta Londres–París"
+- **English hyphen (-) in compound words → Spanish hyphen rules differ**
+  - Source: "decision-making" → Target: "toma de decisiones" (no hyphen, separate words in Spanish)
+  - Source: "state-of-the-art" → Target: "de última generación" / "puntero" / "más avanzado" (descriptive, not hyphenated)
+  - Source: "well-known" → Target: "bien conocido" (adverb + adjective, no hyphen in Spanish)
+  - Source: "user-friendly" → Target: "fácil de usar" / "intuitivo" (no hyphen)
+  - Source: "English-speaking" → Target: "de habla inglesa" / "anglohablante"
+  - Note: Spanish does hyphenate certain compound words: "teórico-práctico", "político-económico", "hispano-chino"
+- **English serial (Oxford) comma → Spanish RAE comma rules**
+  - English: "apples, oranges, and bananas" → Spanish: "manzanas, naranjas y plátanos" (NO comma before "y" in simple enumerations — this is the RAE rule)
+  - English: "red, white, and blue" → Spanish: "rojo, blanco y azul"
+  - Exception: Oxford comma IS used in Spanish when needed to avoid ambiguity: "comió con sus hijos, y sus padres" (comma before "y" distinguishes from "comió con sus hijos y sus padres" meaning something different)
+  - Source: "I studied law, psychology, and medicine" → Target: "Estudié Derecho, Psicología y Medicina"
+- **English colon after complete sentence → Spanish colon (same)**
+  - English: "He said:" → Spanish: "Él dijo:" (same)
+  - English: "The following items:" → Spanish: "Los siguientes puntos:" (same)
+- **English ellipsis ... (3 dots) → Spanish ... (3 dots, same)**
+  - Source: "and so on..." → Target: "y así sucesivamente..."
+  - Source: "in other words..." → Target: "en otras palabras..."
+  - Note: Both use 3 dots. If the sentence ends with ellipsis, no period is added.
+- **English apostrophe ' → Spanish apostrophe ' (rarely used)**
+  - Source: "O'Brien" → Target: "O'Brien" (kept for foreign names)
+  - Source: "don't" → Target: "no" (contractions don't exist in formal Spanish; write as separate words)
+  - Source: "it's" → Target: "es" / "está" (context-dependent, never contracted)
+  - Note: Spanish uses the apostrophe only in foreign names and, rarely, in poetic elisions. It is NOT used for possessives (use "de": "the book of Juan" not "Juan's book")
+- **English percent sign spacing → Spanish RAE rule (no space) or ISO (space)**
+  - Source: "50%" → Target: "50%" (RAE: no space between number and %)
+  - Source: "a 10% increase" → Target: "un aumento del 10%"
+  - Exception: Some style guides follow ISO standard with non-breaking space: "50 %". Check target style guide.
+- **English degrees → Spanish**
+  - Source: "25°C" → Target: "25 °C" (with non-breaking space: 25 + °C)
+  - Source: "90° angle" → Target: "ángulo de 90°" (degrees without scale: no space)
+- **Spanish spacing after punctuation → same as English (one space)**
+  - Double spaces (typewriter convention) should always be reduced to single.
+- **English mathematical operators spacing → same in Spanish**
+  - Source: "5 + 3 = 8" → Target: "5 + 3 = 8" (spaces around operators)
+- **English slash in alternatives → same / in Spanish**
+  - Source: "and/or" → Target: "y/o"
+  - Source: "input/output" → Target: "entrada/salida" (E/S)
+  - Source: "w/out" → Target: "sin" (avoid slash abbreviations)
+
+### Special Spanish Typographic Rules (RAE Comprehensive)
+
+- **Accents (tilde) are mandatory**: Spanish has strict accent rules. Missing or misplaced accents are spelling errors.
+  - Key pattern: Interrogative/exclamative words always carry accents: qué, quién, cómo, cuándo, dónde, cuál, cuánto
+  - Differentiating accents: tú (you) vs tu (your), él (he) vs el (the), sí (yes/oneself) vs si (if), más (more) vs mas (but), dé (give) vs de (of), sé (I know/be) vs se (reflexive)
+  - Source: "What do you need?" → Target: "¿Qué necesita?" (qué with accent)
+  - Source: "I know what you need" → Target: "Sé lo que necesita" (Sé with accent for "I know", que without accent for relative)
+  - ZERO TOLERANCE: Missing accent on qué/cómo/dónde/cuándo in questions is a grammatical error.
+- **Uppercase letters and accents**: Spanish uppercase vowels ALWAYS carry their accents. "África", not "AFRICA" (though some style guides omit accents on all-caps — check target style; RAE recommends keeping accents on capitals).
+- **Days of the week and months are lowercase**: "lunes", "martes", "enero", "febrero"
+  - Source: "Monday, January 15th" → Target: "lunes, 15 de enero" (NOT "Lunes, 15 de Enero")
+- **Nationality adjectives are lowercase**: "chino", "español", "estadounidense"
+- **Languages are lowercase**: "inglés", "español", "chino"
+- **Book/movie titles capitalize only first word and proper nouns**: "Cien años de soledad" (only first word capitalized, plus proper nouns)
+- **Personal/professional titles are lowercase**: "el presidente", "el rey", "el papa", "el director"
+  - Source: "President Xi" → Target: "el presidente Xi" (lowercase "presidente")
+  - Exception: Abbreviated titles keep the capital: "Sr. García", "Dr. Martínez"
+- **Question marks in mid-sentence**: In Spanish, a question can begin in the middle of a sentence
+  - Source: "If it's possible, when will it be done?" → Target: "Si es posible, ¿cuándo se hará?"
+  - Source: "I wonder, what is the purpose?" → Target: "Me pregunto, ¿cuál es el propósito?"
+- **Non-breaking spaces in Spanish (espacios duros)**: Use in specific contexts
+  - Between number and abbreviated unit: "10 km", "50 kg", "100 m"
+  - In dates: "15 de enero de 2024" (before "de")
+  - In times: "15:30 h" (before "h")
+  - With initials: "J. R. R. Tolkien"
+  - With a. m. / p. m.: "3:00 p. m."
+  - In large numbers (thin space style): "12 345 678"
+- **Spanish abbreviations**:
+  - "etc." (with period)
+  - "a. m." / "p. m." (with spaces and periods)
+  - "S. A." (Sociedad Anónima) or "SA" (no periods, modern style)
+  - "S. L." (Sociedad Limitada) or "SL"
+  - "D. L." (Depósito Legal)
+  - "n.º" (número) — use masculine ordinal indicator, not "No."
+  - "art." (artículo), "pág." (página), "cap." (capítulo), "vol." (volumen)
+  - "Sra." (Señora), "Sr." (Señor), "Srta." (Señorita)
+  - "Ud." / "Vd." (usted) — both accepted
+- **Spanish "y" → "e" and "o" → "u" rules**:
+  - "y" changes to "e" before words starting with /i/ sound: "padres e hijos", "español e inglés"
+  - "o" changes to "u" before words starting with /o/ sound: "siete u ocho", "hoy u hoy no"
+  - Source: "men and women" → Target: "hombres y mujeres" (no change needed)
+  - Source: "fathers and sons" → Target: "padres e hijos" (y → e before hi-)
+  - Source: "one or another" → Target: "uno u otro" (o → u before o-)
+- **Spanish numerals: thousands separator and decimal comma**
+  - Traditional Spanish period separator: "12.345.678"
+  - Modern international thin-space (preferred by RAE 2010): "12 345 678"
+  - Decimal comma: "3,1416"
+  - CRITICAL: Never use English style "12,345.67" in Spanish — this is the most common numeric error.
+  - For 4-digit numbers, it is acceptable to write them without separator: "1234" (not "1.234" necessarily)

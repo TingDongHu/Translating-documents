@@ -1,0 +1,1481 @@
+{
+  "source_lang": "zh",
+  "target_lang": "ru",
+  "domain": [
+    "technical"
+  ],
+  "last_updated": "2026-05-24T22:41:34.250265+00:00",
+  "entries": [
+    {
+      "source": "给汤机",
+      "target": "Разливочная машина",
+      "frequency": 25,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.219172+00:00",
+      "last_seen": "2026-05-24T22:41:34.219172+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P1] 给汤机",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "前言",
+      "target": "Предисловие",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.219558+00:00",
+      "last_seen": "2026-05-24T22:41:34.219558+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P4] 前言",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "尊敬的客户",
+      "target": "Уважаемый клиент! Здравствуйте!",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.219880+00:00",
+      "last_seen": "2026-05-24T22:41:34.219880+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P7] 尊敬的客户：您好！",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "您好",
+      "target": "Уважаемый клиент! Здравствуйте!",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.220200+00:00",
+      "last_seen": "2026-05-24T22:41:34.220200+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P7] 尊敬的客户：您好！",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "非常荣幸能把我公司的产品推荐给您",
+      "target": "Мы рады рекомендовать Вам продукцию нашей компании и надеемся, что она принесет пользу Вашему производству.",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.220507+00:00",
+      "last_seen": "2026-05-24T22:41:34.220507+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P8] 非常荣幸能把我公司的产品推荐给您，希望能为您的生产带来效益。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "希望能为您的生产带来效益",
+      "target": "Мы рады рекомендовать Вам продукцию нашей компании и надеемся, что она принесет пользу Вашему производству.",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.220810+00:00",
+      "last_seen": "2026-05-24T22:41:34.220810+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P8] 非常荣幸能把我公司的产品推荐给您，希望能为您的生产带来效益。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "此说明书协助您了解我们的产品",
+      "target": "Настоящее руководство поможет Вам ознакомиться с нашей продукцией, а также правильно эксплуатировать и использовать ее. Эффективные методы обслуживания обеспечат бесперебойную работу Вашего оборудован",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.221111+00:00",
+      "last_seen": "2026-05-24T22:41:34.221111+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P9] 此说明书协助您了解我们的产品，并能正确的操作和使用。有效的保养方法能使您的机器运作顺畅。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "并能正确的操作和使用",
+      "target": "Настоящее руководство поможет Вам ознакомиться с нашей продукцией, а также правильно эксплуатировать и использовать ее. Эффективные методы обслуживания обеспечат бесперебойную работу Вашего оборудован",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.221411+00:00",
+      "last_seen": "2026-05-24T22:41:34.221411+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P9] 此说明书协助您了解我们的产品，并能正确的操作和使用。有效的保养方法能使您的机器运作顺畅。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "有效的保养方法能使您的机器运作顺畅",
+      "target": "Настоящее руководство поможет Вам ознакомиться с нашей продукцией, а также правильно эксплуатировать и использовать ее. Эффективные методы обслуживания обеспечат бесперебойную работу Вашего оборудован",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.221711+00:00",
+      "last_seen": "2026-05-24T22:41:34.221711+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P9] 此说明书协助您了解我们的产品，并能正确的操作和使用。有效的保养方法能使您的机器运作顺畅。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "您在使用我公司的机器时",
+      "target": "При возникновении вопросов или неясностей при эксплуатации оборудования нашей компании, пожалуйста, обратитесь к данному руководству или позвоните в службу поддержки клиентов по телефону: /. Мы предос",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.222015+00:00",
+      "last_seen": "2026-05-24T22:41:34.222015+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P10] 您在使用我公司的机器时，若发现有疑问或不明之处，请参阅本说明书，或者拨打我公司客户服务热线：/，我们将以一流的服务为您提供帮助！",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "若发现有疑问或不明之处",
+      "target": "При возникновении вопросов или неясностей при эксплуатации оборудования нашей компании, пожалуйста, обратитесь к данному руководству или позвоните в службу поддержки клиентов по телефону: /. Мы предос",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.222336+00:00",
+      "last_seen": "2026-05-24T22:41:34.222336+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P10] 您在使用我公司的机器时，若发现有疑问或不明之处，请参阅本说明书，或者拨打我公司客户服务热线：/，我们将以一流的服务为您提供帮助！",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "请参阅本说明书",
+      "target": "При возникновении вопросов или неясностей при эксплуатации оборудования нашей компании, пожалуйста, обратитесь к данному руководству или позвоните в службу поддержки клиентов по телефону: /. Мы предос",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.222641+00:00",
+      "last_seen": "2026-05-24T22:41:34.222641+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P10] 您在使用我公司的机器时，若发现有疑问或不明之处，请参阅本说明书，或者拨打我公司客户服务热线：/，我们将以一流的服务为您提供帮助！",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "或者拨打我公司客户服务热线",
+      "target": "При возникновении вопросов или неясностей при эксплуатации оборудования нашей компании, пожалуйста, обратитесь к данному руководству или позвоните в службу поддержки клиентов по телефону: /. Мы предос",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.222958+00:00",
+      "last_seen": "2026-05-24T22:41:34.222958+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P10] 您在使用我公司的机器时，若发现有疑问或不明之处，请参阅本说明书，或者拨打我公司客户服务热线：/，我们将以一流的服务为您提供帮助！",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "我们将以一流的服务为您提供帮助",
+      "target": "При возникновении вопросов или неясностей при эксплуатации оборудования нашей компании, пожалуйста, обратитесь к данному руководству или позвоните в службу поддержки клиентов по телефону: /. Мы предос",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.223266+00:00",
+      "last_seen": "2026-05-24T22:41:34.223266+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P10] 您在使用我公司的机器时，若发现有疑问或不明之处，请参阅本说明书，或者拨打我公司客户服务热线：/，我们将以一流的服务为您提供帮助！",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "为了方便编写",
+      "target": "Для удобства составления в настоящем руководстве аналогичные изделия описаны вместе, просим принять это к сведению.",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.223567+00:00",
+      "last_seen": "2026-05-24T22:41:34.223567+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P11] 为了方便编写，本说明书将同类产品编写为一体，敬请留意。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "本说明书将同类产品编写为一体",
+      "target": "Для удобства составления в настоящем руководстве аналогичные изделия описаны вместе, просим принять это к сведению.",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.223869+00:00",
+      "last_seen": "2026-05-24T22:41:34.223869+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P11] 为了方便编写，本说明书将同类产品编写为一体，敬请留意。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "敬请留意",
+      "target": "Для удобства составления в настоящем руководстве аналогичные изделия описаны вместе, просим принять это к сведению.",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.224174+00:00",
+      "last_seen": "2026-05-24T22:41:34.224174+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P11] 为了方便编写，本说明书将同类产品编写为一体，敬请留意。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "本公司产品将跟随时代的进步而不断的更新和改进",
+      "target": "Продукция нашей компании постоянно совершенствуется и модернизируется в соответствии с развитием технологий, без предварительного уведомления, просим отнестись с пониманием!",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.224480+00:00",
+      "last_seen": "2026-05-24T22:41:34.224480+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P12] 本公司产品将跟随时代的进步而不断的更新和改进，恕不另行通知，敬请谅解！",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "恕不另行通知",
+      "target": "Продукция нашей компании постоянно совершенствуется и модернизируется в соответствии с развитием технологий, без предварительного уведомления, просим отнестись с пониманием!",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.224780+00:00",
+      "last_seen": "2026-05-24T22:41:34.224780+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P12] 本公司产品将跟随时代的进步而不断的更新和改进，恕不另行通知，敬请谅解！",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "敬请谅解",
+      "target": "Продукция нашей компании постоянно совершенствуется и модернизируется в соответствии с развитием технологий, без предварительного уведомления, просим отнестись с пониманием!",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.225077+00:00",
+      "last_seen": "2026-05-24T22:41:34.225077+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P12] 本公司产品将跟随时代的进步而不断的更新和改进，恕不另行通知，敬请谅解！",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "探针",
+      "target": "3.1 Установка выключателей и регулировка щупов",
+      "frequency": 5,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.225375+00:00",
+      "last_seen": "2026-05-24T22:41:34.225375+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P31] 3.1 开关安装及探针的调整",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "HMI",
+      "target": "Человеко-машинный интерфейс (ЧМИ) предоставляет интуитивно понятный интерфейс для настройки соответствующих параметров оборудования. Он позволяет контролировать соответствующие контакты, параметры и с",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.225675+00:00",
+      "last_seen": "2026-05-24T22:41:34.225675+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P52] 人机界面（HMI）为机器的相关参数设定提供了一个直观的操作界面，可以监控相关接点，参数以及机器的运行状态，具有故障显示，以及历史记录功能，下面将对其做具体說明。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "注意",
+      "target": "Перед эксплуатацией данного оборудования во избежание несчастных случаев обязательно соблюдайте следующие меры предосторожности:",
+      "frequency": 5,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.225973+00:00",
+      "last_seen": "2026-05-24T22:41:34.225973+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P21] 在操作本机器前，为防止事故，请务必注意下列事项：",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "管理员",
+      "target": "Администратор: пароль 777777 — можно регулировать технические параметры, такие как положения",
+      "frequency": 9,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.226279+00:00",
+      "last_seen": "2026-05-24T22:41:34.226279+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P64] 管理员：密码 777777 可以调节位置等技术性参数",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "位置",
+      "target": "Концевой выключатель движения руки вперед в исходное положение показан на рисунке выше. Он установлен на передней панели корпуса и срабатывает при нажатии при поиске исходной точки. Регулировка данног",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.226578+00:00",
+      "last_seen": "2026-05-24T22:41:34.226578+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P34] 臂进原点开关如上图所示，它安装于箱体的正面，在找原点时压到开关时有效。调整该开关上下控制手臂前进距离，将螺杆往上调，并将支架及开关一起往上提，前进距离减少，反之则距离增加，一般前进极限作为前进位置的最大限，后面位置都是根据前进极限位进行更改，调整后要将支架螺钉紧固。调整需根据浇口位置而定。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "取汤限",
+      "target": "Предел забора расплава: устанавливает предельное нижнее положение руки при заборе алюминия. В процессе автоматической работы при достижении этого положения рука подачи расплава автоматически возвращае",
+      "frequency": 14,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.226878+00:00",
+      "last_seen": "2026-05-24T22:41:34.226878+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P75] 取汤限：设置臂吸铝的下降极限位。在自动工作过程中，给汤臂一碰到此位置就会自动回到机器原位，不再工作。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "待机位",
+      "target": "Позиция ожидания: положение руки после завершения заливки, ожидание у печи. Позиция заливки: положение, в котором рука выливает расплав алюминия.",
+      "frequency": 25,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.227179+00:00",
+      "last_seen": "2026-05-24T22:41:34.227179+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P76] 待机位：手臂注完铝在炉子上的等待位置。注汤位：手臂倒铝水的位置。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "注汤位",
+      "target": "Позиция ожидания: положение руки после завершения заливки, ожидание у печи. Позиция заливки: положение, в котором рука выливает расплав алюминия.",
+      "frequency": 38,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.227477+00:00",
+      "last_seen": "2026-05-24T22:41:34.227477+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P76] 待机位：手臂注完铝在炉子上的等待位置。注汤位：手臂倒铝水的位置。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "汤量位",
+      "target": "Позиция объема заливки: положение, определяющее количество забираемого расплава.",
+      "frequency": 8,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.227777+00:00",
+      "last_seen": "2026-05-24T22:41:34.227777+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P82] 汤量位：汤勺取汤多少的位置。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "水平位",
+      "target": "Горизонтальное положение: фактическое положение выравнивания ковша по горизонтали.",
+      "frequency": 13,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.228082+00:00",
+      "last_seen": "2026-05-24T22:41:34.228082+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P83] 水平位：汤勺翻平的实际位置。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "预灌角",
+      "target": "Угол предварительной заливки: положение предварительного поворота ковша при опускании в печь.",
+      "frequency": 7,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.228382+00:00",
+      "last_seen": "2026-05-24T22:41:34.228382+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P87] 预灌角：汤勺下炉提前翻转位置。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "注汤",
+      "target": "Позиция ожидания: положение руки после завершения заливки, ожидание у печи. Позиция заливки: положение, в котором рука выливает расплав алюминия.",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.228683+00:00",
+      "last_seen": "2026-05-24T22:41:34.228683+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P76] 待机位：手臂注完铝在炉子上的等待位置。注汤位：手臂倒铝水的位置。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "功能设定",
+      "target": "Настройка функций",
+      "frequency": 7,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.228985+00:00",
+      "last_seen": "2026-05-24T22:41:34.228985+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P105] 功能设定",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "汤臂前待机",
+      "target": "Ожидание руки спереди: ожидание руки у заливочного отверстия.",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.229286+00:00",
+      "last_seen": "2026-05-24T22:41:34.229286+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P107] 汤臂前待机：汤臂在料口处等待。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "汤臂安全位",
+      "target": "Безопасная позиция руки: безопасное положение отвода руки после завершения заливки алюминия.",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.229588+00:00",
+      "last_seen": "2026-05-24T22:41:34.229588+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P109] 汤臂安全位：注完铝汤臂后退的安全位置。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "液面位置报警",
+      "target": "Сигнализация уровня расплава: допустимое отклонение между предыдущим и текущим положением забора расплава.",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.229890+00:00",
+      "last_seen": "2026-05-24T22:41:34.229890+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P110] 液面位置报警：上次取汤位置与本次取汤位置的误差范围。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "无液面模式",
+      "target": "Режим без датчика уровня: режим настройки производителя.",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.230195+00:00",
+      "last_seen": "2026-05-24T22:41:34.230195+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P111] 无液面模式：厂家调试模式。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "汤量设定",
+      "target": "Установка объема заливки",
+      "frequency": 6,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.230497+00:00",
+      "last_seen": "2026-05-24T22:41:34.230497+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P113] 汤量设定",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "原点搜索",
+      "target": "Поиск исходной точки: кнопка автоматического поиска исходной точки после включения питания разливочной машины. Примечание. Исходная точка ковша может быть найдена автоматически, исходная точка руки ищ",
+      "frequency": 6,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.230810+00:00",
+      "last_seen": "2026-05-24T22:41:34.230810+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P121] 原点搜索：给汤机上电后自动搜索原点按钮，注：汤勺原点可以自动搜索，手臂原点需在操作面板开关上面搜索。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "强制手动",
+      "target": "Принудительный ручной режим: принудительная работа разливочной машины в состоянии аварийной сигнализации.",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.231111+00:00",
+      "last_seen": "2026-05-24T22:41:34.231111+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P122] 强制手动：给汤机在报警故障状态上强制运行。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "手动",
+      "target": "Эксплуатация разрешается только после закрытия защитной дверцы. При открытии защитной дверцы во время работы оборудование немедленно останавливается (как в автоматическом, так и в ручном режиме).",
+      "frequency": 8,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.231407+00:00",
+      "last_seen": "2026-05-24T22:41:34.231407+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P24] 安全门必须合上后，才允许进行操作。运行中只要打开安全门机器就会停止动作（无论是自动或手动）。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "自动",
+      "target": "Разливочная машина STG с сервоприводом и RV-редуктором является одним из вспомогательных устройств машины литья под давлением (МЛД), тщательно спроектированных и изготовленных нашей компанией. Она пре",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.231703+00:00",
+      "last_seen": "2026-05-24T22:41:34.231703+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P16] STG 系列伺服RV 给汤机是我公司精心设计与制作的压铸机辅机设备之一。专用于各类卧式冷室压铸机的自动定量给汤。为了保证产品稳定可靠，在设计中采用了许多先进技术。使整个系统操作方便，定量正确，尤其重复精度高，工作效率高。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "后退",
+      "target": "Безопасная позиция руки: безопасное положение отвода руки после завершения заливки алюминия.",
+      "frequency": 6,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.232003+00:00",
+      "last_seen": "2026-05-24T22:41:34.232003+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P109] 汤臂安全位：注完铝汤臂后退的安全位置。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "前进",
+      "target": "Запрещается открывать защитную дверцу во время движения ковша вперед для забора расплава, так как возможно разбрызгивание расплава из ковша. ОПАСНО!",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.232303+00:00",
+      "last_seen": "2026-05-24T22:41:34.232303+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P25] 勺子在吸汤前进过程中请勿打开安全门，这时勺内溶汤可能溅出，非常危险。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "浇铝",
+      "target": "(2) Ручной забор алюминия / заливка алюминия",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.232604+00:00",
+      "last_seen": "2026-05-24T22:41:34.232604+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P133] （2）手动吸铝/浇铝",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "吸铝",
+      "target": "При касании щупа 2 поверхности расплава алюминия рука подачи расплава прекращает движение вниз и начинает забор алюминия.",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.232901+00:00",
+      "last_seen": "2026-05-24T22:41:34.232901+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P44] 探针 2 接触到铝液面时，给汤臂停止向下运动，开始吸铝。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "得到启动信号",
+      "target": "Получение пускового сигнала",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.233203+00:00",
+      "last_seen": "2026-05-24T22:41:34.233203+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P143] 得到启动信号",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "启动位",
+      "target": "Установите переключатель «Ручной/Автоматический» в положение «Автоматический». Оборудование автоматически возвращается в пусковую позицию.",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.233512+00:00",
+      "last_seen": "2026-05-24T22:41:34.233512+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P139] 把“手动/自动”旋钮置“自动” 位置，机器自动复位至自动启动位。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "喷雾机",
+      "target": "Распылительная машина",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.233820+00:00",
+      "last_seen": "2026-05-24T22:41:34.233820+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P208] 喷雾机",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "cm2",
+      "target": "1. Давление компрессора должно поддерживаться не менее 6 кгс/см².",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.234136+00:00",
+      "last_seen": "2026-05-24T22:41:34.234136+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P231] 1.空压机压力需保持在 6kg/cm2 以上；",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "取件机",
+      "target": "Извлекающий манипулятор",
+      "frequency": 15,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.234448+00:00",
+      "last_seen": "2026-05-24T22:41:34.234448+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P302] 取件机",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "具体视压铸机吨位而定",
+      "target": "1. Диаметр захвата: Ø40–Ø150 мм (в зависимости от тоннажа машины литья под давлением)",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.234908+00:00",
+      "last_seen": "2026-05-24T22:41:34.234908+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P332] 1.夹取直径:φ40—φ150mm(具体视压铸机吨位而定)",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "电磁阀",
+      "target": "1. Электромагнитные клапаны — импортные серии SMC, CKD, AirAC.",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.235318+00:00",
+      "last_seen": "2026-05-24T22:41:34.235318+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P222] 1.电磁阀采用进口 SMC，CKD, AirAC 系列阀；",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "取件位",
+      "target": "Внимание! При регулировке положения извлечения данного устройства остановите насос и выключите машину литья под давлением!",
+      "frequency": 14,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.235698+00:00",
+      "last_seen": "2026-05-24T22:41:34.235698+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P340] 注意：在调整本机取件位置时，请将压铸机停泵关机！",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "放件位",
+      "target": "Позиция обнаружения: положение касания концевого выключателя обнаружения при выходе после извлечения изделия. Позиция укладки: положение размещения изделия.",
+      "frequency": 13,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.236022+00:00",
+      "last_seen": "2026-05-24T22:41:34.236022+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P368] 检测位：取完产品出来碰到检测开关的位置。放件位：放产品的位置。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "引拔位",
+      "target": "Позиция извлечения: положение входа основания в пресс-форму для извлечения изделия. Позиция отвода: положение отвода основания после извлечения изделия.",
+      "frequency": 7,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.236353+00:00",
+      "last_seen": "2026-05-24T22:41:34.236353+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P376] 取件位：底座进入模具取产品的位置。引拔位：底座取完产品后退的位置。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "v5",
+      "target": "HMI v5.0.0.1b",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.236679+00:00",
+      "last_seen": "2026-05-24T22:41:34.236679+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P418] HMI v5.0.0.1b",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "返回",
+      "target": "После ввода пароля нажмите клавишу возврата для входа в систему настройки параметров разливочной машины.",
+      "frequency": 30,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.236985+00:00",
+      "last_seen": "2026-05-24T22:41:34.236985+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P67] 设定完密码按返回键进入系统给汤机进入系统参数设定。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "位置设定",
+      "target": "Настройка позиций",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.237306+00:00",
+      "last_seen": "2026-05-24T22:41:34.237306+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P454] 位置设定",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "时间设定",
+      "target": "В обоих вышеуказанных рабочих процессах, если ковш находится в режиме ожидания (ожидание над печью или ожидание в позиции заливки) и в течение времени ожидания не получен сигнал 2 (разрешение заливки)",
+      "frequency": 7,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.237614+00:00",
+      "last_seen": "2026-05-24T22:41:34.237614+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P157] 上述两种工作过程中，汤勺处于待机状态时（炉上待机或浇铝位待机），若在待机时间内未接收到信号2（允许浇铝），机器将自动下降换铝并回 到待机位。此时间由炉上待机时间或给汤口待机时间设定。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "O监控",
+      "target": "Мониторинг I/O",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.237934+00:00",
+      "last_seen": "2026-05-24T22:41:34.237934+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P458] I/O监控",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "手动画面",
+      "target": "Ручной режим",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.238259+00:00",
+      "last_seen": "2026-05-24T22:41:34.238259+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P459] 手动画面",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "故障信息",
+      "target": "Информация о неисправностях",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.238579+00:00",
+      "last_seen": "2026-05-24T22:41:34.238579+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P465] 故障信息",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "汤臂",
+      "target": "При касании щупа 2 поверхности расплава алюминия рука подачи расплава прекращает движение вниз и начинает забор алюминия.",
+      "frequency": 13,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.238879+00:00",
+      "last_seen": "2026-05-24T22:41:34.238879+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P44] 探针 2 接触到铝液面时，给汤臂停止向下运动，开始吸铝。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "汤勺",
+      "target": "В качестве датчика исходного положения ковша обычно используется бесконтактный датчик с кулачком. Часть, обнаруживаемая кулачком, считается положительной, необнаруживаемая часть — отрицательной, момен",
+      "frequency": 14,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.239176+00:00",
+      "last_seen": "2026-05-24T22:41:34.239176+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P36] 汤勺原点一般采用接近开关加凸轮，凸轮感应到部分为正，感应不到部分为负，刚好感应到原点开关为零位。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "原点",
+      "target": "1. Схема концевого выключателя исходного положения руки вперед:",
+      "frequency": 44,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.239476+00:00",
+      "last_seen": "2026-05-24T22:41:34.239476+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P32] 1.臂前进原点开关示意图：",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "取汤位",
+      "target": "Сигнализация уровня расплава: допустимое отклонение между предыдущим и текущим положением забора расплава.",
+      "frequency": 10,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.239778+00:00",
+      "last_seen": "2026-05-24T22:41:34.239778+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P110] 液面位置报警：上次取汤位置与本次取汤位置的误差范围。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "切换位置",
+      "target": "Переключение позиции",
+      "frequency": 7,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.240101+00:00",
+      "last_seen": "2026-05-24T22:41:34.240101+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P499] 切换位置",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "速度",
+      "target": "2. Настройка положения и скорости",
+      "frequency": 10,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.240406+00:00",
+      "last_seen": "2026-05-24T22:41:34.240406+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P69] 2. 位置，速度设置",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "后极限位",
+      "target": "Задний предел",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.240730+00:00",
+      "last_seen": "2026-05-24T22:41:34.240730+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P527] 后极限位",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "下页",
+      "target": "След. страница",
+      "frequency": 10,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.241051+00:00",
+      "last_seen": "2026-05-24T22:41:34.241051+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P531] 下页",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "勺独动",
+      "target": "Отд.ход → Горизонт.пол. → Угол предв.зал. → Предел забора",
+      "frequency": 6,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.241377+00:00",
+      "last_seen": "2026-05-24T22:41:34.241377+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P572] 勺独动 → 水平位 → 预灌角 → 取汤限",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "汤勺前进",
+      "target": "Ковш вперед",
+      "frequency": 7,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.241707+00:00",
+      "last_seen": "2026-05-24T22:41:34.241707+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P605] 汤勺前进",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "汤勺后退",
+      "target": "Ковш назад",
+      "frequency": 6,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.242034+00:00",
+      "last_seen": "2026-05-24T22:41:34.242034+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P607] 汤勺后退",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "上页",
+      "target": "Пред. страница",
+      "frequency": 5,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.242366+00:00",
+      "last_seen": "2026-05-24T22:41:34.242366+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P609] 上页",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "汤勺注汤",
+      "target": "Заливка расплава ковшом обычно делится на три этапа скорости: быстро, медленно, быстро.",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.242666+00:00",
+      "last_seen": "2026-05-24T22:41:34.242666+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P90] 汤勺注汤一般分为三段速度，快速慢速快速。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "注汤①",
+      "target": "Заливка ① → Заливка ② → Заливка ③",
+      "frequency": 9,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.242993+00:00",
+      "last_seen": "2026-05-24T22:41:34.242993+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P621] 注汤① → 注汤② → 注汤③",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "注汤②",
+      "target": "Заливка ① → Заливка ② → Заливка ③",
+      "frequency": 9,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.243324+00:00",
+      "last_seen": "2026-05-24T22:41:34.243324+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P621] 注汤① → 注汤② → 注汤③",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "注汤③",
+      "target": "Заливка ① → Заливка ② → Заливка ③",
+      "frequency": 9,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.243651+00:00",
+      "last_seen": "2026-05-24T22:41:34.243651+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P621] 注汤① → 注汤② → 注汤③",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "不选择",
+      "target": "Не выбрано",
+      "frequency": 18,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.243984+00:00",
+      "last_seen": "2026-05-24T22:41:34.243984+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P727] 不选择",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "选择",
+      "target": "Автоматическая разливочная машина имеет два режима работы: ручной и автоматический.",
+      "frequency": 5,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.244294+00:00",
+      "last_seen": "2026-05-24T22:41:34.244294+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P126] 自动给汤机有二种工作方式可供选择：手动方式、自动运转。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Z轴",
+      "target": "Ось Z:",
+      "frequency": 9,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.244642+00:00",
+      "last_seen": "2026-05-24T22:41:34.244642+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P892] Z轴:",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "吹气",
+      "target": "3. Имеет функцию продувки при подъеме, обеспечивающую очистку поверхности неподвижной и подвижной пресс-форм при подъеме, с контролем времени продувки.",
+      "frequency": 7,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.244950+00:00",
+      "last_seen": "2026-05-24T22:41:34.244950+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P224] 3.具有上升吹气功能，使其上升时清扫固定、活动模面，并对吹气时间进行控制；",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "前1",
+      "target": "Перед 1",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.245296+00:00",
+      "last_seen": "2026-05-24T22:41:34.245296+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P941] 前1",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "后2",
+      "target": "После 2",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.245640+00:00",
+      "last_seen": "2026-05-24T22:41:34.245640+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P942] 后2",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "示教设定4",
+      "target": "NO.1 Настройка обучения 4",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.245986+00:00",
+      "last_seen": "2026-05-24T22:41:34.245986+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P1007] NO.1 示教设定4",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "自动模式",
+      "target": "Автоматический режим",
+      "frequency": 7,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.246344+00:00",
+      "last_seen": "2026-05-24T22:41:34.246344+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P1016] 自动模式",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "0s",
+      "target": "1,0 с",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.246708+00:00",
+      "last_seen": "2026-05-24T22:41:34.246708+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P1098] 1.0s",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "手臂",
+      "target": "Концевой выключатель движения руки вперед в исходное положение показан на рисунке выше. Он установлен на передней панели корпуса и срабатывает при нажатии при поиске исходной точки. Регулировка данног",
+      "frequency": 12,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.247009+00:00",
+      "last_seen": "2026-05-24T22:41:34.247009+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P34] 臂进原点开关如上图所示，它安装于箱体的正面，在找原点时压到开关时有效。调整该开关上下控制手臂前进距离，将螺杆往上调，并将支架及开关一起往上提，前进距离减少，反之则距离增加，一般前进极限作为前进位置的最大限，后面位置都是根据前进极限位进行更改，调整后要将支架螺钉紧固。调整需根据浇口位置而定。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "检出位",
+      "target": "Исх. точка → Ожидание → Извлечение → Обнаружение → Укладка → Исх. точка",
+      "frequency": 6,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.247380+00:00",
+      "last_seen": "2026-05-24T22:41:34.247380+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P1215] 原点 → 待机位 →取件位 → 检出位 →放件位 →原点",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "拔出工件计时",
+      "target": "Таймер извлечения детали",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.247738+00:00",
+      "last_seen": "2026-05-24T22:41:34.247738+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P1236] 拔出工件计时",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "不合格放件位",
+      "target": "Позиция укладки бракованных деталей",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.248111+00:00",
+      "last_seen": "2026-05-24T22:41:34.248111+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P1242] 不合格放件位",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "手臂前进",
+      "target": "Концевой выключатель движения руки вперед в исходное положение показан на рисунке выше. Он установлен на передней панели корпуса и срабатывает при нажатии при поиске исходной точки. Регулировка данног",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.248419+00:00",
+      "last_seen": "2026-05-24T22:41:34.248419+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P34] 臂进原点开关如上图所示，它安装于箱体的正面，在找原点时压到开关时有效。调整该开关上下控制手臂前进距离，将螺杆往上调，并将支架及开关一起往上提，前进距离减少，反之则距离增加，一般前进极限作为前进位置的最大限，后面位置都是根据前进极限位进行更改，调整后要将支架螺钉紧固。调整需根据浇口位置而定。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "手臂后退",
+      "target": "3. Регулировка щупа обнаружения уровня расплава: при остановке руки назад при касании щупом поверхности расплава алюминия заборное отверстие ковша в положении забора должно находиться на 20–30 мм ниже",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.248736+00:00",
+      "last_seen": "2026-05-24T22:41:34.248736+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P163] 3.汤面检测探棒的调整；当手臂后退探棒遇铝液面停止时，让呈现吸汤姿势的勺子的吸汤口降至溶汤面 20-30mm 的位置。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "底座",
+      "target": "Отпустите крепежные винты основания и направляющей стойки подъема. С помощью маховика червячного подъемника поднимите или опустите монтажное основание. После завершения регулировки затяните крепежные ",
+      "frequency": 7,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.249050+00:00",
+      "last_seen": "2026-05-24T22:41:34.249050+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P342] 松开底座与升降导柱的紧固螺钉，使用蜗杆升降机手轮使安装座升起或下降，调整结束后，紧上底座与升降导柱的紧固螺钉。",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "底座前进",
+      "target": "Основание вперёд",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.249412+00:00",
+      "last_seen": "2026-05-24T22:41:34.249412+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P1294] 底座前进",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "底座后退",
+      "target": "Основание назад",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.249772+00:00",
+      "last_seen": "2026-05-24T22:41:34.249772+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "general",
+      "source_context": "[P1296] 底座后退",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "2024/10/19",
+      "target": "19.10.2024",
+      "frequency": 7,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-24T22:41:34.250121+00:00",
+      "last_seen": "2026-05-24T22:41:34.250121+00:00",
+      "source_jobs": [
+        "translation_job_20260525_045944_三机说明书"
+      ],
+      "category": "reference",
+      "source_context": "2024/10/19",
+      "extraction_method": "paragraph_alignment"
+    }
+  ],
+  "archived_count": 0
+}

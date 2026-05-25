@@ -130,22 +130,44 @@ def extract_codes_and_references(text, min_freq=2):
 # Translation alignment (paragraph-level heuristic)
 # ---------------------------------------------------------------------------
 
+def is_glossary_candidate(term):
+    """
+    Filter out noise: single Chinese chars, full sentences, pure numbers.
+    Only keep real glossary terms (typically 2-6 Chinese chars or meaningful phrases).
+    """
+    if len(term) <= 1:
+        return False  # single char — too noisy
+    if len(term) > 25:
+        return False  # full sentence, not a term
+    cjk_count = sum(1 for c in term if '一' <= c <= '鿿' or '㐀' <= c <= '䶿')
+    if cjk_count == 1 and len(term) < 3 and not any(c.isalpha() for c in term if ord(c) > 127):
+        return False  # single CJK char with no other meaningful content
+    return True
+
+
 def extract_translation_mapping(term, source_text, translated_text):
     """
     Paragraph-level alignment: find which source paragraph contains the term,
-    then return the corresponding translated paragraph.
+    then return aligned context.
 
-    Known limitation: does not handle multi-column documents, tables, or
-    heavily reformatted output. Extracted mappings are confidence=pending
-    and must be verified through repeated use before automatic injection.
+    Returns (translated_snippet, source_context) tuple.
+    translated_snippet is the translated paragraph WITHOUT tag prefix.
+    source_context is the source paragraph for reference.
+
+    Known limitation: returns the full translated paragraph (not the exact
+    term translation). Entries are confidence=pending and need human
+    verification before use in production.
     """
     source_lines = source_text.splitlines()
     translated_lines = translated_text.splitlines()
 
     for i, line in enumerate(source_lines):
         if term in line and i < len(translated_lines):
-            return translated_lines[i].strip()[:200]
-    return None
+            translated = translated_lines[i].strip()
+            # Strip [Pxxx] tag prefix for cleaner target
+            clean = re.sub(r'^\[P\d+\]\s*', '', translated)
+            return clean[:200], line.strip()
+    return None, None
 
 
 # ---------------------------------------------------------------------------
@@ -224,6 +246,8 @@ def update_glossary(existing_glossary, new_entries, source_lang, target_lang, jo
             "last_seen": entry.get("last_seen", ""),
             "source_jobs": [job_id],
             "category": entry.get("category", "general"),
+            "source_context": entry.get("source_context", ""),
+            "extraction_method": entry.get("extraction_method", "manual"),
         })
         added += 1
 
@@ -281,7 +305,7 @@ def main():
     source_lang = manifest["source_language"]
     target_lang = manifest["target_language"]
     domain = manifest["domain"]
-    job_id = manifest["job_id"]
+    job_id = manifest.get("job_id", manifest.get("job_name", "unknown"))
 
     source_text = Path(args.source_tagged).read_text(encoding='utf-8')
     translated_text = Path(args.translation_merged).read_text(encoding='utf-8')
@@ -316,25 +340,35 @@ def main():
 
     new_entries = []
     for term, freq in frequent_terms.items():
-        translation = extract_translation_mapping(term, source_text, translated_text)
+        if not is_glossary_candidate(term):
+            continue
+        translation, source_context = extract_translation_mapping(term, source_text, translated_text)
         if translation:
             new_entries.append({
                 "source": term,
                 "target": translation,
                 "frequency": freq,
+                "source_context": source_context,
                 "last_seen": datetime.now(timezone.utc).isoformat(),
-                "category": "general"
+                "category": "general",
+                "extraction_method": "paragraph_alignment",
+                "confidence": "pending"
             })
 
     for term, freq in codes.items():
-        translation = extract_translation_mapping(term, source_text, translated_text)
+        if not is_glossary_candidate(term):
+            continue
+        translation, source_context = extract_translation_mapping(term, source_text, translated_text)
         if translation:
             new_entries.append({
                 "source": term,
                 "target": translation,
                 "frequency": freq,
+                "source_context": source_context,
                 "last_seen": datetime.now(timezone.utc).isoformat(),
-                "category": "reference"
+                "category": "reference",
+                "extraction_method": "paragraph_alignment",
+                "confidence": "pending"
             })
 
     updated_entries, added, updated, upgraded, conflicts = update_glossary(
