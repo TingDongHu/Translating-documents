@@ -17,6 +17,7 @@ TEXT_ELEMENTS = {
     'p', 'div', 'span', 'li',
     'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
     'td', 'th', 'a', 'button', 'label',
+    'textarea',
 }
 
 # Elements whose entire content subtree should be skipped.
