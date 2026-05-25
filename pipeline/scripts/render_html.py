@@ -203,15 +203,16 @@ class HTMLRenderer(HTMLParser):
     def _emit_text(self, elem):
         """Emit accumulated text of a TEXT_ELEMENT, checking for translations.
 
-        This mirrors the extract's _emit_text: it increments the text index,
-        checks for a translation match, and adds either the original or
-        translated text to the element's fragments.
+        This mirrors the extract's _emit_text: it always increments the text
+        index (even for empty fragments) to stay in sync, checks for a
+        translation match, and adds either the original or translated text
+        to the element's fragments.
         """
-        if not elem['text_fragment']:
-            return
+        elem['text_index'] += 1
         raw = elem['text_fragment']
         elem['text_fragment'] = ''
-        elem['text_index'] += 1
+        if not raw:
+            return
         xpath = f'{elem["full_xpath"]}/text()[{elem["text_index"]}]'
         tag_key = self.text_lookup.get(xpath)
         if tag_key and tag_key in self.translations:

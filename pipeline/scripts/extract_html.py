@@ -97,21 +97,24 @@ class HTMLTextExtractor(HTMLParser):
     def _emit_text(self, elem):
         """Emit *elem*'s accumulated text as a new paragraph entry.
 
-        The element's text buffer is cleared after emission.  Nothing is
-        emitted if the buffer is empty or whitespace-only.
+        The element's text buffer is cleared after emission.  The text_index
+        is ALWAYS incremented (even for whitespace-only text) to stay in
+        sync with the renderer.  A paragraph entry is only created when the
+        stripped text is non-empty.
         """
         raw = elem['text']
-        if raw and raw.strip():
-            elem['text_index'] += 1
+        elem['text'] = ''
+        elem['text_index'] += 1
+        text = raw.strip()
+        if text:
             xpath = f'{elem["full_xpath"]}/text()[{elem["text_index"]}]'
             self.entries.append({
                 'tag': f'P{self.index}',
                 'type': 'body',
-                'text': raw.strip(),
+                'text': text,
                 'location': {'xpath': xpath},
             })
             self.index += 1
-        elem['text'] = ''
 
     def _emit_attribute_text(self, tag, attrs, parent_xpath, count):
         """Emit alt/placeholder text from attrs as paragraph entries.
