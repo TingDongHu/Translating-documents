@@ -40,8 +40,8 @@ def main():
         generate_report(marker, numerical, scorecard, render, args.revision_rounds, args.final_report)
 
     final_report_exists = Path(args.final_report).exists()
-    final_docx = render.get('output_docx', '')
-    final_docx_exists = bool(final_docx) and Path(final_docx).exists()
+    final_output = render.get('output_path', '') or render.get('output_docx', '')
+    final_output_exists = bool(final_output) and Path(final_output).exists()
     layout_warnings = render.get('layout_warnings', [])
     critical_remaining = scorecard.get('critical_count', 0)
 
@@ -50,18 +50,19 @@ def main():
         numerical.get('passed') is True and
         critical_remaining == 0 and
         final_report_exists and
-        final_docx_exists
+        final_output_exists
     )
 
     manifest = {
         'status': 'completed' if passed else 'blocked',
-        'final_docx': final_docx,
+        'final_output': final_output,
+        'final_docx': final_output,
         'final_report': args.final_report,
         'revision_rounds': args.revision_rounds,
         'critical_issues_remaining': critical_remaining,
         'numerical_check_passed': numerical.get('passed') is True,
         'marker_check_passed': marker.get('passed') is True,
-        'render_check_passed': final_docx_exists,
+        'render_check_passed': final_output_exists,
         'layout_warnings': layout_warnings,
     }
 

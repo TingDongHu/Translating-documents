@@ -13,6 +13,7 @@
   ],
   "properties": {
     "status": { "type": "string", "enum": ["completed", "blocked"] },
+    "final_output": { "type": "string" },
     "final_docx": { "type": "string" },
     "final_translation": { "type": "string" },
     "final_report": { "type": "string", "minLength": 1 },

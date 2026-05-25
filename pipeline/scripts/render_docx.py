@@ -20,12 +20,32 @@ def load_translations(path):
 
 
 def set_paragraph_text(paragraph, text):
-    if paragraph.runs:
-        paragraph.runs[0].text = text
-        for run in paragraph.runs[1:]:
-            run.text = ''
-    else:
-        paragraph.text = text
+    """Replace text content preserving images and other non-text elements.
+
+    Operates at the XML level on <w:t> elements only, so <w:drawing>,
+    <w:pict>, <mc:AlternateContent>, and other non-text content within
+    runs is never touched.
+    """
+    t_elements = paragraph._element.findall(f'.//{{{W_NS}}}t')
+    if not t_elements:
+        # No text elements — look for runs to insert text into
+        runs = paragraph._element.findall(f'{{{W_NS}}}r')
+        if runs:
+            from docx.oxml import OxmlElement
+            new_t = OxmlElement('w:t')
+            new_t.text = text
+            new_t.set('{http://www.w3.org/XML/1998/namespace}space', 'preserve')
+            runs[0].append(new_t)
+        else:
+            # No runs either — fallback (destructive but nothing to preserve)
+            paragraph.text = text
+        return
+
+    for i, t_elem in enumerate(t_elements):
+        if i == 0:
+            t_elem.text = text
+        else:
+            t_elem.text = ''
 
 
 def set_xml_paragraph_text(p_elem, text):
@@ -118,7 +138,7 @@ def main():
     render_log = {
         'logical_tags_applied': len(applied),
         'missing': missing,
-        'output_docx': args.output_docx,
+        'output_path': args.output_docx,
         'layout_warnings': layout_warnings,
     }
     Path(args.render_log).write_text(json.dumps(render_log, ensure_ascii=False, indent=2), encoding='utf-8')
