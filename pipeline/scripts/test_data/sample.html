@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>测试文档</title></head>
+<body>
+  <h1>产品说明书</h1>
+  <p>欢迎使用本产品。请在操作前仔细阅读本手册。</p>
+  <div class="warning">
+    <p><strong>警告：</strong>请勿在潮湿环境中使用。</p>
+  </div>
+  <ul>
+    <li>额定电压：220V</li>
+    <li>额定功率：1500W</li>
+  </ul>
+  <table>
+    <tr><td>型号</td><td>XYZ-100</td></tr>
+    <tr><td>重量</td><td>2.5kg</td></tr>
+  </table>
+  <img src="diagram.png" alt="产品结构图">
+  <a href="manual.pdf">下载详细手册</a>
+  <script>console.log("should not be extracted");</script>
+  <style>.hidden { display: none; }</style>
+  <pre><code>sudo rm -rf /</code></pre>
+  <!-- comment should not appear -->
+</body>
+</html>

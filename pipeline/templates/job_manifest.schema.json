@@ -5,6 +5,7 @@
   "required": [
     "job_id",
     "source_file",
+    "source_format",
     "source_language",
     "target_language",
     "domain",
@@ -14,6 +15,11 @@
   "properties": {
     "job_id": { "type": "string", "minLength": 1 },
     "source_file": { "type": "string", "minLength": 1 },
+    "source_format": {
+      "type": "string",
+      "enum": ["docx", "html", "md"],
+      "default": "docx"
+    },
     "source_language": { "type": "string", "minLength": 1 },
     "target_language": { "type": "string", "minLength": 1 },
     "domain": {
