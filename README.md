@@ -6,6 +6,7 @@ A file-driven, quality-assured DOCX translation pipeline for [Claude Code](https
 
 ## Features
 
+- **Multi-format support** — DOCX, PPTX, XLSX, HTML, Markdown (.md), and plain text (.txt)
 - **14-stage canonical pipeline** — extraction → knowledge loading → adaptation research → translation (parallel with professional term research) → marker integrity check → numerical check → inspection → revision → render → final audit
 - **3 quality levels** — `standard`, `high`, `professional` with declarative stage mapping; numerical zero-tolerance check runs on all levels; revision triggered by critical issues (not mandatory); professional allows up to 2 revision rounds
 - **Parallel batch translation** — splits large documents into overlapping batches, dispatches up to 3 translators concurrently, reports per-wave progress
