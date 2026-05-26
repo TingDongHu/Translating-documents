@@ -9,7 +9,7 @@ A file-driven, quality-assured DOCX translation pipeline for [Claude Code](https
 - **14-stage canonical pipeline** — extraction → knowledge loading → adaptation research → translation (parallel with professional term research) → marker integrity check → numerical check → inspection → revision → render → final audit
 - **3 quality levels** — `standard`, `high`, `professional` with declarative stage mapping; numerical zero-tolerance check runs on all levels; revision triggered by critical issues (not mandatory); professional allows up to 2 revision rounds
 - **Parallel batch translation** — splits large documents into overlapping batches, dispatches up to 3 translators concurrently, reports per-wave progress
-- **Multi-language knowledge base** — domain rules, adaptation guides, cultural references, and bilingual glossaries for en, zh, fr, pt, mn, tr, sv
+- **Multi-language knowledge base** — domain rules, adaptation guides, cultural references, and bilingual glossaries covering 24+ languages: en, zh, ar, bn, da, de, es, fa, fi, fr, hi, hr, id, it, ja, ko, ms, nl, no, pl, pt, sv, th, tr, vi, mn
 - **Scoring rubric** — 6 inspection dimensions (numerical accuracy, terminology consistency, semantic fidelity, format compliance, completeness, inference/OCR quality) with 5-band scoring criteria
 - **Recovery protocols** — 3-layer retry escalation, blocked communication protocol, batch retry, and final audit recovery with targeted gate diagnosis
 - **JSON Schema-validated** — all manifests, scorecards, and state files validated against schemas before each stage dispatch
@@ -230,12 +230,12 @@ translating-documents/
 │   └── templates/                 # JSON Schema definitions
 ├── workers/                       # Subagent prompt templates
 └── knowledge/                     # Multi-language knowledge base
-    ├── {lang}/
+    ├── {lang}/                    # 24+ language directories
     │   ├── rules/                 # Writing rules and scoring rubrics
     │   ├── domain/                # Domain-specific terminology
     │   └── adapt/                 # Source-to-target adaptation rules
     ├── culture/                   # Cultural reference guides
-    └── glossary/                  # Bilingual glossaries
+    └── glossary/                  # Bilingual glossaries (en_zh.json, etc.)
 ```
 
 ## License
