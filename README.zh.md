@@ -2,12 +2,12 @@
 
 [**English**](README.md) | Translating Documents — 文档翻译
 
-基于文件的、质量受控的 DOCX 翻译管道，专为 [Claude Code](https://claude.ai/code) 设计。通过主编排器调度专业子代理，完成提取、术语研究、并行翻译、多轮质检、修订和最终审计——所有流程通过 JSON manifest 和经过校验的状态机协调。
+基于文件的、质量受控的翻译管道，专为 [Claude Code](https://claude.ai/code) 设计。通过主编排器调度专业子代理，完成提取、知识加载、适配研究、并行翻译、专业术语研究、多轮质检、修订和最终审计——所有流程通过 JSON manifest 和经过校验的状态机协调。
 
 ## 特性
 
-- **14 阶段标准化管道** — 提取 → 知识加载 → 术语研究 → 翻译 → 标记完整性检查 → 数值检查 → 术语扫描 → 质检 → 修订 → 渲染 → 最终审计
-- **3 个质量等级** — `standard`（标准）、`high`（高）、`professional`（专业级），使用声明式阶段映射表；专业级强制数值零容忍检查、修订和复审
+- **14 阶段标准化管道** — 提取 → 知识加载 → 适配研究 → 翻译（并行专业术语研究） → 标记完整性检查 → 数值检查 → 质检 → 修订 → 渲染 → 最终审计
+- **3 个质量等级** — `standard`（标准）、`high`（高）、`professional`（专业级），使用声明式阶段映射表；数值零容忍检查在所有等级运行；修订按 critical 问题条件触发；专业级最多允许 2 轮修订
 - **并行批量翻译** — 大文档自动拆分重叠批次，最多 3 个翻译子代理并发执行，每波次报告进度
 - **多语言知识库** — 涵盖 en、zh、fr、pt、mn、tr、sv 的领域规则、语言适应指南、文化参考和双语术语表
 - **评分标尺** — 6 个质检维度（数值准确性、术语一致性、语义忠实度、格式规范性、完整性、推断/OCR 质量），每维度 5 档评分标准
@@ -117,7 +117,6 @@ translation_job_{时间戳}_{源文件名}/
 ├── qa/
 │   ├── marker_check.json          # 标记完整性门禁
 │   ├── numerical_score.json       # 数值零容忍门禁
-│   ├── terminology_score.json     # 术语扫描数据
 │   └── scorecard_round1.json      # 质检评分卡
 ├── revision/
 │   └── revision_status_round1.json
@@ -147,8 +146,8 @@ translation_job_{时间戳}_{源文件名}/
 管道遵循标准的 14 阶段工作流：
 
 ```
-initialized → extraction → knowledge_loading → terminology_research → translation
-  → merge_marker_check → [numerical_check] → terminology_scan → inspection_round1
+initialized → extraction → knowledge_loading → adaptation_research → translation
+  → merge_marker_check → [numerical_check] → inspection_round1
   → [revision_round1] → [inspection_round2] → [revision_round2] → render → final_audit → completed
 ```
 
@@ -162,14 +161,14 @@ initialized → extraction → knowledge_loading → terminology_research → tr
 |-------|----------|------|--------------|
 | extraction | 运行 | 运行 | 运行 |
 | knowledge_loading | 运行 | 运行 | 运行 |
-| terminology_research | 运行 | 运行 | 运行 |
+| adaptation_research | 运行 | 运行 | 运行 |
 | translation | 运行 | 运行 | 运行 |
+| professional_term_research | 运行（后台） | 运行（后台） | 运行（后台） |
 | merge_marker_check | 运行 | 运行 | 运行 |
-| numerical_check | 跳过 | 跳过 | 强制 |
-| terminology_scan | 运行 | 运行 | 运行 |
+| numerical_check | 运行 | 运行 | 运行 |
 | inspection_round1 | 运行 | 运行 | 运行 |
-| revision_round1 | 跳过 | critical > 0 时 | 强制 |
-| inspection_round2 | 跳过 | 已修订时 | 强制 |
+| revision_round1 | 跳过 | critical > 0 时 | critical > 0 时 |
+| inspection_round2 | 跳过 | 已修订时 | 已修订时 |
 | revision_round2 | 跳过 | 跳过 | 最多 2 轮，需用户批准 |
 | render | 运行 | 运行 | 运行 |
 | final_audit | 运行 | 运行 | 运行 |
@@ -211,12 +210,12 @@ initialized → extraction → knowledge_loading → terminology_research → tr
   │   └── validate_workflow_state.py — 状态机校验
   │
   └── 语言子代理 (LLM subagents，通过提示模板调度)
-      ├── knowledge_loader.md       — 组装领域规则 + 术语表为知识包
-      ├── terminology_researcher.md — 提取高频术语，研究未覆盖的术语
-      ├── translator.md             — 翻译批次，保持 [Pn]/[CONTEXT] 标记
-      ├── consistency_checker.md    — 扫描全文检查术语一致性
-      ├── inspector.md              — 6 维度质检评分（使用评分标尺）
-      └── reviser.md                — 根据质检报告修复问题
+      ├── knowledge_loader.md             — 组装领域规则 + 术语表为知识包
+      ├── adaptation_researcher.md        — 研究源语言→目标语言适配规则
+      ├── terminology_researcher.md       — 专业术语研究（与翻译并行）
+      ├── translator.md                   — 翻译批次，保持 [Pn]/[CONTEXT] 标记
+      ├── inspector.md                    — 6 维度质检评分（内含集成术语扫描）
+      └── reviser.md                      — 根据质检报告修复问题
 ```
 
 ## 项目结构
@@ -224,8 +223,6 @@ initialized → extraction → knowledge_loading → terminology_research → tr
 ```
 translating-documents/
 ├── SKILL.md                       # 主编排器合约
-├── improvement-plan.md            # 改进历史和路线图
-├── v2-todo.md                     # 未来开发候选
 ├── README.md                      # 英文说明
 ├── README.zh.md                   # 中文说明
 ├── pipeline/

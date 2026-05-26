@@ -28,6 +28,7 @@ Revise the current translation using upstream QA reports.
 2. Read the inspection report.
 3. Read terminology and numerical reports if provided.
 4. Read the knowledge bundles if provided.
+4a. Read the adaptation notes file if it exists — if present, apply language-pair-specific rules from it.
 5. Fix all critical issues.
 6. Fix warning issues when they are actionable.
 7. Preserve every tag marker exactly.

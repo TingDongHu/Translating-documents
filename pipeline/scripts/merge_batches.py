@@ -16,7 +16,22 @@ def main():
     missing_batches = []
     batch_details = []
 
-    for batch in manifest['batches']:
+    # Support both split-style manifests (with 'batches') and job-style manifests
+    if 'batches' in manifest:
+        batch_list = manifest['batches']
+    else:
+        # Scan translated directory for batch_{n:03d}_translated.txt files
+        batch_files = sorted(translated_dir.glob('batch_*_translated.txt'))
+        batch_list = []
+        for bf in batch_files:
+            # Extract batch number from filename
+            try:
+                batch_no = int(bf.stem.split('_')[1])
+            except (IndexError, ValueError):
+                continue
+            batch_list.append({'batch': batch_no})
+
+    for batch in batch_list:
         batch_no = batch['batch']
         translated_path = translated_dir / f'batch_{batch_no:03d}_translated.txt'
         if not translated_path.exists():
@@ -36,7 +51,7 @@ def main():
         'stage': 'merge_batches',
         'status': 'failed' if missing_batches else 'completed',
         'outputs': {'merged_translation': str(output)},
-        'metrics': {'merged_lines': len(merged), 'missing_batches': missing_batches, 'total_batches': len(manifest['batches'])},
+        'metrics': {'merged_lines': len(merged), 'missing_batches': missing_batches, 'total_batches': len(batch_list)},
         'batch_details': batch_details,
     }
     status_path = output.with_suffix('.status.json')

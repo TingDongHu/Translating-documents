@@ -15,7 +15,7 @@ Translate the tagged source batch from `{source_lang}` to `{target_lang}`.
 - Errors bundle path: `{bundle_errors_file}`
 - Culture bundle path: `{bundle_culture_file}`
 - Supplementary terms path: `{supplementary_terms_file}`
-- Adaptation notes path: `{adaptation_notes_file}`
+- Adaptation notes path: `{adaptation_notes_file}` (optional — may not exist if adaptation research hasn't completed yet)
 
 ## Outputs
 - Translated batch path: `{output_file}`

@@ -6,8 +6,8 @@ A file-driven, quality-assured DOCX translation pipeline for [Claude Code](https
 
 ## Features
 
-- **14-stage canonical pipeline** — extraction → knowledge loading → terminology research → translation → marker integrity check → numerical check → terminology scan → inspection → revision → render → final audit
-- **3 quality levels** — `standard`, `high`, `professional` with declarative stage mapping; professional enforces numerical zero-tolerance, mandatory revision, and reinspection
+- **14-stage canonical pipeline** — extraction → knowledge loading → adaptation research → translation (parallel with professional term research) → marker integrity check → numerical check → inspection → revision → render → final audit
+- **3 quality levels** — `standard`, `high`, `professional` with declarative stage mapping; numerical zero-tolerance check runs on all levels; revision triggered by critical issues (not mandatory); professional allows up to 2 revision rounds
 - **Parallel batch translation** — splits large documents into overlapping batches, dispatches up to 3 translators concurrently, reports per-wave progress
 - **Multi-language knowledge base** — domain rules, adaptation guides, cultural references, and bilingual glossaries for en, zh, fr, pt, mn, tr, sv
 - **Scoring rubric** — 6 inspection dimensions (numerical accuracy, terminology consistency, semantic fidelity, format compliance, completeness, inference/OCR quality) with 5-band scoring criteria
@@ -118,7 +118,6 @@ translation_job_{timestamp}_{source}/
 ├── qa/
 │   ├── marker_check.json          # Marker integrity gate
 │   ├── numerical_score.json       # Numerical zero‑tolerance gate
-│   ├── terminology_score.json     # Terminology scan data
 │   └── scorecard_round1.json      # Inspection scorecard
 ├── revision/
 │   └── revision_status_round1.json
@@ -148,8 +147,8 @@ Each script runner gets a **fresh subagent** so debugging loops never pollute th
 The pipeline follows a canonical 14‑stage workflow:
 
 ```
-initialized → extraction → knowledge_loading → terminology_research → translation
-  → merge_marker_check → [numerical_check] → terminology_scan → inspection_round1
+initialized → extraction → knowledge_loading → adaptation_research → translation
+  → merge_marker_check → [numerical_check] → inspection_round1
   → [revision_round1] → [inspection_round2] → [revision_round2] → render → final_audit → completed
 ```
 
@@ -163,14 +162,14 @@ Stages in `[brackets]` are conditional based on quality level.
 |-------|----------|------|--------------|
 | extraction | run | run | run |
 | knowledge_loading | run | run | run |
-| terminology_research | run | run | run |
+| adaptation_research | run | run | run |
 | translation | run | run | run |
+| professional_term_research | run (background) | run (background) | run (background) |
 | merge_marker_check | run | run | run |
-| numerical_check | skip | skip | mandatory |
-| terminology_scan | run | run | run |
+| numerical_check | run | run | run |
 | inspection_round1 | run | run | run |
-| revision_round1 | skip | if critical > 0 | mandatory |
-| inspection_round2 | skip | if revised | mandatory |
+| revision_round1 | skip | if critical > 0 | if critical > 0 |
+| inspection_round2 | skip | if revised | if revised |
 | revision_round2 | skip | skip | max 2, user approval |
 | render | run | run | run |
 | final_audit | run | run | run |
@@ -180,7 +179,7 @@ Stages in `[brackets]` are conditional based on quality level.
 Hard gates that the pipeline MUST NOT bypass:
 
 - **Marker check** — all `[Pn]` tags must be present and correctly paired before QA
-- **Numerical check** (professional only) — zero‑tolerance: any amount, date, or percentage mismatch is automatically critical
+- **Numerical check** — zero‑tolerance: any amount, date, or percentage mismatch is automatically critical (all quality levels)
 - **Inspection** — no revision without a scorecard; no render after revision without reinspection
 - **Final audit** — all gates must pass before the pipeline reports completion
 
@@ -212,12 +211,12 @@ Main Agent (orchestrator)
   │   └── validate_workflow_state.py — State machine validation against schema
   │
   └── Language Worker (LLM subagents, dispatched via prompt templates)
-      ├── knowledge_loader.md       — Assembles domain rules + glossary into knowledge bundle
-      ├── terminology_researcher.md — Extracts recurring terms, researches uncovered ones
-      ├── translator.md             — Translates batches preserving [Pn]/[CONTEXT] markers
-      ├── consistency_checker.md    — Scans full document for terminology consistency
-      ├── inspector.md              — 6‑dimension quality scoring using rubric
-      └── reviser.md                — Fixes issues identified by inspection
+      ├── knowledge_loader.md             — Assembles domain rules + glossary into knowledge bundle
+      ├── adaptation_researcher.md        — Researches source→target adaptation rules
+      ├── terminology_researcher.md       — Professional term research (parallel with translation)
+      ├── translator.md                   — Translates batches preserving [Pn]/[CONTEXT] markers
+      ├── inspector.md                    — 6‑dimension quality scoring with integrated terminology scan
+      └── reviser.md                      — Fixes issues identified by inspection
 ```
 
 ## Project Structure
@@ -225,8 +224,6 @@ Main Agent (orchestrator)
 ```
 translating-documents/
 ├── SKILL.md                       # Main orchestrator contract
-├── improvement-plan.md            # Improvement history and roadmap
-├── v2-todo.md                     # Future development candidates
 ├── pipeline/
 │   ├── scripts/                   # Python pipeline scripts
 │   └── templates/                 # JSON Schema definitions

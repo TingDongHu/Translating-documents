@@ -1,5 +1,10 @@
 """
-knowledge_extraction.py — Extract new glossary entries, error patterns, and adaptation rules
+knowledge_extraction.py — DEPRECATED. Knowledge extraction was removed from the pipeline
+in favor of a read-only pub-sub model. LLM capabilities replace auto-glossary growth.
+
+This file is retained for reference only. It is no longer dispatched by the pipeline.
+
+Original purpose: Extract new glossary entries, error patterns, and adaptation rules
 from completed pipeline outputs and write them back to the knowledge base.
 
 Usage:
@@ -302,8 +307,8 @@ def main():
         print(f"Error: job manifest not found or invalid at {args.job_manifest}")
         raise SystemExit(1)
 
-    source_lang = manifest["source_language"]
-    target_lang = manifest["target_language"]
+    source_lang = manifest.get("source_lang", manifest.get("source_language"))
+    target_lang = manifest.get("target_lang", manifest.get("target_language"))
     domain = manifest["domain"]
     job_id = manifest.get("job_id", manifest.get("job_name", "unknown"))
 
