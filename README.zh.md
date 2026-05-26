@@ -4,6 +4,16 @@
 
 基于文件的、质量受控的翻译管道，专为 [Claude Code](https://claude.ai/code) 设计。通过主编排器调度专业子代理，完成提取、知识加载、适配研究、并行翻译、专业术语研究、多轮质检、修订和最终审计——所有流程通过 JSON manifest 和经过校验的状态机协调。
 
+## 快速开始
+
+在 Claude Code 中粘贴以下内容即可安装或更新：
+
+```
+帮我从 https://github.com/TingDongHu/Translating-documents.git 安装 translating-documents 技能到 ~/.claude/skills/ 目录，如果已存在就拉取最新版本
+```
+
+Claude Code 下次启动时会自动发现该技能。通过描述翻译任务或使用 `/translating-documents` 来调用。
+
 ## 特性
 
 - **多格式支持** — DOCX、PPTX、XLSX、HTML、Markdown (.md)、纯文本 (.txt)
@@ -29,13 +39,11 @@ pip install python-docx lxml
 
 ## 安装
 
-将仓库克隆到 Claude Code 的技能目录：
+或手动安装：
 
 ```bash
 git clone https://github.com/TingDongHu/Translating-documents.git ~/.claude/skills/translating-documents
 ```
-
-下次启动 Claude Code 时技能会自动发现。通过描述翻译任务或使用 `/translating-documents` 来调用。
 
 ## 使用方法
 

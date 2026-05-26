@@ -4,6 +4,16 @@
 
 A file-driven, quality-assured DOCX translation pipeline for [Claude Code](https://claude.ai/code). Orchestrates specialized subagents through extraction, terminology research, parallel translation, multi-round QA, revision, and final audit — all coordinated via JSON manifests and a validated workflow state machine.
 
+## Quick Start
+
+Paste this into Claude Code to install or update:
+
+```
+帮我从 https://github.com/TingDongHu/Translating-documents.git 安装 translating-documents 技能到 ~/.claude/skills/ 目录，如果已存在就拉取最新版本
+```
+
+Claude Code will automatically discover the skill on next launch. Invoke it by describing a translation task or using `/translating-documents`.
+
 ## Features
 
 - **Multi-format support** — DOCX, PPTX, XLSX, HTML, Markdown (.md), and plain text (.txt)
@@ -29,14 +39,11 @@ pip install python-docx lxml
 
 ## Installation
 
-Clone the repository into your Claude Code skills directory:
+Or install manually:
 
 ```bash
-# Clone into the skills directory
 git clone https://github.com/TingDongHu/Translating-documents.git ~/.claude/skills/translating-documents
 ```
-
-Claude Code will automatically discover the skill on next launch. Invoke it by describing a translation task or using `/translating-documents`.
 
 ## Usage
 
