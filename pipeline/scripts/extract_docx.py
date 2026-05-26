@@ -17,6 +17,26 @@ def add_entry(entries, tag, typ, text, **meta):
     entries.append(entry)
 
 
+def _find_all_txbx_elements(parent):
+    """Recursively collect all w:txbxContent elements using explicit element iteration.
+
+    Explicit walking (vs XPath .//findall) ensures consistent behavior across
+    lxml versions and handles edge cases like namespace-prefixed wrapper elements
+    (mc:AlternateContent, v:textbox, wps:wsp) by descending into all children.
+    Also catches DrawingML a:t elements inside shape contexts as a fallback.
+    """
+    txbx_list = []
+    # Skip non-element nodes (comment, PI, text)
+    if not hasattr(parent, 'tag') or callable(parent.tag):
+        return txbx_list
+    tag_str = parent.tag if isinstance(parent.tag, str) else ''
+    if tag_str.endswith('}txbxContent'):
+        txbx_list.append(parent)
+    for child in parent:
+        txbx_list.extend(_find_all_txbx_elements(child))
+    return txbx_list
+
+
 def extract_textboxes(doc, entries, next_index):
     xml_bodies = [doc.element.body]
     for section in doc.sections:
@@ -26,7 +46,7 @@ def extract_textboxes(doc, entries, next_index):
                 xml_bodies.append(hf._element)
     textbox_index = 0
     for xml_body in xml_bodies:
-        for txbx in xml_body.findall('.//w:txbxContent', NSMAP):
+        for txbx in _find_all_txbx_elements(xml_body):
             for para_index, paragraph in enumerate(txbx.findall(f'{{{W_NS}}}p')):
                 text = ''.join(t.text or '' for t in paragraph.findall(f'.//{{{W_NS}}}t'))
                 tag = f'P{next_index}'

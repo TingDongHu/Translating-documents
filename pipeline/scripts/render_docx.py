@@ -63,6 +63,25 @@ def set_xml_paragraph_text(p_elem, text):
             t_elem.text = ''
 
 
+def _find_all_txbx_elements(parent):
+    """Recursively collect all w:txbxContent elements.
+
+    MUST stay in sync with extract_docx.py:_find_all_txbx_elements to
+    preserve textbox_index alignment between extraction and rendering.
+    Uses explicit element iteration (not XPath .//) for robustness across
+    lxml versions and namespace edge cases.
+    """
+    txbx_list = []
+    if not hasattr(parent, 'tag') or callable(parent.tag):
+        return txbx_list
+    tag_str = parent.tag if isinstance(parent.tag, str) else ''
+    if tag_str.endswith('}txbxContent'):
+        txbx_list.append(parent)
+    for child in parent:
+        txbx_list.extend(_find_all_txbx_elements(child))
+    return txbx_list
+
+
 def build_textbox_index(doc):
     xml_bodies = [doc.element.body]
     for section in doc.sections:
@@ -72,7 +91,7 @@ def build_textbox_index(doc):
                 xml_bodies.append(hf._element)
     textboxes = []
     for xml_body in xml_bodies:
-        textboxes.extend(xml_body.findall('.//w:txbxContent', NSMAP))
+        textboxes.extend(_find_all_txbx_elements(xml_body))
     return textboxes
 
 
