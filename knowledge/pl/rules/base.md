@@ -1,3 +1,11 @@
+---
+id: pl/rules/base
+type: rules
+target_lang: pl
+name: Polish Language Knowledge Base — Base Rules
+description: Polish base translation rules
+---
+
 # Polish Language Knowledge Base — Base Rules
 
 > This document defines the canonical Polish-language rules for document translation into Polish.

@@ -1,3 +1,11 @@
+---
+id: tr/rules/scoring-rubric
+type: rules
+target_lang: tr
+name: Turkish Translation Scoring Rubric
+description: Turkish translation quality scoring rubric
+---
+
 # Turkish Translation Scoring Rubric
 
 This rubric defines quality evaluation criteria for Turkish translations. Each dimension is scored on a 6-band scale (0-5). Scores are weighted and summed to produce a final quality score out of 100.

@@ -1,3 +1,12 @@
+---
+
+id: nl/domain/legal
+type: domain
+target_lang: nl
+name: "Juridisch Nederlands — Domain File: Legal Translation"
+description: Dutch Legal domain terminology and translation rules
+---
+
 # Juridisch Nederlands — Domain File: Legal Translation
 
 ## 1. Reader Model

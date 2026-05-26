@@ -136,7 +136,7 @@ term_mappings:
   "pledge": "nantissement"
   "mortgage": "hypotheque"
   "guarantee": "cautionnement"
-
+---
 # =============================================================================
 # MODELE DE LECTURE / READER MODEL
 # =============================================================================

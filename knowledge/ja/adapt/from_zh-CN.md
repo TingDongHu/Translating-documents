@@ -1,3 +1,12 @@
+---
+id: ja/adapt/from_zh-CN
+type: adapt
+target_lang: ja
+source_lang: zh-CN
+name: 中国語（簡体字）→ 日本語 適応ルール
+description: Simplified Chinese to Japanese language adaptation rules
+---
+
 # 中国語（簡体字）→ 日本語 適応ルール
 
 > **対象**: 中国語（簡体字）から日本語への翻訳における適応ルール

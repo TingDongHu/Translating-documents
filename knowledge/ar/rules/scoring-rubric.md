@@ -1,3 +1,11 @@
+---
+id: ar/rules/scoring-rubric
+type: rules
+target_lang: ar
+name: Arabic (ar) Translation Scoring Rubric — معيار تقييم جودة الترجمة العربية
+description: Arabic translation quality scoring rubric
+---
+
 # Arabic (ar) Translation Scoring Rubric — معيار تقييم جودة الترجمة العربية
 
 > Version 1.0 | Last updated: 2026-05-25

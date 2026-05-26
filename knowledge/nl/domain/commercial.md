@@ -1,3 +1,12 @@
+---
+
+id: nl/domain/commercial
+type: domain
+target_lang: nl
+name: "Commercieel Nederlands — Domain File: Commercial Translation"
+description: Dutch Commercial domain terminology and translation rules
+---
+
 # Commercieel Nederlands — Domain File: Commercial Translation
 
 ## 1. Reader Model

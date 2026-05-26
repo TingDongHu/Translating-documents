@@ -1,3 +1,11 @@
+---
+id: th/rules/base
+type: rules
+target_lang: th
+name: Thai Language Translation Rules (Base)
+description: Thai base translation rules
+---
+
 # Thai Language Translation Rules (Base)
 
 > Language pair target: Any source language -> Thai (ภาษาไทย)

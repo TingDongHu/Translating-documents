@@ -1,3 +1,11 @@
+---
+id: nl/rules/scoring-rubric
+type: rules
+target_lang: nl
+name: Dutch Translation Scoring Rubric
+description: Dutch translation quality scoring rubric
+---
+
 # Dutch Translation Scoring Rubric
 
 This rubric defines the scoring criteria for evaluating Dutch translations. It is used for quality assurance (QA), review, and revision scoring of translated output. Each dimension has a weight and six performance bands. Final scores are calculated as weighted averages and may be adjusted by zero-tolerance or global-issue penalties.

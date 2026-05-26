@@ -1,3 +1,11 @@
+---
+id: th/domain/administrative
+type: domain
+target_lang: th
+name: Thai Administrative Domain (บริหาร/ราชการ) — Domain Knowledge for Thai Government Document Translation
+description: Thai Administrative domain terminology and translation rules
+---
+
 # Thai Administrative Domain (บริหาร/ราชการ) — Domain Knowledge for Thai Government Document Translation
 
 ---

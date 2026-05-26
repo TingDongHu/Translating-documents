@@ -1,3 +1,13 @@
+---
+
+id: nl/adapt/from_zh-CN
+type: adapt
+target_lang: nl
+source_lang: zh-CN
+name: "Dutch Adaptation Guide: Chinese (Simplified) -> Dutch"
+description: Simplified Chinese to Dutch language adaptation rules
+---
+
 # Dutch Adaptation Guide: Chinese (Simplified) -> Dutch
 
 ## 1. Formality

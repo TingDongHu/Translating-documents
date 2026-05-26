@@ -1,3 +1,12 @@
+---
+
+id: id/domain/legal
+type: domain
+target_lang: id
+name: "Domain: Legal (Hukum) — Indonesian"
+description: Indonesian Legal domain terminology and translation rules
+---
+
 # Domain: Legal (Hukum) — Indonesian
 
 ## 1. Reader Model: How to Read Indonesian Legal Documents

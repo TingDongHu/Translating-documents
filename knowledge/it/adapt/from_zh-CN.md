@@ -1,3 +1,12 @@
+---
+id: it/adapt/from_zh-CN
+type: adapt
+target_lang: it
+source_lang: zh-CN
+name: Adattamento Cinese (Semplificato) -> Italiano
+description: Simplified Chinese to Italian language adaptation rules
+---
+
 # Adattamento Cinese (Semplificato) -> Italiano
 
 Regole e tabelle di conversione per tradurre documenti dallo **Zhongwen (Cinese Semplificato)** all'**Italiano**.

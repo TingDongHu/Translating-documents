@@ -107,7 +107,7 @@ term_mappings:
   "certified copy": "copie certifiee conforme"
   "authentic act": "acte authentique"
   "private deed": "acte sous seing prive"
-
+---
 # =============================================================================
 # MODELE DE LECTURE / READER MODEL
 # =============================================================================

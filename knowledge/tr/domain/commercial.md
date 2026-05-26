@@ -1,3 +1,11 @@
+---
+id: tr/domain/commercial
+type: domain
+target_lang: tr
+name: Türkçe Ticari/İş Belgesi Çeviri Alan Bilgisi
+description: Turkish Commercial domain terminology and translation rules
+---
+
 # Türkçe Ticari/İş Belgesi Çeviri Alan Bilgisi
 
 ## Okuyucu Modeli (Reader Model)

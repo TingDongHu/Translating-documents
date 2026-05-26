@@ -1,3 +1,12 @@
+---
+
+id: pl/domain/administrative
+type: domain
+target_lang: pl
+name: "Polish Administrative Domain: Reader Model + Decision Framework + Standards"
+description: Polish Administrative domain terminology and translation rules
+---
+
 # Polish Administrative Domain: Reader Model + Decision Framework + Standards
 
 ---

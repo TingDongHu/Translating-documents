@@ -1,3 +1,13 @@
+---
+
+id: tr/adapt/from_en
+type: adapt
+target_lang: tr
+source_lang: en
+name: "Turkish Adaptation Guide: English → Turkish"
+description: English to Turkish language adaptation rules
+---
+
 # Turkish Adaptation Guide: English → Turkish
 
 ## 1. Formality and Voice

@@ -1,3 +1,12 @@
+---
+
+id: es/domain/technical
+type: domain
+target_lang: es
+name: "Domain: Technical (Spanish — ES)"
+description: Spanish Technical domain terminology and translation rules
+---
+
 # Domain: Technical (Spanish — ES)
 
 ## Reader Model

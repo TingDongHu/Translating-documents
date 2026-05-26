@@ -1,3 +1,13 @@
+---
+
+id: tr/adapt/from_zh-CN
+type: adapt
+target_lang: tr
+source_lang: zh-CN
+name: "Turkish Adaptation Guide: Chinese (Simplified) → Turkish"
+description: Simplified Chinese to Turkish language adaptation rules
+---
+
 # Turkish Adaptation Guide: Chinese (Simplified) → Turkish
 
 ## 1. Formality

@@ -1,3 +1,12 @@
+---
+
+id: es/domain/administrative
+type: domain
+target_lang: es
+name: "Domain: Administrative (Spanish — ES)"
+description: Spanish Administrative domain terminology and translation rules
+---
+
 # Domain: Administrative (Spanish — ES)
 
 ## Reader Model

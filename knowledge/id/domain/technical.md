@@ -1,3 +1,12 @@
+---
+
+id: id/domain/technical
+type: domain
+target_lang: id
+name: "Domain: Technical (Teknis) — Indonesian"
+description: Indonesian Technical domain terminology and translation rules
+---
+
 # Domain: Technical (Teknis) — Indonesian
 
 ## 1. Reader Model: How to Read Indonesian Technical Documents

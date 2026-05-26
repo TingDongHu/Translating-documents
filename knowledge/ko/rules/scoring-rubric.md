@@ -1,3 +1,11 @@
+---
+id: ko/rules/scoring-rubric
+type: rules
+target_lang: ko
+name: Korean (ko) QA Scoring Rubric
+description: Korean translation quality scoring rubric
+---
+
 # Korean (ko) QA Scoring Rubric
 
 > Target language: Korean (한국어)

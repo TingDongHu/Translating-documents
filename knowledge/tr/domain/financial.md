@@ -1,3 +1,11 @@
+---
+id: tr/domain/financial
+type: domain
+target_lang: tr
+name: Türkçe Finansal Belge Çeviri Alan Bilgisi
+description: Turkish Financial domain terminology and translation rules
+---
+
 # Türkçe Finansal Belge Çeviri Alan Bilgisi
 
 ## Okuyucu Modeli (Reader Model)

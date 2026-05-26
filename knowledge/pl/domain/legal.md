@@ -1,3 +1,12 @@
+---
+
+id: pl/domain/legal
+type: domain
+target_lang: pl
+name: "Polish Legal Domain: Reader Model + Decision Framework + Standards"
+description: Polish Legal domain terminology and translation rules
+---
+
 # Polish Legal Domain: Reader Model + Decision Framework + Standards
 
 ---

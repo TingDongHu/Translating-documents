@@ -1,3 +1,12 @@
+---
+id: es/adapt/from_zh-CN
+type: adapt
+target_lang: es
+source_lang: zh-CN
+name: Reglas de adaptacion de chino simplificado (zh-CN) a espanol (es)
+description: Simplified Chinese to Spanish language adaptation rules
+---
+
 # Reglas de adaptacion de chino simplificado (zh-CN) a espanol (es)
 
 ## 1. Formulidad y trato

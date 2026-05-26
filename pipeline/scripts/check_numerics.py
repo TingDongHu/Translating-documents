@@ -5,7 +5,8 @@ from pathlib import Path
 
 TOKEN_RE = re.compile(
     r'GB/T\d+-\d+|ISO\s?\d+:\d+|IS0\d+:\d+|Q\d+[A-Z]?|E\d+[A-Z]?|'
-    r'\d{4}/\d{2}/\d{2}|\d{2}/\d{2}/\d{4}|\d+\*\d+(?:\*\d+)?|'
+    r'\d{4}/\d{2}/\d{2}|\d{2}/\d{2}/\d{4}|\d{4}年\d{1,2}月\d{1,2}日|'
+    r'\d+\*\d+(?:\*\d+)?|'
     r'\d+(?:[.,]\d+)?a|\d+(?:[.,]\d+)?'
 )
 TAG_RE = re.compile(r'^\[([^\]]+)\]\s?(.*)$')
@@ -22,10 +23,54 @@ def load_tagged(path):
 
 
 def norm_date(token):
+    # YYYY/MM/DD → DD/MM/YYYY
     if re.fullmatch(r'\d{4}/\d{2}/\d{2}', token):
         year, month, day = token.split('/')
         return f'{day}/{month}/{year}'
+    # DD.MM.YYYY. or DD.MM.YYYY (European dot-separated with optional trailing dot)
+    m = re.fullmatch(r'(\d{2})\.(\d{2})\.(\d{4})\.?', token)
+    if m:
+        day, month, year = m.groups()
+        return f'{day}/{month}/{year}'
+    # YYYY-MM-DD (ISO)
+    m = re.fullmatch(r'(\d{4})-(\d{2})-(\d{2})', token)
+    if m:
+        year, month, day = m.groups()
+        return f'{day}/{month}/{year}'
+    # YYYY年MM月DD日 (Japanese)
+    m = re.fullmatch(r'(\d{4})年(\d{1,2})月(\d{1,2})日', token)
+    if m:
+        year, month, day = m.groups()
+        return f'{int(day):02d}/{int(month):02d}/{year}'
     return token
+
+
+def norm_date_with_context(tokens, i):
+    """Normalize a date token, with awareness of pre-split dot-date components.
+
+    When TOKEN_RE splits '15.03.2024.' into ['15.03', '2024'], this function
+    detects the DD.MM pattern and merges with the adjacent year token.
+    """
+    token = tokens[i].strip()
+
+    # Already a complete dot-date: DD.MM.YYYY or DD.MM.YYYY.
+    m = re.fullmatch(r'(\d{2})\.(\d{2})\.(\d{4})\.?', token)
+    if m:
+        day, month, year = m.groups()
+        return f'{day}/{month}/{year}'
+
+    # Pre-split dot-date: token is 'DD.MM' and next token is a 4-digit year
+    m = re.fullmatch(r'(\d{2})\.(\d{2})', token)
+    if m and i + 1 < len(tokens):
+        next_tok = tokens[i + 1].strip()
+        year_m = re.fullmatch(r'(\d{4})\.?', next_tok)
+        if year_m:
+            day, month = m.groups()
+            year = year_m.group(1)
+            return f'{day}/{month}/{year}'
+
+    # Other date formats handled by norm_date
+    return norm_date(token)
 
 
 def norm_token(token):
@@ -45,11 +90,38 @@ def multiset(tokens):
     return result
 
 
+def normalize_token_list(raw_tokens):
+    """Normalize a list of raw tokens with date context awareness."""
+    result = []
+    i = 0
+    while i < len(raw_tokens):
+        normalized = norm_date_with_context(raw_tokens, i)
+        # If context-aware normalization consumed the next token (merged DD.MM + YYYY), skip it
+        if (i + 1 < len(raw_tokens)
+                and re.fullmatch(r'\d{2}\.\d{2}', raw_tokens[i].strip())
+                and re.fullmatch(r'\d{4}\.?', raw_tokens[i + 1].strip())):
+            # Apply the same IS0/ISO/decimal normalization to the merged result
+            normalized = normalized.replace('IS0', 'ISO').replace('ISO ', 'ISO')
+            if re.fullmatch(r'\d+[.,]\d+', normalized):
+                normalized = normalized.replace(',', '.')
+            result.append(normalized)
+            i += 2  # skip the year token that was merged
+            continue
+        normalized = normalized.replace('IS0', 'ISO').replace('ISO ', 'ISO')
+        if re.fullmatch(r'\d+[.,]\d+', normalized):
+            normalized = normalized.replace(',', '.')
+        if re.fullmatch(r'\d+[.,]\d+a', normalized):
+            normalized = normalized.replace(',', '.')
+        result.append(normalized)
+        i += 1
+    return result
+
+
 def compare(source, translation):
     rows = []
     for tag in sorted(source, key=lambda item: (item[0], int(re.search(r'\d+', item).group()) if re.search(r'\d+', item) else -1)):
-        source_tokens = [norm_token(token) for token in TOKEN_RE.findall(source.get(tag, ''))]
-        translation_tokens = [norm_token(token) for token in TOKEN_RE.findall(translation.get(tag, ''))]
+        source_tokens = normalize_token_list(TOKEN_RE.findall(source.get(tag, '')))
+        translation_tokens = normalize_token_list(TOKEN_RE.findall(translation.get(tag, '')))
         source_counts = multiset(source_tokens)
         translation_counts = multiset(translation_tokens)
         missing = []

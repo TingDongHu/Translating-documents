@@ -1,3 +1,11 @@
+---
+id: pl/rules/scoring-rubric
+type: rules
+target_lang: pl
+name: Polish Translation Scoring Rubric
+description: Polish translation quality scoring rubric
+---
+
 # Polish Translation Scoring Rubric
 
 > This rubric defines how translation quality is evaluated for Polish-language document translation.

@@ -1,3 +1,12 @@
+---
+
+id: ar/domain/technical
+type: domain
+target_lang: ar
+name: "Domain: Technical (AR) — Arabic Technical Documentation"
+description: Arabic Technical domain terminology and translation rules
+---
+
 # Domain: Technical (AR) — Arabic Technical Documentation
 
 ## Reader Model

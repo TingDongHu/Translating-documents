@@ -1,3 +1,11 @@
+---
+id: th/rules/scoring-rubric
+type: rules
+target_lang: th
+name: Thai Translation Quality Scoring Rubric
+description: Thai translation quality scoring rubric
+---
+
 # Thai Translation Quality Scoring Rubric
 
 > Applicable to: All Thai-language document translation outputs

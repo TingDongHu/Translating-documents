@@ -1,3 +1,12 @@
+---
+id: id/adapt/from_zh-CN
+type: adapt
+target_lang: id
+source_lang: zh-CN
+name: Adaptasi dari Bahasa Mandarin (Zhongwen) ke Bahasa Indonesia
+description: Simplified Chinese to Indonesian language adaptation rules
+---
+
 # Adaptasi dari Bahasa Mandarin (Zhongwen) ke Bahasa Indonesia
 
 Panduan adaptasi saat menerjemahkan dari bahasa Mandarin (Zhongwen) ke bahasa Indonesia.

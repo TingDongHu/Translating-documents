@@ -1,3 +1,12 @@
+---
+
+id: id/domain/commercial
+type: domain
+target_lang: id
+name: "Domain: Commercial (Bisnis / Niaga) — Indonesian"
+description: Indonesian Commercial domain terminology and translation rules
+---
+
 # Domain: Commercial (Bisnis / Niaga) — Indonesian
 
 ## 1. Reader Model: How to Read Indonesian Commercial Documents

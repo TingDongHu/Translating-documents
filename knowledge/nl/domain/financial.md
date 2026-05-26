@@ -1,3 +1,12 @@
+---
+
+id: nl/domain/financial
+type: domain
+target_lang: nl
+name: "Financieel Nederlands — Domain File: Financial Translation"
+description: Dutch Financial domain terminology and translation rules
+---
+
 # Financieel Nederlands — Domain File: Financial Translation
 
 ## 1. Reader Model

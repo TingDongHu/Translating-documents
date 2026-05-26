@@ -1,3 +1,11 @@
+---
+id: pt/rules/base
+type: rules
+target_lang: pt
+name: Regras de Traducao para Portugues (PT-BR / PT-PT)
+description: Portuguese base translation rules
+---
+
 # Regras de Traducao para Portugues (PT-BR / PT-PT)
 
 ## 1. Formatação Numerica

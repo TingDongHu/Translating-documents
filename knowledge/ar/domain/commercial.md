@@ -1,3 +1,12 @@
+---
+
+id: ar/domain/commercial
+type: domain
+target_lang: ar
+name: "Domain: Commercial (AR) — Arabic Business Correspondence & Commerce"
+description: Arabic Commercial domain terminology and translation rules
+---
+
 # Domain: Commercial (AR) — Arabic Business Correspondence & Commerce
 
 ## Reader Model

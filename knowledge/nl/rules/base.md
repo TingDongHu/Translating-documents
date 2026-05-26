@@ -1,3 +1,11 @@
+---
+id: nl/rules/base
+type: rules
+target_lang: nl
+name: Dutch Language Rules for Translation
+description: Dutch base translation rules
+---
+
 # Dutch Language Rules for Translation
 
 This document defines the standard Dutch language rules that must be applied when translating or localizing content into Dutch (Nederlands). These rules cover formatting, grammar, punctuation, and stylistic conventions for the Nederlandse Taalunie standard variety of Dutch (Algemeen Nederlands).

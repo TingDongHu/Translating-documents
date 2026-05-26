@@ -1,3 +1,11 @@
+---
+id: id/rules/base
+type: rules
+target_lang: id
+name: Pedoman Dasar Terjemahan Bahasa Indonesia
+description: Indonesian base translation rules
+---
+
 # Pedoman Dasar Terjemahan Bahasa Indonesia
 
 > Dokumen ini merupakan acuan utama untuk seluruh proyek terjemahan ke dalam bahasa Indonesia. Setiap penerjemah dan pengulas wajib memahami dan menerapkan pedoman di bawah ini secara konsisten.

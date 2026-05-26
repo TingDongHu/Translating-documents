@@ -1,3 +1,11 @@
+---
+id: tr/domain/technical
+type: domain
+target_lang: tr
+name: Türkçe Teknik Belge Çeviri Alan Bilgisi
+description: Turkish Technical domain terminology and translation rules
+---
+
 # Türkçe Teknik Belge Çeviri Alan Bilgisi
 
 ## Okuyucu Modeli (Reader Model)

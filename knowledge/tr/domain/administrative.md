@@ -1,3 +1,11 @@
+---
+id: tr/domain/administrative
+type: domain
+target_lang: tr
+name: Türkçe İdari/Resmî Belge Çeviri Alan Bilgisi
+description: Turkish Administrative domain terminology and translation rules
+---
+
 # Türkçe İdari/Resmî Belge Çeviri Alan Bilgisi
 
 ## Okuyucu Modeli (Reader Model)

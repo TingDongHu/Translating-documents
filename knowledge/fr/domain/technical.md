@@ -129,7 +129,7 @@ term_mappings:
   "availability": "disponibilite"
   "reliability": "fiabilite"
   "maintainability": "maintenabilite"
-
+---
 # =============================================================================
 # MODELE DE LECTURE / READER MODEL
 # =============================================================================

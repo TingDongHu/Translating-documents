@@ -1,3 +1,12 @@
+---
+
+id: hi/domain/commercial
+type: domain
+target_lang: hi
+name: "वाणिज्यिक दस्तावेज़ अनुवाद डोमेन: हिंदी (Commercial Domain)"
+description: Hindi Commercial domain terminology and translation rules
+---
+
 # वाणिज्यिक दस्तावेज़ अनुवाद डोमेन: हिंदी (Commercial Domain)
 
 ---

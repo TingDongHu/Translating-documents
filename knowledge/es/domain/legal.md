@@ -1,3 +1,12 @@
+---
+
+id: es/domain/legal
+type: domain
+target_lang: es
+name: "Domain: Legal (Spanish — ES)"
+description: Spanish Legal domain terminology and translation rules
+---
+
 # Domain: Legal (Spanish — ES)
 
 ## Reader Model

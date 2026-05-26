@@ -1,3 +1,12 @@
+---
+
+id: es/domain/commercial
+type: domain
+target_lang: es
+name: "Domain: Commercial (Spanish — ES)"
+description: Spanish Commercial domain terminology and translation rules
+---
+
 # Domain: Commercial (Spanish — ES)
 
 ## Reader Model

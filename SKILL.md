@@ -88,14 +88,7 @@ Required core files:
 - `extraction/extraction.json` — source location mapping;
 - `extraction/extraction_report.json` — paragraph count and type summary for batch strategy decisions; report contents vary by format (DOCX/HTML/MD: body_count, heading_count, table_count; TXT: body_count; XLSX: table_count; PPTX: body_count, table_count);
 - `pipeline.log` — append-only structured event log for diagnostics;
-- `knowledge/knowledge_manifest.json` — index of produced bundles;
-- `knowledge/bundle_universal.md` — target-language writing rules;
-- `knowledge/bundle_domain.md` — domain-specific decision frameworks;
-- `knowledge/bundle_glossary.json` — bilingual glossary subset;
-- `knowledge/bundle_adapt.json` — adaptation rules (if exists);
-- `knowledge/bundle_errors.json` — error patterns (if exists);
-- `knowledge/bundle_culture.md` — source culture rules (if exists);
-- `knowledge/bundle_quality.md` — scoring rubric (if exists, for inspectors);
+- `knowledge/knowledge_manifest.json` — knowledge index with file paths, frontmatter, section offsets, and filtered glossary metadata;
 - `knowledge/adaptation_notes.json` — adaptation research output;
 - `knowledge/research_reference.json` — professional term research output for inspector (if research completed);
 - `knowledge/research_heartbeat.json` — researcher heartbeat for stall detection (if research dispatched);
@@ -119,10 +112,10 @@ Canonical stages:
 ```text
 initialized
   -> extraction
-  -> knowledge_loading
-  -> adaptation_research
+  -> prepare_knowledge
+  -> knowledge_generation (conditional — only if prepare_knowledge reports missing files)
   [parallel fork]
-  -> translation (foreground)
+  -> translation (foreground, sliding window)
   -> adaptation_research (background)
   -> professional_term_research (background)
   [parallel join]
@@ -146,7 +139,8 @@ Every stage is dispatched to an isolated subagent. The main agent never runs scr
 | Stage | Worker Type | Worker Template | Script | Dependencies |
 |-------|-------------|----------------|--------|--------------|
 | extraction | script runner | `workers/script_runner.md` | `pipeline/scripts/extract_{source_format}.py` | — |
-| knowledge_loading | language worker | `workers/knowledge_loader.md` | — | — |
+| prepare_knowledge | safe script (direct bash) | — | `pipeline/scripts/prepare_knowledge.py` | — |
+| knowledge_generation | language worker (conditional) | `workers/knowledge_loader.md` | — | runs only if prepare_knowledge reports missing knowledge files; re-runs prepare_knowledge after completion |
 | professional_term_research | language worker (background) | `workers/terminology_researcher.md` | — | runs parallel with translation |
 | adaptation_research | language worker (background) | `workers/adaptation_researcher.md` | — | runs parallel with translation |
 | translation | language worker (parallel by batch) | `workers/translator.md` | — | — |
@@ -163,6 +157,37 @@ Every stage is dispatched to an isolated subagent. The main agent never runs scr
 
 **Language worker** = a subagent with the corresponding worker template, receiving file paths and key parameters.
 
+### knowledge_generation (conditional)
+
+**Position**: `prepare_knowledge → knowledge_generation → [parallel fork]`
+
+**Purpose**: When `prepare_knowledge.py` reports that required knowledge files are missing for the target language (no rules/base.md, no domain files, no adapt files), spawn a knowledge_loader subagent to generate them on-the-fly using LLM language knowledge. No web search — purely template-driven generation from the LLM's training data.
+
+**When to run**: Only if `prepare_knowledge.py` output or `knowledge_manifest.json` contains warnings about missing files for the target language. If all required files exist, skip this stage entirely.
+
+**Inputs**:
+- `target_lang`, `source_lang`, `domain`
+- Paths to existing reference files in the same language or similar languages (e.g., if generating `sv/domain/legal.md`, reference `no/domain/legal.md` or `da/domain/legal.md`)
+- `knowledge/{target_lang}/` directory structure (already created by orchestrator if empty)
+
+**Process**:
+1. Read `prepare_knowledge.py` output or manifest warnings to identify exactly which files are missing.
+2. Spawn `workers/knowledge_loader.md` subagent with the missing file list and reference file paths.
+3. Knowledge_loader generates each missing file using LLM language knowledge:
+   - `rules/base.md` — number format, date format, currency, script rules, formality
+   - `domain/{name}.md` — Reader Model, Decision Framework, Error Pattern Library, Domain-Specific Reference
+   - `adapt/from_{source}.md` — 6-section adaptation guide (Formality → Dates → Cultural → Terminology → Admin/Legal → Punctuation)
+4. After knowledge_loader completes, re-run `prepare_knowledge.py` to regenerate the manifest with the new files.
+5. Verify manifest now includes the previously missing files.
+
+**Error handling**: Non-hard gate. If knowledge_loader fails, log warning and proceed — translator will work without target-language knowledge (degraded quality but not blocked).
+
+**Output**: Updated `knowledge/knowledge_manifest.json` with newly generated files included.
+
+**Time cost**: ~1-2 minutes per language (one-time; generated files persist for future jobs).
+
+**Parallel conflict**: None. This stage runs BEFORE the parallel fork, so it cannot conflict with adaptation_research or professional_term_research.
+
 ### Safe Scripts
 
 Some deterministic Python scripts run **directly via Bash** (not through a script runner subagent) to avoid the ~10-15s subagent dispatch overhead for <1s scripts.
@@ -171,6 +196,7 @@ Some deterministic Python scripts run **directly via Bash** (not through a scrip
 
 | Category | Script | Fallback |
 |----------|--------|----------|
+| Knowledge preparation | `prepare_knowledge.py` | script runner if failed |
 | Workflow validation | `validate_workflow_state.py` | script runner if failed |
 | Marker integrity | `check_markers.py` | script runner if failed |
 | Numerical check | `check_numerics.py` | script runner if failed |
@@ -207,24 +233,26 @@ Some deterministic Python scripts run **directly via Bash** (not through a scrip
 
 ### adaptation_research
 
-**Position**: `knowledge_loading → [parallel fork: adaptation_research + translation + professional_term_research]`
+**Position**: `prepare_knowledge → [parallel fork: translation + adaptation_research + professional_term_research]`
 
 **Purpose**: Research known pitfalls and adaptation rules for the specific source→target language pair.
 
 **Inputs**:
 - source_lang, target_lang, domain
-- `knowledge/bundle_adapt.json` (existing adaptation rules, if any)
-- `knowledge/bundle_errors.json` (existing error patterns, if any)
+- `knowledge/knowledge_manifest.json` (knowledge index — provides paths to adapt, errors, rules files)
+- Static `knowledge/{target_lang}/adapt/from_{source_lang}.md` (existing adaptation rules)
+- Static `knowledge/errors/{source}_{target}.json` (existing error patterns)
 
 **Process**:
-1. Load existing adapt and error pattern knowledge.
-2. Filter by domain (only inject relevant entries).
-3. Evaluate coverage — identify categories with weak coverage.
-4. For weak categories, research using web if needed.
-5. Merge existing + new rules into adaptation_notes.json.
-6. Write adaptation_notes.json to `knowledge/adaptation_notes.json`.
+1. Read knowledge manifest to locate adapt and errors files.
+2. Load existing adapt and error pattern knowledge directly from knowledge base (Read at manifest path).
+3. Read rules/base.md for target-language writing context.
+4. Evaluate coverage — identify categories with weak coverage.
+5. For weak categories, research using web if needed.
+6. Merge existing + new rules into adaptation_notes.json.
+7. Write adaptation_notes.json to `knowledge/adaptation_notes.json`.
 
-**Error handling**: Non-hard gate. If web research fails, use only existing knowledge. If no adaptation knowledge exists at all, inject only base.md rules and flag the gap.
+**Error handling**: Non-hard gate. If web research fails, use only existing knowledge. If no adaptation knowledge exists at all, inject only rules/base.md rules and flag the gap.
 
 **Output**: `knowledge/adaptation_notes.json`
 
@@ -233,7 +261,7 @@ Some deterministic Python scripts run **directly via Bash** (not through a scrip
 `standard`:
 
 - extraction;
-- knowledge loading;
+- prepare_knowledge (Python script, no LLM cost);
 - translation;
 - merge_marker_check;
 - numerical check (zero-tolerance gate);
@@ -258,7 +286,8 @@ Some deterministic Python scripts run **directly via Bash** (not through a scrip
 | Stage | standard | high | professional |
 |-------|----------|------|--------------|
 | extraction | run | run | run |
-| knowledge_loading | run | run | run |
+| prepare_knowledge | run | run | run |
+| knowledge_generation | if needed | if needed | if needed |
 | adaptation_research | run | run | run |
 | translation | run | run | run |
 | professional_term_research | run (background) | run (background) | run (background) |
@@ -271,16 +300,19 @@ Some deterministic Python scripts run **directly via Bash** (not through a scrip
 | render | run | run | run |
 | final_audit | run | run | run |
 
-## Worker Bundle Mapping
+## Knowledge Access Pattern
 
-| Worker | Bundles Received |
-|--------|-----------------|
-| translator | universal + domain + adapt + glossary + errors + culture + supplementary_terms + adaptation_notes |
-| professional_term_researcher | source_tagged.txt |
-| adaptation_researcher | adapt + errors |
-| inspector | universal + domain + glossary + quality + adaptation_notes + research_reference |
-| reviser | universal + domain + adapt + adaptation_notes |
-| knowledge_loader | universal (for itself) |
+Each worker receives `knowledge_manifest.json` (as `{manifest_path}`) instead of pre-assembled bundles. Workers use `Read` on demand, loading only the files and sections they need.
+
+**Parameter resolution:** The main agent resolves `{manifest_path}` to the job directory's `knowledge/knowledge_manifest.json` for all workers that receive it. Workers access knowledge files by reading the manifest, then using the absolute paths listed there with `Read(path, offset, limit)` for section-level loading.
+
+| Worker | Reads from manifest | On-demand Read strategy |
+|--------|-------------------|------------------------|
+| translator | manifest | Read `rules` file (required sections), then `domain` sections based on manifest term_mappings + description. Optionally Read `adapt`, `culture`, `glossary` as needed. |
+| adaptation_researcher | manifest | Read `adapt` file (full), `errors`, and `rules` from manifest paths to evaluate coverage. |
+| professional_term_researcher | — (reads source_tagged.txt directly) | Not knowledge-dependent. Input is source text only. |
+| inspector | manifest + adaptation_notes + research_reference | Read `rules`, `domain`, `quality` sections based on manifest index. Cross-check against researcher outputs. |
+| reviser | manifest + adaptation_notes | Read `rules` and `domain` sections relevant to reported issues. |
 
 ## Pipeline Log
 
@@ -289,14 +321,15 @@ Every job directory contains `pipeline.log` — an append-only structured event 
 ### Log Format
 
 ```
-2026-05-26T10:30:00.123 | INFO  | extraction        | dispatch
-2026-05-26T10:30:05.456 | INFO  | extraction        | complete  | 622 entries (elapsed: 5.3s)
-2026-05-26T10:30:06.000 | INFO  | knowledge_loading | dispatch
-2026-05-26T10:30:21.789 | INFO  | knowledge_loading | complete  | 6 bundles (elapsed: 15.8s)
-2026-05-26T10:30:22.000 | INFO  | translation       | dispatch  | wave 1/2 (batches 1-3)
-2026-05-26T10:30:22.001 | INFO  | research          | dispatch  | background, parallel with translation
-2026-05-26T10:31:00.000 | WARN  | research          | stalled   | no heartbeat for 60s
-2026-05-26T10:31:05.000 | INFO  | translation       | complete  | wave 1/2 done (elapsed: 43.0s)
+2026-05-26T10:30:00.123 | INFO  | extraction          | dispatch
+2026-05-26T10:30:05.456 | INFO  | extraction          | complete  | 622 entries (elapsed: 5.3s)
+2026-05-26T10:30:06.000 | INFO  | prepare_knowledge   | dispatch
+2026-05-26T10:30:06.050 | INFO  | prepare_knowledge   | complete  | 5 files indexed, 72 glossary entries (elapsed: 0.05s)
+2026-05-26T10:30:07.000 | INFO  | parallel_fork       | start     | translation + adaptation_research + professional_term_research
+2026-05-26T10:30:22.000 | INFO  | translation         | dispatch  | wave 1/2 (batches 1-3)
+2026-05-26T10:30:22.001 | INFO  | research            | dispatch  | background, parallel with translation
+2026-05-26T10:31:00.000 | WARN  | research            | stalled   | no heartbeat for 60s
+2026-05-26T10:31:05.000 | INFO  | translation         | complete  | wave 1/2 done (elapsed: 43.0s)
 ```
 
 Format: `timestamp | level | stage | event | details`
@@ -339,13 +372,25 @@ Mandatory log points:
 
 ### Background Agent Dispatch
 
-`professional_term_research` 使用 `Agent(run_in_background=true)` 调度。主 agent 在 dispatch 后立即启动 translation，不等待 research 返回。
+After `prepare_knowledge` completes, the pipeline forks into three parallel tracks:
+
+- **translation** (foreground, sliding window of 3 concurrent batches)
+- **adaptation_research** (background) — researches adaptation rules, wrote `adaptation_notes.json`
+- **professional_term_research** (background) — researches official term translations, writes `research_reference.json`
+
+Both researchers run via `Agent(run_in_background=true)`. The main agent starts translation immediately without waiting for researchers.
 
 ```text
-# Dispatch research (non-blocking)
+# Dispatch adaptation research (background)
+Agent tool:
+  description: "Adaptation research"
+  prompt: @workers/adaptation_researcher.md (parameters filled)
+  run_in_background: true
+
+# Dispatch term research (background)
 Agent tool:
   description: "Professional term research"
-  prompt: @workers/terminology_researcher.md (new professional term researcher, parameters filled)
+  prompt: @workers/terminology_researcher.md (parameters filled)
   run_in_background: true
 
 # Immediately start translation (foreground)
@@ -391,11 +436,11 @@ After extraction completes, read `extraction/extraction_report.json` to get `par
 | 1001–3000 | 1000 | 10 | 2–3 batches |
 | > 3000 | 1500 | 10 | 3+ batches |
 
-Rationale: typical tagged source averages ~5 tokens per line. 1000 lines ≈ 5000 source tokens + knowledge bundle ≈ well within modern context windows. Over-splitting wastes dispatch rounds; under-splitting risks context overflow.
+Rationale: typical tagged source averages ~5 tokens per line. 1000 lines ≈ 5000 source tokens + knowledge from on-demand Read ≈ well within modern context windows. Over-splitting wastes dispatch rounds; under-splitting risks context overflow.
 
 ### Translation Parallelism
 
-After `knowledge_loading` (and `adaptation_research` if applicable), the pipeline forks into two parallel tracks:
+After `prepare_knowledge` completes, the pipeline forks into three parallel tracks:
 
 **Track A — Translation (sliding window, foreground):**
 翻译阶段使用滑动窗口，最多同时 dispatch 3 个 translator subagent。每收到一个 completion 立即 dispatch 下一个 batch，减少空闲等待。
@@ -409,7 +454,14 @@ After `knowledge_loading` (and `adaptation_research` if applicable), the pipelin
 4. 检查是否有失败的 batch，按 **Batch Translation Retry** 协议处理（逐批重试，最多 3 次）。
 5. 所有 batch 完成后报告：`翻译进度: 全部 {total_batches} 批完成（{elapsed:.1f}s）`
 
-**Track B — Professional Term Research (background, parallel):**
+**Track B — Adaptation Research (background, parallel):**
+As soon as translation starts, dispatch `adaptation_research` via `run_in_background=true`:
+- Researches language-pair-specific adaptation rules not covered in existing knowledge
+- Evaluates coverage gaps in static `adapt/from_{source}.md` rules
+- Produces `knowledge/adaptation_notes.json` for inspector use
+- Not a hard gate — pipeline never blocks on adaptation research
+
+**Track C — Professional Term Research (background, parallel):**
 As soon as translation starts, dispatch `professional_term_research` via `run_in_background=true`:
 
 ```
@@ -489,6 +541,9 @@ After each stage completes, the main agent MUST report a one-line progress updat
 Examples:
 
 - `[extraction] done — 622 tagged entries (9 body, 601 table, 6 header, 6 footer)`
+- `[prepare_knowledge] done — 5 knowledge files indexed, 72 glossary entries (0.05s)`
+- `[knowledge_generation] done — generated 8 files for sw (rules + 5 domain + 2 adapt) (1.2s)`
+- `[knowledge_generation] skipped — all knowledge files present for target language`
 - `[translation] done — 622 tags translated across 4 batches`
 - `[professional_term_research] done — 15 terms researched, 10 with official translations`
 - `[professional_term_research] stalled — no heartbeat for 60s, proceeding without reference`
@@ -601,7 +656,9 @@ The final user summary should include:
 
 ## Knowledge Base Maintenance
 
-The knowledge base is read-only and maintained manually. Pipeline workers consume existing knowledge bundles but never write back. LLM capabilities provide up-to-date domain knowledge for each job.
+The knowledge base is primarily read-only and maintained manually. Pipeline workers read knowledge files on demand from the manifest but never write back. LLM capabilities provide up-to-date domain knowledge for each job.
+
+**Auto-generation**: When `prepare_knowledge.py` detects missing files for a target language, the `knowledge_generation` stage spawns a knowledge_loader subagent to generate them. Generated files use the same structure as handcrafted files (frontmatter + `##` sections) and persist to disk for future reuse. Generated files are indistinguishable from handcrafted files — there is no "generated" flag because the LLM-generated content is equally valid knowledge.
 
 | Limit | Value | Behavior |
 |-------|-------|----------|
@@ -610,4 +667,4 @@ The knowledge base is read-only and maintained manually. Pipeline workers consum
 | Archived storage location | `knowledge/archived/{source}_{target}.json` | Preserved for recovery, not injected into workers |
 | Conflicting entry review trigger | Detected in extraction | Flagged in manifest warnings[] for manual review |
 
-Archived entries remain on disk in `knowledge/archived/` but are NOT included in bundle_glossary.json during knowledge_loading.
+Archived entries remain on disk in `knowledge/archived/` but are automatically excluded by prepare_knowledge.py's confidence-based filtering.

@@ -1,3 +1,12 @@
+---
+id: de/adapt/from_en
+type: adapt
+target_lang: de
+source_lang: en
+name: 英→德 (en → de-DE) 适应规则
+description: English to German language adaptation rules
+---
+
 # 英→德 (en → de-DE) 适应规则
 
 - **id**: de/adapt/from_en

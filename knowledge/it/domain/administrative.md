@@ -1,3 +1,11 @@
+---
+id: it/domain/administrative
+type: domain
+target_lang: it
+name: Administrative Domain (Settore Amministrativo)
+description: Italian Administrative domain terminology and translation rules
+---
+
 # Administrative Domain (Settore Amministrativo)
 
 ## Reader Model: Destinatario della Traduzione Amministrativa

@@ -1,3 +1,11 @@
+---
+id: it/domain/commercial
+type: domain
+target_lang: it
+name: Commercial Domain (Settore Commerciale)
+description: Italian Commercial domain terminology and translation rules
+---
+
 # Commercial Domain (Settore Commerciale)
 
 ## Reader Model: Destinatario della Traduzione Commerciale

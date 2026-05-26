@@ -1,3 +1,12 @@
+---
+
+id: hi/domain/technical
+type: domain
+target_lang: hi
+name: "तकनीकी दस्तावेज़ अनुवाद डोमेन: हिंदी (Technical Domain)"
+description: Hindi Technical domain terminology and translation rules
+---
+
 # तकनीकी दस्तावेज़ अनुवाद डोमेन: हिंदी (Technical Domain)
 
 ---

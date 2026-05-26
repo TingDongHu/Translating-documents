@@ -1,3 +1,11 @@
+---
+id: hi/rules/scoring-rubric
+type: rules
+target_lang: hi
+name: Hindi Translation Quality Scoring Rubric
+description: Hindi translation quality scoring rubric
+---
+
 # Hindi Translation Quality Scoring Rubric
 
 ## Scoring Framework

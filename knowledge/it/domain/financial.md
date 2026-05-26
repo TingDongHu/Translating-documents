@@ -1,3 +1,11 @@
+---
+id: it/domain/financial
+type: domain
+target_lang: it
+name: Financial Domain (Settore Finanziario)
+description: Italian Financial domain terminology and translation rules
+---
+
 # Financial Domain (Settore Finanziario)
 
 ## Reader Model: Destinatario della Traduzione Finanziaria

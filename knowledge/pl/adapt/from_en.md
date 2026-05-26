@@ -1,3 +1,13 @@
+---
+
+id: pl/adapt/from_en
+type: adapt
+target_lang: pl
+source_lang: en
+name: "Polish Adaptation: English → Polish"
+description: English to Polish language adaptation rules
+---
+
 # Polish Adaptation: English → Polish
 
 ## 1. Formality

@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 CANONICAL_STAGES = [
-    'initialized', 'extraction', 'knowledge_loading',
+    'initialized', 'extraction', 'prepare_knowledge', 'knowledge_generation',
     'adaptation_research',
     'translation', 'professional_term_research',
     'merge_marker_check', 'numerical_check',

@@ -106,7 +106,7 @@ term_mappings:
   "sales contract": "contrat de vente"
   "service-level agreement": "accord de niveau de service"
   "master service agreement": "contrat-cadre de prestations"
-
+---
 # =============================================================================
 # MODELE DE LECTURE / READER MODEL
 # =============================================================================

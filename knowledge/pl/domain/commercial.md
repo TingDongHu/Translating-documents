@@ -1,3 +1,12 @@
+---
+
+id: pl/domain/commercial
+type: domain
+target_lang: pl
+name: "Polish Commercial Domain: Reader Model + Decision Framework + Standards"
+description: Polish Commercial domain terminology and translation rules
+---
+
 # Polish Commercial Domain: Reader Model + Decision Framework + Standards
 
 ---

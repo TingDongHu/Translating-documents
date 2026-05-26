@@ -1,3 +1,13 @@
+---
+
+id: nl/adapt/from_en
+type: adapt
+target_lang: nl
+source_lang: en
+name: "Dutch Adaptation Guide: English -> Dutch"
+description: English to Dutch language adaptation rules
+---
+
 # Dutch Adaptation Guide: English -> Dutch
 
 ## 1. Formality

@@ -1,3 +1,11 @@
+---
+id: it/domain/technical
+type: domain
+target_lang: it
+name: Technical Domain (Settore Tecnico)
+description: Italian Technical domain terminology and translation rules
+---
+
 # Technical Domain (Settore Tecnico)
 
 ## Reader Model: Destinatario della Traduzione Tecnica

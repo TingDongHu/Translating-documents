@@ -1,3 +1,11 @@
+---
+id: ko/rules/base
+type: rules
+target_lang: ko
+name: Korean (ko) Translation Rules -- Base Guide
+description: Korean base translation rules
+---
+
 # Korean (ko) Translation Rules -- Base Guide
 
 > Target language: Korean (한국어)

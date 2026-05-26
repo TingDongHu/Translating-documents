@@ -1,3 +1,12 @@
+---
+
+id: id/domain/financial
+type: domain
+target_lang: id
+name: "Domain: Financial (Keuangan) — Indonesian"
+description: Indonesian Financial domain terminology and translation rules
+---
+
 # Domain: Financial (Keuangan) — Indonesian
 
 ## 1. Reader Model: How to Read Indonesian Financial Documents

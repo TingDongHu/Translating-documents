@@ -1,3 +1,11 @@
+---
+id: hi/rules/base
+type: rules
+target_lang: hi
+name: Hindi Translation Knowledge Base — Base Rules
+description: Hindi base translation rules
+---
+
 # Hindi Translation Knowledge Base — Base Rules
 
 ## 1. Number Format

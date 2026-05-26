@@ -1,3 +1,11 @@
+---
+id: th/domain/financial
+type: domain
+target_lang: th
+name: Thai Financial Domain (การเงิน) — Domain Knowledge for Thai Financial Document Translation
+description: Thai Financial domain terminology and translation rules
+---
+
 # Thai Financial Domain (การเงิน) — Domain Knowledge for Thai Financial Document Translation
 
 ---

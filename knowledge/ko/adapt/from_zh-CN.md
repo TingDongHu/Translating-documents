@@ -1,3 +1,12 @@
+---
+id: ko/adapt/from_zh-CN
+type: adapt
+target_lang: ko
+source_lang: zh-CN
+name: Chinese (Simplified) to Korean Adaptation Guide
+description: Simplified Chinese to Korean language adaptation rules
+---
+
 # Chinese (Simplified) to Korean Adaptation Guide
 
 > Target language: Korean (한국어 / 韓國語)  

@@ -1,3 +1,11 @@
+---
+id: vi/rules/base
+type: rules
+target_lang: vi
+name: Quy tắc Dịch thuật Tiếng Việt (Vietnamese Translation Rules)
+description: Vietnamese base translation rules
+---
+
 # Quy tắc Dịch thuật Tiếng Việt (Vietnamese Translation Rules)
 
 > Tài liệu tham khảo toàn diện cho dịch thuật từ ngôn ngữ nguồn sang tiếng Việt.

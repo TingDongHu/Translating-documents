@@ -1,3 +1,11 @@
+---
+id: it/rules/base
+type: rules
+target_lang: it
+name: Regole di Localizzazione Italiana — Base
+description: Italian base translation rules
+---
+
 # Regole di Localizzazione Italiana — Base
 
 Questo documento definisce le regole fondamentali per la localizzazione di contenuti in lingua italiana. Deve essere consultato per ogni traduzione dal russo (o da altre lingue) all'italiano.

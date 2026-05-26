@@ -1,3 +1,12 @@
+---
+id: fr/adapt/from_en
+type: adapt
+target_lang: fr
+source_lang: en
+name: Adaptation francophone depuis l'anglais (en)
+description: English to French language adaptation rules
+---
+
 # Adaptation francophone depuis l'anglais (en)
 
 ## 1. Formule de politesse et registre

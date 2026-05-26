@@ -1,3 +1,12 @@
+---
+
+id: pl/domain/technical
+type: domain
+target_lang: pl
+name: "Polish Technical Domain: Reader Model + Decision Framework + Standards"
+description: Polish Technical domain terminology and translation rules
+---
+
 # Polish Technical Domain: Reader Model + Decision Framework + Standards
 
 ---

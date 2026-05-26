@@ -1,3 +1,12 @@
+---
+
+id: id/domain/administrative
+type: domain
+target_lang: id
+name: "Domain: Administrative (Administrasi) — Indonesian"
+description: Indonesian Administrative domain terminology and translation rules
+---
+
 # Domain: Administrative (Administrasi) — Indonesian
 
 ## 1. Reader Model: How to Read Indonesian Administrative Documents

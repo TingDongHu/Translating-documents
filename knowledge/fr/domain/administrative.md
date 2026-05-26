@@ -100,7 +100,7 @@ term_mappings:
   "annual leave": "conges annuels"
   "special leave": "conges exceptionnels"
   "administrative leave": "conges administratifs"
-
+---
 # =============================================================================
 # MODELE DE LECTURE / READER MODEL
 # =============================================================================

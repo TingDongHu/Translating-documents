@@ -1,3 +1,11 @@
+---
+id: it/rules/scoring-rubric
+type: rules
+target_lang: it
+name: Rubrica di Valutazione — Localizzazione Italiana
+description: Italian translation quality scoring rubric
+---
+
 # Rubrica di Valutazione — Localizzazione Italiana
 
 Questa rubrica definisce i criteri di valutazione per la qualita delle traduzioni verso l'italiano. Ogni dimensione viene valutata su 6 bande (0–5) e moltiplicata per il peso corrispondente. Il punteggio globale e la somma pesata, espressa in percentuale.

@@ -1,3 +1,12 @@
+---
+id: it/adapt/from_en
+type: adapt
+target_lang: it
+source_lang: en
+name: Adattamento Inglese -> Italiano
+description: English to Italian language adaptation rules
+---
+
 # Adattamento Inglese -> Italiano
 
 Regole e tabelle di conversione per tradurre documenti dall'**Inglese** all'**Italiano**.

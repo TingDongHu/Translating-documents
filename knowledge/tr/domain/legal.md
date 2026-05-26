@@ -1,3 +1,11 @@
+---
+id: tr/domain/legal
+type: domain
+target_lang: tr
+name: Türkçe Hukuki Belge Çeviri Alan Bilgisi
+description: Turkish Legal domain terminology and translation rules
+---
+
 # Türkçe Hukuki Belge Çeviri Alan Bilgisi
 
 ## Okuyucu Modeli (Reader Model)

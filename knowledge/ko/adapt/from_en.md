@@ -1,3 +1,12 @@
+---
+id: ko/adapt/from_en
+type: adapt
+target_lang: ko
+source_lang: en
+name: English to Korean Adaptation Guide
+description: English to Korean language adaptation rules
+---
+
 # English to Korean Adaptation Guide
 
 > Target language: Korean (한국어 / 韓國語)  

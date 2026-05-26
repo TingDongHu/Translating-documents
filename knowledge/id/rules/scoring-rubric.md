@@ -1,3 +1,11 @@
+---
+id: id/rules/scoring-rubric
+type: rules
+target_lang: id
+name: Rubrik Penilaian Kualitas Terjemahan — Bahasa Indonesia
+description: Indonesian translation quality scoring rubric
+---
+
 # Rubrik Penilaian Kualitas Terjemahan — Bahasa Indonesia
 
 > Rubrik ini digunakan untuk menilai kualitas terjemahan dari bahasa sumber ke dalam bahasa Indonesia. Setiap dimensi dinilai pada skala 1--6 (band). Bobot setiap dimensi mencerminkan tingkat kepentingannya terhadap kualitas keseluruhan.

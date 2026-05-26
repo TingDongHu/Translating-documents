@@ -1,3 +1,11 @@
+---
+id: vi/rules/scoring-rubric
+type: rules
+target_lang: vi
+name: Thang điểm Đánh giá Chất lượng Dịch thuật Tiếng Việt (Vietnamese Translation Quality Scoring Rubric)
+description: Vietnamese translation quality scoring rubric
+---
+
 # Thang điểm Đánh giá Chất lượng Dịch thuật Tiếng Việt (Vietnamese Translation Quality Scoring Rubric)
 
 > Phiên bản: 1.0 | Ngày: 2026-05

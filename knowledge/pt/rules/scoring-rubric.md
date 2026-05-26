@@ -1,3 +1,11 @@
+---
+id: pt/rules/scoring-rubric
+type: rules
+target_lang: pt
+name: Rubrica de Pontuacao — Traducao para Portugues (PT-BR / PT-PT)
+description: Portuguese translation quality scoring rubric
+---
+
 # Rubrica de Pontuacao — Traducao para Portugues (PT-BR / PT-PT)
 
 ## Estrutura da Rubrica

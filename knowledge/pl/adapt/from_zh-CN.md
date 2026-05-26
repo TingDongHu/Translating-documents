@@ -1,3 +1,13 @@
+---
+
+id: pl/adapt/from_zh-CN
+type: adapt
+target_lang: pl
+source_lang: zh-CN
+name: "Polish Adaptation: Chinese (zh-CN) → Polish (pl)"
+description: Simplified Chinese to Polish language adaptation rules
+---
+
 # Polish Adaptation: Chinese (zh-CN) → Polish (pl)
 
 ## 1. Formality

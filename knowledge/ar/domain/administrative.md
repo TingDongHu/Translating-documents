@@ -1,3 +1,12 @@
+---
+
+id: ar/domain/administrative
+type: domain
+target_lang: ar
+name: "Domain: Administrative (AR) — Arabic Official & Administrative Documentation"
+description: Arabic Administrative domain terminology and translation rules
+---
+
 # Domain: Administrative (AR) — Arabic Official & Administrative Documentation
 
 ## Reader Model

@@ -110,7 +110,7 @@ translation_job_{时间戳}_{源文件名}/
 ├── extraction/
 │   └── source_tagged.txt          # 带 [Pn] 标记的源文本
 ├── knowledge/
-│   └── knowledge_bundle.md        # 为 worker 组装的知识包
+│   └── knowledge_manifest.json    # 知识文件的索引和章节偏移
 ├── translation/
 │   ├── batch_001_translated.txt   # 每批的翻译结果
 │   └── translated_merged.txt      # 合并后的完整译文
@@ -146,7 +146,7 @@ translation_job_{时间戳}_{源文件名}/
 管道遵循标准的 14 阶段工作流：
 
 ```
-initialized → extraction → knowledge_loading → adaptation_research → translation
+initialized → extraction → prepare_knowledge → adaptation_research → translation
   → merge_marker_check → [numerical_check] → inspection_round1
   → [revision_round1] → [inspection_round2] → [revision_round2] → render → final_audit → completed
 ```
@@ -160,7 +160,7 @@ initialized → extraction → knowledge_loading → adaptation_research → tra
 | 阶段 | standard | high | professional |
 |-------|----------|------|--------------|
 | extraction | 运行 | 运行 | 运行 |
-| knowledge_loading | 运行 | 运行 | 运行 |
+| prepare_knowledge | 运行 | 运行 | 运行 |
 | adaptation_research | 运行 | 运行 | 运行 |
 | translation | 运行 | 运行 | 运行 |
 | professional_term_research | 运行（后台） | 运行（后台） | 运行（后台） |
@@ -210,11 +210,12 @@ initialized → extraction → knowledge_loading → adaptation_research → tra
   │   └── validate_workflow_state.py — 状态机校验
   │
   └── 语言子代理 (LLM subagents，通过提示模板调度)
-      ├── knowledge_loader.md             — 组装领域规则 + 术语表为知识包
-      ├── adaptation_researcher.md        — 研究源语言→目标语言适配规则
+      ├── 预处理:
+      │   └── prepare_knowledge.py       — 索引知识库为 manifest（Python 脚本）
+      ├── adaptation_researcher.md        — 研究源语言→目标语言适配规则（并行）
       ├── terminology_researcher.md       — 专业术语研究（与翻译并行）
       ├── translator.md                   — 翻译批次，保持 [Pn]/[CONTEXT] 标记
-      ├── inspector.md                    — 6 维度质检评分（内含集成术语扫描）
+      ├── inspector.md                    — 6 维度质检评分（含术语扫描 + researcher 交叉核验）
       └── reviser.md                      — 根据质检报告修复问题
 ```
 

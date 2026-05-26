@@ -1,3 +1,12 @@
+---
+id: fr/adapt/from_zh-CN
+type: adapt
+target_lang: fr
+source_lang: zh-CN
+name: Adaptation francophone depuis le chinois simplifié (zh-CN)
+description: Simplified Chinese to French language adaptation rules
+---
+
 # Adaptation francophone depuis le chinois simplifié (zh-CN)
 
 ## 1. Formule de politesse et registre

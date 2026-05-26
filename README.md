@@ -111,7 +111,7 @@ translation_job_{timestamp}_{source}/
 ├── extraction/
 │   └── source_tagged.txt          # Tagged source text with [Pn] markers
 ├── knowledge/
-│   └── knowledge_bundle.md        # Assembled rules for workers
+│   └── knowledge_manifest.json    # Index of knowledge files with section offsets
 ├── translation/
 │   ├── batch_001_translated.txt   # Per‑batch translations
 │   └── translated_merged.txt      # Merged full translation
@@ -147,7 +147,7 @@ Each script runner gets a **fresh subagent** so debugging loops never pollute th
 The pipeline follows a canonical 14‑stage workflow:
 
 ```
-initialized → extraction → knowledge_loading → adaptation_research → translation
+initialized → extraction → prepare_knowledge → adaptation_research → translation
   → merge_marker_check → [numerical_check] → inspection_round1
   → [revision_round1] → [inspection_round2] → [revision_round2] → render → final_audit → completed
 ```
@@ -161,7 +161,7 @@ Stages in `[brackets]` are conditional based on quality level.
 | Stage | standard | high | professional |
 |-------|----------|------|--------------|
 | extraction | run | run | run |
-| knowledge_loading | run | run | run |
+| prepare_knowledge | run | run | run |
 | adaptation_research | run | run | run |
 | translation | run | run | run |
 | professional_term_research | run (background) | run (background) | run (background) |
@@ -211,11 +211,12 @@ Main Agent (orchestrator)
   │   └── validate_workflow_state.py — State machine validation against schema
   │
   └── Language Worker (LLM subagents, dispatched via prompt templates)
-      ├── knowledge_loader.md             — Assembles domain rules + glossary into knowledge bundle
-      ├── adaptation_researcher.md        — Researches source→target adaptation rules
+      ├── preparation:
+      │   └── prepare_knowledge.py       — Indexes knowledge base into manifest (Python script)
+      ├── adaptation_researcher.md        — Researches source→target adaptation rules (parallel)
       ├── terminology_researcher.md       — Professional term research (parallel with translation)
       ├── translator.md                   — Translates batches preserving [Pn]/[CONTEXT] markers
-      ├── inspector.md                    — 6‑dimension quality scoring with integrated terminology scan
+      ├── inspector.md                    — 6‑dimension quality scoring with integrated terminology + researcher cross-check
       └── reviser.md                      — Fixes issues identified by inspection
 ```
 

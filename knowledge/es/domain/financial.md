@@ -1,3 +1,12 @@
+---
+
+id: es/domain/financial
+type: domain
+target_lang: es
+name: "Domain: Financial (Spanish — ES)"
+description: Spanish Financial domain terminology and translation rules
+---
+
 # Domain: Financial (Spanish — ES)
 
 ## Reader Model

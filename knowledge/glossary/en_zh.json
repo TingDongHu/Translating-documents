@@ -1,0 +1,881 @@
+{
+  "source_lang": "en",
+  "target_lang": "zh",
+  "domain": [
+    "technical"
+  ],
+  "last_updated": "2026-05-26T14:22:13.621575+00:00",
+  "entries": [
+    {
+      "source": "Docker",
+      "target": "Docker 容器管理指南",
+      "frequency": 27,
+      "confidence": "pending",
+      "verified_count": 1,
+      "first_seen": "2026-05-26T13:39:26.271585+00:00",
+      "last_seen": "2026-05-26T14:22:13.621350+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P0] Docker Container Management Guide",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Container",
+      "target": "Docker 容器管理指南",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.271893+00:00",
+      "last_seen": "2026-05-26T13:39:26.271893+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P0] Docker Container Management Guide",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "applications",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包成轻量级、可移植的容器。与传统的虚拟机（VM）不同，Docker 容器共享宿主机操作系统内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署流程中的事实标准，截至 2024 年，企业环境中的采用率已超过 80%。",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.271922+00:00",
+      "last_seen": "2026-05-26T13:39:26.271922+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "and",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包成轻量级、可移植的容器。与传统的虚拟机（VM）不同，Docker 容器共享宿主机操作系统内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署流程中的事实标准，截至 2024 年，企业环境中的采用率已超过 80%。",
+      "frequency": 21,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.271945+00:00",
+      "last_seen": "2026-05-26T13:39:26.271945+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "containers",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包成轻量级、可移植的容器。与传统的虚拟机（VM）不同，Docker 容器共享宿主机操作系统内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署流程中的事实标准，截至 2024 年，企业环境中的采用率已超过 80%。",
+      "frequency": 9,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.271969+00:00",
+      "last_seen": "2026-05-26T13:39:26.271969+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "the",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包成轻量级、可移植的容器。与传统的虚拟机（VM）不同，Docker 容器共享宿主机操作系统内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署流程中的事实标准，截至 2024 年，企业环境中的采用率已超过 80%。",
+      "frequency": 13,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.271991+00:00",
+      "last_seen": "2026-05-26T13:39:26.271991+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "host",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包成轻量级、可移植的容器。与传统的虚拟机（VM）不同，Docker 容器共享宿主机操作系统内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署流程中的事实标准，截至 2024 年，企业环境中的采用率已超过 80%。",
+      "frequency": 8,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272011+00:00",
+      "last_seen": "2026-05-26T13:39:26.272011+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "system",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包成轻量级、可移植的容器。与传统的虚拟机（VM）不同，Docker 容器共享宿主机操作系统内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署流程中的事实标准，截至 2024 年，企业环境中的采用率已超过 80%。",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272031+00:00",
+      "last_seen": "2026-05-26T13:39:26.272031+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "resource",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包成轻量级、可移植的容器。与传统的虚拟机（VM）不同，Docker 容器共享宿主机操作系统内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署流程中的事实标准，截至 2024 年，企业环境中的采用率已超过 80%。",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272051+00:00",
+      "last_seen": "2026-05-26T13:39:26.272051+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "The",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包成轻量级、可移植的容器。与传统的虚拟机（VM）不同，Docker 容器共享宿主机操作系统内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署流程中的事实标准，截至 2024 年，企业环境中的采用率已超过 80%。",
+      "frequency": 8,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272071+00:00",
+      "last_seen": "2026-05-26T13:39:26.272071+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "with",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包成轻量级、可移植的容器。与传统的虚拟机（VM）不同，Docker 容器共享宿主机操作系统内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署流程中的事实标准，截至 2024 年，企业环境中的采用率已超过 80%。",
+      "frequency": 7,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272091+00:00",
+      "last_seen": "2026-05-26T13:39:26.272091+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "image",
+      "target": "Docker 镜像是一个只读模板，其中包含创建容器的指令。镜像是按层构建的，每一层代表一组文件系统变更。[推断: 原文\"popular  image\"中存在内容缺失，各版本一致，基于语义推测为\"popular nginx:alpine image\"，Docker 上下文中 23MB 的镜像通常为 nginx:alpine]nginx:alpine 镜像只有 23MB，而完整的 Ubuntu 虚拟机",
+      "frequency": 12,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272114+00:00",
+      "last_seen": "2026-05-26T13:39:26.272114+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P5] A Docker image is a read-only template with instructions for creating a container. Images are built in layers, where each layer represents a set of filesystem changes. The popular  image is only 23MB in size, compared to a full Ubuntu VM which could be over 2GB. Docker images are stored in registries, with Docker Hub being the largest public registry hosting over 10 million repositories.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "read",
+      "target": "Docker 镜像是一个只读模板，其中包含创建容器的指令。镜像是按层构建的，每一层代表一组文件系统变更。[推断: 原文\"popular  image\"中存在内容缺失，各版本一致，基于语义推测为\"popular nginx:alpine image\"，Docker 上下文中 23MB 的镜像通常为 nginx:alpine]nginx:alpine 镜像只有 23MB，而完整的 Ubuntu 虚拟机",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272134+00:00",
+      "last_seen": "2026-05-26T13:39:26.272134+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P5] A Docker image is a read-only template with instructions for creating a container. Images are built in layers, where each layer represents a set of filesystem changes. The popular  image is only 23MB in size, compared to a full Ubuntu VM which could be over 2GB. Docker images are stored in registries, with Docker Hub being the largest public registry hosting over 10 million repositories.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "only",
+      "target": "Docker 镜像是一个只读模板，其中包含创建容器的指令。镜像是按层构建的，每一层代表一组文件系统变更。[推断: 原文\"popular  image\"中存在内容缺失，各版本一致，基于语义推测为\"popular nginx:alpine image\"，Docker 上下文中 23MB 的镜像通常为 nginx:alpine]nginx:alpine 镜像只有 23MB，而完整的 Ubuntu 虚拟机",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272154+00:00",
+      "last_seen": "2026-05-26T13:39:26.272154+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P5] A Docker image is a read-only template with instructions for creating a container. Images are built in layers, where each layer represents a set of filesystem changes. The popular  image is only 23MB in size, compared to a full Ubuntu VM which could be over 2GB. Docker images are stored in registries, with Docker Hub being the largest public registry hosting over 10 million repositories.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "for",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包成轻量级、可移植的容器。与传统的虚拟机（VM）不同，Docker 容器共享宿主机操作系统内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署流程中的事实标准，截至 2024 年，企业环境中的采用率已超过 80%。",
+      "frequency": 13,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272174+00:00",
+      "last_seen": "2026-05-26T13:39:26.272174+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "container",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包成轻量级、可移植的容器。与传统的虚拟机（VM）不同，Docker 容器共享宿主机操作系统内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署流程中的事实标准，截至 2024 年，企业环境中的采用率已超过 80%。",
+      "frequency": 11,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272193+00:00",
+      "last_seen": "2026-05-26T13:39:26.272193+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "filesystem",
+      "target": "Docker 镜像是一个只读模板，其中包含创建容器的指令。镜像是按层构建的，每一层代表一组文件系统变更。[推断: 原文\"popular  image\"中存在内容缺失，各版本一致，基于语义推测为\"popular nginx:alpine image\"，Docker 上下文中 23MB 的镜像通常为 nginx:alpine]nginx:alpine 镜像只有 23MB，而完整的 Ubuntu 虚拟机",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272223+00:00",
+      "last_seen": "2026-05-26T13:39:26.272223+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P5] A Docker image is a read-only template with instructions for creating a container. Images are built in layers, where each layer represents a set of filesystem changes. The popular  image is only 23MB in size, compared to a full Ubuntu VM which could be over 2GB. Docker images are stored in registries, with Docker Hub being the largest public registry hosting over 10 million repositories.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "size",
+      "target": "Docker 镜像是一个只读模板，其中包含创建容器的指令。镜像是按层构建的，每一层代表一组文件系统变更。[推断: 原文\"popular  image\"中存在内容缺失，各版本一致，基于语义推测为\"popular nginx:alpine image\"，Docker 上下文中 23MB 的镜像通常为 nginx:alpine]nginx:alpine 镜像只有 23MB，而完整的 Ubuntu 虚拟机",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272245+00:00",
+      "last_seen": "2026-05-26T13:39:26.272245+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P5] A Docker image is a read-only template with instructions for creating a container. Images are built in layers, where each layer represents a set of filesystem changes. The popular  image is only 23MB in size, compared to a full Ubuntu VM which could be over 2GB. Docker images are stored in registries, with Docker Hub being the largest public registry hosting over 10 million repositories.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "over",
+      "target": "Docker 镜像是一个只读模板，其中包含创建容器的指令。镜像是按层构建的，每一层代表一组文件系统变更。[推断: 原文\"popular  image\"中存在内容缺失，各版本一致，基于语义推测为\"popular nginx:alpine image\"，Docker 上下文中 23MB 的镜像通常为 nginx:alpine]nginx:alpine 镜像只有 23MB，而完整的 Ubuntu 虚拟机",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272266+00:00",
+      "last_seen": "2026-05-26T13:39:26.272266+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P5] A Docker image is a read-only template with instructions for creating a container. Images are built in layers, where each layer represents a set of filesystem changes. The popular  image is only 23MB in size, compared to a full Ubuntu VM which could be over 2GB. Docker images are stored in registries, with Docker Hub being the largest public registry hosting over 10 million repositories.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "images",
+      "target": "Docker 镜像是一个只读模板，其中包含创建容器的指令。镜像是按层构建的，每一层代表一组文件系统变更。[推断: 原文\"popular  image\"中存在内容缺失，各版本一致，基于语义推测为\"popular nginx:alpine image\"，Docker 上下文中 23MB 的镜像通常为 nginx:alpine]nginx:alpine 镜像只有 23MB，而完整的 Ubuntu 虚拟机",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272289+00:00",
+      "last_seen": "2026-05-26T13:39:26.272289+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P5] A Docker image is a read-only template with instructions for creating a container. Images are built in layers, where each layer represents a set of filesystem changes. The popular  image is only 23MB in size, compared to a full Ubuntu VM which could be over 2GB. Docker images are stored in registries, with Docker Hub being the largest public registry hosting over 10 million repositories.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Containers",
+      "target": "Docker 容器",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 1,
+      "first_seen": "2026-05-26T13:39:26.272310+00:00",
+      "last_seen": "2026-05-26T14:22:13.621470+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P6] Docker Containers",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "network",
+      "target": "容器是镜像的可运行实例。容器拥有自己的文件系统、网络栈和进程空间，与宿主机隔离。[推断: 原文\"run \"后缺失命令，各版本一致，基于语义推测为\"run docker run nginx\"，后文提到从 nginx 镜像创建容器]运行 docker run nginx 时，Docker 会从 nginx 镜像创建一个新容器。容器可以启动、停止、迁移和删除。一台典型的生产服务器可能同时运行 15-20",
+      "frequency": 9,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272332+00:00",
+      "last_seen": "2026-05-26T13:39:26.272332+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P7] A container is a runnable instance of an image. Containers have their own filesystem, network stack, and process space, isolated from the host system. When you run , Docker creates a new container from the nginx image. Containers can be started, stopped, moved, and deleted. A typical production server might run 15-20 containers simultaneously.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "from",
+      "target": "容器是镜像的可运行实例。容器拥有自己的文件系统、网络栈和进程空间，与宿主机隔离。[推断: 原文\"run \"后缺失命令，各版本一致，基于语义推测为\"run docker run nginx\"，后文提到从 nginx 镜像创建容器]运行 docker run nginx 时，Docker 会从 nginx 镜像创建一个新容器。容器可以启动、停止、迁移和删除。一台典型的生产服务器可能同时运行 15-20",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272353+00:00",
+      "last_seen": "2026-05-26T13:39:26.272353+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P7] A container is a runnable instance of an image. Containers have their own filesystem, network stack, and process space, isolated from the host system. When you run , Docker creates a new container from the nginx image. Containers can be started, stopped, moved, and deleted. A typical production server might run 15-20 containers simultaneously.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "run",
+      "target": "容器是镜像的可运行实例。容器拥有自己的文件系统、网络栈和进程空间，与宿主机隔离。[推断: 原文\"run \"后缺失命令，各版本一致，基于语义推测为\"run docker run nginx\"，后文提到从 nginx 镜像创建容器]运行 docker run nginx 时，Docker 会从 nginx 镜像创建一个新容器。容器可以启动、停止、迁移和删除。一台典型的生产服务器可能同时运行 15-20",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272375+00:00",
+      "last_seen": "2026-05-26T13:39:26.272375+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P7] A container is a runnable instance of an image. Containers have their own filesystem, network stack, and process space, isolated from the host system. When you run , Docker creates a new container from the nginx image. Containers can be started, stopped, moved, and deleted. A typical production server might run 15-20 containers simultaneously.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "can",
+      "target": "容器是镜像的可运行实例。容器拥有自己的文件系统、网络栈和进程空间，与宿主机隔离。[推断: 原文\"run \"后缺失命令，各版本一致，基于语义推测为\"run docker run nginx\"，后文提到从 nginx 镜像创建容器]运行 docker run nginx 时，Docker 会从 nginx 镜像创建一个新容器。容器可以启动、停止、迁移和删除。一台典型的生产服务器可能同时运行 15-20",
+      "frequency": 5,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272396+00:00",
+      "last_seen": "2026-05-26T13:39:26.272396+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P7] A container is a runnable instance of an image. Containers have their own filesystem, network stack, and process space, isolated from the host system. When you run , Docker creates a new container from the nginx image. Containers can be started, stopped, moved, and deleted. A typical production server might run 15-20 containers simultaneously.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "typical",
+      "target": "容器是镜像的可运行实例。容器拥有自己的文件系统、网络栈和进程空间，与宿主机隔离。[推断: 原文\"run \"后缺失命令，各版本一致，基于语义推测为\"run docker run nginx\"，后文提到从 nginx 镜像创建容器]运行 docker run nginx 时，Docker 会从 nginx 镜像创建一个新容器。容器可以启动、停止、迁移和删除。一台典型的生产服务器可能同时运行 15-20",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272417+00:00",
+      "last_seen": "2026-05-26T13:39:26.272417+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P7] A container is a runnable instance of an image. Containers have their own filesystem, network stack, and process space, isolated from the host system. When you run , Docker creates a new container from the nginx image. Containers can be started, stopped, moved, and deleted. A typical production server might run 15-20 containers simultaneously.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Dockerfile",
+      "target": "Dockerfile",
+      "frequency": 5,
+      "confidence": "pending",
+      "verified_count": 1,
+      "first_seen": "2026-05-26T13:39:26.272439+00:00",
+      "last_seen": "2026-05-26T14:22:13.621492+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P8] Dockerfile",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "all",
+      "target": "Dockerfile 是一个文本文档，包含构建镜像的所有命令。以下是 Node.js 应用程序的示例：",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272460+00:00",
+      "last_seen": "2026-05-26T13:39:26.272460+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P9] A Dockerfile is a text document that contains all the commands to build an image. Here is an example for a Node.js application:",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "commands",
+      "target": "Dockerfile 是一个文本文档，包含构建镜像的所有命令。以下是 Node.js 应用程序的示例：",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272481+00:00",
+      "last_seen": "2026-05-26T13:39:26.272481+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P9] A Dockerfile is a text document that contains all the commands to build an image. Here is an example for a Node.js application:",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "application",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包成轻量级、可移植的容器。与传统的虚拟机（VM）不同，Docker 容器共享宿主机操作系统内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署流程中的事实标准，截至 2024 年，企业环境中的采用率已超过 80%。",
+      "frequency": 5,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272501+00:00",
+      "last_seen": "2026-05-26T13:39:26.272501+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "using",
+      "target": "Docker Compose 允许使用 YAML 文件定义多容器应用程序。以下是典型的 Web 应用栈：",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272524+00:00",
+      "last_seen": "2026-05-26T13:39:26.272524+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P12] Docker Compose allows defining multi-container applications using a YAML file. Below is a typical web application stack:",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "file",
+      "target": "Docker 镜像是一个只读模板，其中包含创建容器的指令。镜像是按层构建的，每一层代表一组文件系统变更。[推断: 原文\"popular  image\"中存在内容缺失，各版本一致，基于语义推测为\"popular nginx:alpine image\"，Docker 上下文中 23MB 的镜像通常为 nginx:alpine]nginx:alpine 镜像只有 23MB，而完整的 Ubuntu 虚拟机",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272545+00:00",
+      "last_seen": "2026-05-26T13:39:26.272545+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P5] A Docker image is a read-only template with instructions for creating a container. Images are built in layers, where each layer represents a set of filesystem changes. The popular  image is only 23MB in size, compared to a full Ubuntu VM which could be over 2GB. Docker images are stored in registries, with Docker Hub being the largest public registry hosting over 10 million repositories.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "provides",
+      "target": "Docker 提供了多种用于容器通信的网络驱动：",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272566+00:00",
+      "last_seen": "2026-05-26T13:39:26.272566+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P15] Docker provides several network drivers for container communication:",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Use",
+      "target": "适用场景",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272588+00:00",
+      "last_seen": "2026-05-26T13:39:26.272588+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P17] Use Case",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "bridge",
+      "target": "bridge",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272610+00:00",
+      "last_seen": "2026-05-26T13:39:26.272610+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P19] bridge",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "networking",
+      "target": "跨节点的多主机网络",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272633+00:00",
+      "last_seen": "2026-05-26T13:39:26.272633+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P26] Multi-host networking across nodes",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "default",
+      "target": "默认 bridge 网络使用 172.17.0.0/16 子网并按顺序分配 IP 地址。同一用户自定义 bridge 网络上的容器可以使用容器名称作为主机名进行通信，解析为 172.18.0.2、172.18.0.3 等内部 IP。",
+      "frequency": 5,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272655+00:00",
+      "last_seen": "2026-05-26T13:39:26.272655+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P31] The default bridge network uses the 172.17.0.0/16 subnet and assigns IPs sequentially. Containers on the same user-defined bridge network can communicate using container names as hostnames, resolving to internal IPs like 172.18.0.2, 172.18.0.3.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "like",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包成轻量级、可移植的容器。与传统的虚拟机（VM）不同，Docker 容器共享宿主机操作系统内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署流程中的事实标准，截至 2024 年，企业环境中的采用率已超过 80%。",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272676+00:00",
+      "last_seen": "2026-05-26T13:39:26.272676+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "volumes",
+      "target": "Docker 卷独立于容器生命周期持久化数据。关键卷命令：",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272698+00:00",
+      "last_seen": "2026-05-26T13:39:26.272698+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P33] Docker volumes persist data independently of container lifecycle. Key volume commands:",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "support",
+      "target": "卷支持多种驱动：local（默认）、NFS（网络文件系统）以及特定于云的选项如 EBS（AWS）。性能基准测试显示，本地卷的读取速度可达到原生文件系统的 98.5%，写入速度达到 95.2%。",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272721+00:00",
+      "last_seen": "2026-05-26T13:39:26.272721+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P34] Volumes support various drivers: local (default), NFS (network file system), and cloud-specific options like EBS (AWS). Performance benchmarks show local volumes achieve 98.5% of native filesystem speed for read operations and 95.2% for writes.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "native",
+      "target": "卷支持多种驱动：local（默认）、NFS（网络文件系统）以及特定于云的选项如 EBS（AWS）。性能基准测试显示，本地卷的读取速度可达到原生文件系统的 98.5%，写入速度达到 95.2%。",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272744+00:00",
+      "last_seen": "2026-05-26T13:39:26.272744+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P34] Volumes support various drivers: local (default), NFS (network file system), and cloud-specific options like EBS (AWS). Performance benchmarks show local volumes achieve 98.5% of native filesystem speed for read operations and 95.2% for writes.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "root",
+      "target": "默认情况下，容器在容器命名空间内以 root 用户运行。最佳实践包括：",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272767+00:00",
+      "last_seen": "2026-05-26T13:39:26.272767+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P37] By default, containers run as root inside the container namespace. Best practices include:",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "seconds",
+      "target": "该扫描可检测 CVE、错误配置和密钥。对于 500MB 的镜像，典型扫描可在 30 秒内完成。",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272791+00:00",
+      "last_seen": "2026-05-26T13:39:26.272791+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P45] This scans for CVEs, misconfigurations, and secrets. A typical scan completes in under 30 seconds for a 500MB image.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "limits",
+      "target": "不加约束的情况下，单个容器可能消耗所有宿主机资源。务必设置限制：",
+      "frequency": 6,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272815+00:00",
+      "last_seen": "2026-05-26T13:39:26.272815+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P47] Without constraints, a single container can consume all host resources. Always set limits:",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "Unlimited",
+      "target": "无限制",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272838+00:00",
+      "last_seen": "2026-05-26T13:39:26.272838+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P54] Unlimited",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "memory",
+      "target": "硬限制和软限制",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272863+00:00",
+      "last_seen": "2026-05-26T13:39:26.272863+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P56] Hard and soft memory limits",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "builds",
+      "target": "Docker 广泛用于持续集成流水线。GitHub Actions、GitLab CI 16.2 和 Jenkins 都支持基于 Docker 的构建。典型的 CI 流水线：",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272887+00:00",
+      "last_seen": "2026-05-26T13:39:26.272887+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P65] Docker is widely used in continuous integration pipelines. GitHub Actions, GitLab CI 16.2, and Jenkins all support Docker-based builds. A typical CI pipeline:",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "performance",
+      "target": "Docker 性能调优可以带来显著改进。关键优化领域：",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272913+00:00",
+      "last_seen": "2026-05-26T13:39:26.272913+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "general",
+      "source_context": "[P81] Docker performance tuning can yield significant improvements. Key optimization areas:",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "CI/CD",
+      "target": "Docker 在 CI/CD 中的应用",
+      "frequency": 2,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T13:39:26.272938+00:00",
+      "last_seen": "2026-05-26T13:39:26.272938+00:00",
+      "source_jobs": [
+        "job_20260526_212758"
+      ],
+      "category": "reference",
+      "source_context": "[P64] Docker in CI/CD",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "and",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包到轻量级、可移植的容器中。与传统的虚拟机（VM）不同，Docker 容器共享宿主操作系统的内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署工作流程中的事实标准，截至 2024 年，企业在生产环境中的采用率已超过 80%。",
+      "frequency": 6,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T14:22:13.621383+00:00",
+      "last_seen": "2026-05-26T14:22:13.621383+00:00",
+      "source_jobs": [
+        "job_20260526_221249"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "containers",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包到轻量级、可移植的容器中。与传统的虚拟机（VM）不同，Docker 容器共享宿主操作系统的内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署工作流程中的事实标准，截至 2024 年，企业在生产环境中的采用率已超过 80%。",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T14:22:13.621396+00:00",
+      "last_seen": "2026-05-26T14:22:13.621396+00:00",
+      "source_jobs": [
+        "job_20260526_221249"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "the",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包到轻量级、可移植的容器中。与传统的虚拟机（VM）不同，Docker 容器共享宿主操作系统的内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署工作流程中的事实标准，截至 2024 年，企业在生产环境中的采用率已超过 80%。",
+      "frequency": 6,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T14:22:13.621407+00:00",
+      "last_seen": "2026-05-26T14:22:13.621407+00:00",
+      "source_jobs": [
+        "job_20260526_221249"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "host",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包到轻量级、可移植的容器中。与传统的虚拟机（VM）不同，Docker 容器共享宿主操作系统的内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署工作流程中的事实标准，截至 2024 年，企业在生产环境中的采用率已超过 80%。",
+      "frequency": 6,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T14:22:13.621419+00:00",
+      "last_seen": "2026-05-26T14:22:13.621419+00:00",
+      "source_jobs": [
+        "job_20260526_221249"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "with",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包到轻量级、可移植的容器中。与传统的虚拟机（VM）不同，Docker 容器共享宿主操作系统的内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署工作流程中的事实标准，截至 2024 年，企业在生产环境中的采用率已超过 80%。",
+      "frequency": 4,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T14:22:13.621429+00:00",
+      "last_seen": "2026-05-26T14:22:13.621429+00:00",
+      "source_jobs": [
+        "job_20260526_221249"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "image",
+      "target": "Docker 镜像是一个只读模板，包含创建容器的指令。镜像通过分层构建，每一层代表一组文件系统变更。流行的镜像仅 23MB，而完整的 Ubuntu 虚拟机可能超过 2GB。Docker 镜像存储在镜像仓库中，其中 Docker Hub 是最大的公共镜像仓库，托管着超过 1000 万个仓库。",
+      "frequency": 6,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T14:22:13.621439+00:00",
+      "last_seen": "2026-05-26T14:22:13.621439+00:00",
+      "source_jobs": [
+        "job_20260526_221249"
+      ],
+      "category": "general",
+      "source_context": "[P5] A Docker image is a read-only template with instructions for creating a container. Images are built in layers, where each layer represents a set of filesystem changes. The popular  image is only 23MB in size, compared to a full Ubuntu VM which could be over 2GB. Docker images are stored in registries, with Docker Hub being the largest public registry hosting over 10 million repositories.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "only",
+      "target": "Docker 镜像是一个只读模板，包含创建容器的指令。镜像通过分层构建，每一层代表一组文件系统变更。流行的镜像仅 23MB，而完整的 Ubuntu 虚拟机可能超过 2GB。Docker 镜像存储在镜像仓库中，其中 Docker Hub 是最大的公共镜像仓库，托管着超过 1000 万个仓库。",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T14:22:13.621449+00:00",
+      "last_seen": "2026-05-26T14:22:13.621449+00:00",
+      "source_jobs": [
+        "job_20260526_221249"
+      ],
+      "category": "general",
+      "source_context": "[P5] A Docker image is a read-only template with instructions for creating a container. Images are built in layers, where each layer represents a set of filesystem changes. The popular  image is only 23MB in size, compared to a full Ubuntu VM which could be over 2GB. Docker images are stored in registries, with Docker Hub being the largest public registry hosting over 10 million repositories.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "container",
+      "target": "Docker 是一个容器化平台，使开发者能够将应用程序及其依赖项打包到轻量级、可移植的容器中。与传统的虚拟机（VM）不同，Docker 容器共享宿主操作系统的内核，因此在资源利用率和启动时间方面更加高效。Docker 平台已成为现代软件开发和部署工作流程中的事实标准，截至 2024 年，企业在生产环境中的采用率已超过 80%。",
+      "frequency": 5,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T14:22:13.621459+00:00",
+      "last_seen": "2026-05-26T14:22:13.621459+00:00",
+      "source_jobs": [
+        "job_20260526_221249"
+      ],
+      "category": "general",
+      "source_context": "[P2] Docker is a containerization platform that enables developers to package applications and their dependencies into lightweight, portable containers. Unlike traditional virtual machines (VMs), Docker containers share the host operating system kernel, making them more efficient in terms of resource utilization and startup time. The Docker platform has become the de facto standard in modern software development and deployment workflows, with adoption rates exceeding 80% in enterprise environments as of 2024.",
+      "extraction_method": "paragraph_alignment"
+    },
+    {
+      "source": "network",
+      "target": "容器是镜像的可运行实例。容器拥有自己的文件系统、网络栈和进程空间，与宿主系统隔离。当您运行时，Docker 会从 nginx 镜像创建一个新容器。容器可以启动、停止、移动和删除。一台典型的生产服务器可能同时运行 15-20 个容器。",
+      "frequency": 3,
+      "confidence": "pending",
+      "verified_count": 0,
+      "first_seen": "2026-05-26T14:22:13.621481+00:00",
+      "last_seen": "2026-05-26T14:22:13.621481+00:00",
+      "source_jobs": [
+        "job_20260526_221249"
+      ],
+      "category": "general",
+      "source_context": "[P7] A container is a runnable instance of an image. Containers have their own filesystem, network stack, and process space, isolated from the host system. When you run , Docker creates a new container from the nginx image. Containers can be started, stopped, moved, and deleted. A typical production server might run 15-20 containers simultaneously.",
+      "extraction_method": "paragraph_alignment"
+    }
+  ],
+  "archived_count": 0
+}

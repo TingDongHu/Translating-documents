@@ -1,3 +1,12 @@
+---
+
+id: hi/domain/administrative
+type: domain
+target_lang: hi
+name: "प्रशासनिक दस्तावेज़ अनुवाद डोमेन: हिंदी (Administrative Domain)"
+description: Hindi Administrative domain terminology and translation rules
+---
+
 # प्रशासनिक दस्तावेज़ अनुवाद डोमेन: हिंदी (Administrative Domain)
 
 ---

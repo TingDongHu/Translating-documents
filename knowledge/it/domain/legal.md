@@ -1,3 +1,11 @@
+---
+id: it/domain/legal
+type: domain
+target_lang: it
+name: Legal Domain (Settore Giuridico)
+description: Italian Legal domain terminology and translation rules
+---
+
 # Legal Domain (Settore Giuridico)
 
 ## Reader Model: Destinatario della Traduzione Giuridica

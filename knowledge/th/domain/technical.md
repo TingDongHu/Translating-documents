@@ -1,3 +1,11 @@
+---
+id: th/domain/technical
+type: domain
+target_lang: th
+name: Thai Technical Domain (เทคนิค) — Domain Knowledge for Thai Technical Document Translation
+description: Thai Technical domain terminology and translation rules
+---
+
 # Thai Technical Domain (เทคนิค) — Domain Knowledge for Thai Technical Document Translation
 
 ---

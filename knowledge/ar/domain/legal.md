@@ -1,3 +1,12 @@
+---
+
+id: ar/domain/legal
+type: domain
+target_lang: ar
+name: "Domain: Legal (AR) — Arabic Legal Documentation Translation"
+description: Arabic Legal domain terminology and translation rules
+---
+
 # Domain: Legal (AR) — Arabic Legal Documentation Translation
 
 ## Reader Model

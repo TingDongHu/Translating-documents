@@ -1,3 +1,12 @@
+---
+
+id: nl/domain/technical
+type: domain
+target_lang: nl
+name: "Technisch Nederlands — Domain File: Technical Translation"
+description: Dutch Technical domain terminology and translation rules
+---
+
 # Technisch Nederlands — Domain File: Technical Translation
 
 ## 1. Reader Model

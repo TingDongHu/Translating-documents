@@ -1,3 +1,12 @@
+---
+id: de/adapt/from_zh-CN
+type: adapt
+target_lang: de
+source_lang: zh-CN
+name: 中→德 (zh-CN → de-DE) 适应规则
+description: Simplified Chinese to German language adaptation rules
+---
+
 # 中→德 (zh-CN → de-DE) 适应规则
 
 - **id**: de/adapt/from_zh-CN

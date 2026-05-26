@@ -1,3 +1,12 @@
+---
+
+id: pl/domain/financial
+type: domain
+target_lang: pl
+name: "Polish Financial Domain: Reader Model + Decision Framework + Standards"
+description: Polish Financial domain terminology and translation rules
+---
+
 # Polish Financial Domain: Reader Model + Decision Framework + Standards
 
 ---

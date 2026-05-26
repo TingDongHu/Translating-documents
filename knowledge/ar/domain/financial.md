@@ -1,3 +1,12 @@
+---
+
+id: ar/domain/financial
+type: domain
+target_lang: ar
+name: "Domain: Financial (AR) — Arabic Financial Documentation Translation"
+description: Arabic Financial domain terminology and translation rules
+---
+
 # Domain: Financial (AR) — Arabic Financial Documentation Translation
 
 ## Reader Model

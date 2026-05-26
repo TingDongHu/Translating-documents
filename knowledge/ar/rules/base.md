@@ -1,3 +1,11 @@
+---
+id: ar/rules/base
+type: rules
+target_lang: ar
+name: Arabic (ar) Translation Rules — قاعدة معايير الترجمة العربية
+description: Arabic base translation rules
+---
+
 # Arabic (ar) Translation Rules — قاعدة معايير الترجمة العربية
 
 > Version 1.0 | Last updated: 2026-05-25

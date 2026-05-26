@@ -1,3 +1,12 @@
+---
+id: ja/adapt/from_en
+type: adapt
+target_lang: ja
+source_lang: en
+name: English → Japanese Adaptation Rules
+description: English to Japanese language adaptation rules
+---
+
 # English → Japanese Adaptation Rules
 
 > **Target**: English to Japanese translation adaptation rules

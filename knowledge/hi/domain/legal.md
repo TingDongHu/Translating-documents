@@ -1,3 +1,12 @@
+---
+
+id: hi/domain/legal
+type: domain
+target_lang: hi
+name: "विधिक दस्तावेज़ अनुवाद डोमेन: हिंदी (Legal Domain)"
+description: Hindi Legal domain terminology and translation rules
+---
+
 # विधिक दस्तावेज़ अनुवाद डोमेन: हिंदी (Legal Domain)
 
 ---

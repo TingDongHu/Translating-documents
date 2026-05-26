@@ -1,3 +1,12 @@
+---
+
+id: hi/domain/financial
+type: domain
+target_lang: hi
+name: "वित्तीय दस्तावेज़ अनुवाद डोमेन: हिंदी (Financial Domain)"
+description: Hindi Financial domain terminology and translation rules
+---
+
 # वित्तीय दस्तावेज़ अनुवाद डोमेन: हिंदी (Financial Domain)
 
 ---

@@ -1,3 +1,11 @@
+---
+id: th/domain/legal
+type: domain
+target_lang: th
+name: Thai Legal Domain (กฎหมาย) — Domain Knowledge for Thai Legal Document Translation
+description: Thai Legal domain terminology and translation rules
+---
+
 # Thai Legal Domain (กฎหมาย) — Domain Knowledge for Thai Legal Document Translation
 
 ---

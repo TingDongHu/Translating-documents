@@ -1,3 +1,12 @@
+---
+
+id: nl/domain/administrative
+type: domain
+target_lang: nl
+name: "Ambtelijk Nederlands — Domain File: Administrative Translation"
+description: Dutch Administrative domain terminology and translation rules
+---
+
 # Ambtelijk Nederlands — Domain File: Administrative Translation
 
 ## 1. Reader Model

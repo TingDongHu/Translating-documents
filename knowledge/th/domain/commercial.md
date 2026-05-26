@@ -1,3 +1,11 @@
+---
+id: th/domain/commercial
+type: domain
+target_lang: th
+name: Thai Commercial Domain (พาณิชย์) — Domain Knowledge for Thai Commercial Document Translation
+description: Thai Commercial domain terminology and translation rules
+---
+
 # Thai Commercial Domain (พาณิชย์) — Domain Knowledge for Thai Commercial Document Translation
 
 ---

@@ -1,3 +1,11 @@
+---
+id: tr/rules/base
+type: rules
+target_lang: tr
+name: Turkish Translation Base Rules
+description: Turkish base translation rules
+---
+
 # Turkish Translation Base Rules
 
 This document defines the foundational rules for translating documents into Turkish. All translations MUST conform to these rules unless explicitly overridden by project-specific instructions.

@@ -1,3 +1,12 @@
+---
+id: id/adapt/from_en
+type: adapt
+target_lang: id
+source_lang: en
+name: Adaptasi dari Bahasa Inggris (English) ke Bahasa Indonesia
+description: English to Indonesian language adaptation rules
+---
+
 # Adaptasi dari Bahasa Inggris (English) ke Bahasa Indonesia
 
 Panduan adaptasi saat menerjemahkan dari bahasa Inggris ke bahasa Indonesia.
